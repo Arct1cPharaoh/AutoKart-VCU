@@ -4,9 +4,9 @@
 <area shape="rect" id="node13" href="$ControllerSystem_8c.html#a4575814c80b0fcfc774c5b562531ca26" title="Initializes the Controller System with initial settings." alt="" coords="123,229,261,255"/>
 <area shape="rect" id="node19" href="$Apps_8c.html#a780a35152c6aa6e99a8981e3a998331a" title="Updates the APPS based on both sensor outputs." alt="" coords="147,104,237,129"/>
 <area shape="rect" id="node3" href="$AnalogSensor_8c.html#ac992e329ef2479c38747e193ce77500c" title="Initializes an analog sensor and configures the corresponding GPIO pin." alt="" coords="333,5,453,31"/>
-<area shape="rect" id="node10" href="$App_8c.html#af9c13c4c47f46fc56e488d635c0a4a73" title="Updates the APP data." alt="" coords="351,55,435,80"/>
+<area shape="rect" id="node10" href="$App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="351,55,435,80"/>
 <area shape="rect" id="node4" href="$Sensor_8c.html#afaf02fb354c266fd34becaa91c007ce6" title="Initializes a sensor with the given parameters." alt="" coords="558,5,638,31"/>
-<area shape="rect" id="node5" href="$Updateable_8c.html#ad7900519e5ee79b328292ae69f0b0fa1" title=" " alt="" coords="720,105,825,131"/>
+<area shape="rect" id="node5" href="$Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="720,105,825,131"/>
 <area shape="rect" id="node6" href="$Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="873,31,977,56"/>
 <area shape="rect" id="node7" href="$Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="875,80,975,105"/>
 <area shape="rect" id="node8" href="$Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="876,129,975,155"/>

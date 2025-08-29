@@ -345,7 +345,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">    7</span>                                                              {</div>
 <div class="line"><span class="lineno">    8</span>    <a class="code hl_function" href="ControllerSystem_8h.html#a4575814c80b0fcfc774c5b562531ca26">initControllerSystem</a>(&amp;apps-&gt;<a class="code hl_variable" href="structApps.html#ad9c1d9b8bfab71381ab156c1e4ad3007">base</a>, <span class="stringliteral">&quot;Apps&quot;</span>, hz, <a class="code hl_enumvalue" href="ControllerSystem_8h.html#a81059b4122c9dd4608d347eb117ae8c9abc148accf7ab9e5ab10aff4b5309b9db">c_APPS</a>, <a class="code hl_function" href="Apps_8c.html#a780a35152c6aa6e99a8981e3a998331a">updateApps</a>, apps);</div>
 <div class="line"><span class="lineno">    9</span>    <span class="comment">// Allocate memory for the app instances</span></div>
-<div class="line"><span class="lineno">   10</span>    <a class="code hl_struct" href="structApp.html">App</a> app1, app2;</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structApp.html">App</a> app1, app2;</div>
 <div class="line"><span class="lineno">   11</span>    apps-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[0] = &amp;app1;</div>
 <div class="line"><span class="lineno">   12</span>    apps-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[1] = &amp;app2;</div>
 <div class="line"><span class="lineno">   13</span> </div>
@@ -377,9 +377,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="ControllerSystem_8c.html#a4575814c80b0fcfc774c5b562531ca26" title="Initializes the Controller System with initial settings." alt="" coords="123,229,261,255"/>
 <area shape="rect" href="Apps_8c.html#a780a35152c6aa6e99a8981e3a998331a" title="Updates the APPS based on both sensor outputs." alt="" coords="147,104,237,129"/>
 <area shape="rect" href="AnalogSensor_8c.html#ac992e329ef2479c38747e193ce77500c" title="Initializes an analog sensor and configures the corresponding GPIO pin." alt="" coords="333,5,453,31"/>
-<area shape="rect" href="App_8c.html#af9c13c4c47f46fc56e488d635c0a4a73" title="Updates the APP data." alt="" coords="351,55,435,80"/>
+<area shape="rect" href="App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="351,55,435,80"/>
 <area shape="rect" href="Sensor_8c.html#afaf02fb354c266fd34becaa91c007ce6" title="Initializes a sensor with the given parameters." alt="" coords="558,5,638,31"/>
-<area shape="rect" href="Updateable_8c.html#ad7900519e5ee79b328292ae69f0b0fa1" title=" " alt="" coords="720,105,825,131"/>
+<area shape="rect" href="Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="720,105,825,131"/>
 <area shape="rect" href="Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="873,31,977,56"/>
 <area shape="rect" href="Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="875,80,975,105"/>
 <area shape="rect" href="Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="876,129,975,155"/>
@@ -434,8 +434,8 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="Apps_8c_source.html#l00026">26</a> of file <a class="el" href="Apps_8c_source.html">Apps.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   26</span>                                             {</div>
 <div class="line"><span class="lineno">   27</span>    <a class="code hl_struct" href="structApps.html">Apps</a>* appsPtr = (<a class="code hl_struct" href="structApps.html">Apps</a>*)controller-&gt;<a class="code hl_variable" href="structControllerSystem.html#af3510581d0c41e08c2e896f106852794">child</a>;</div>
-<div class="line"><span class="lineno">   28</span>    <a class="code hl_function" href="App_8h.html#af9c13c4c47f46fc56e488d635c0a4a73">updateApp</a>(appsPtr-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[0]);</div>
-<div class="line"><span class="lineno">   29</span>    <a class="code hl_function" href="App_8h.html#af9c13c4c47f46fc56e488d635c0a4a73">updateApp</a>(appsPtr-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[1]);</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_function" href="App_8h.html#a364b7b0d4240435c741a2a9bc6c076ba">updateApp</a>(appsPtr-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[0]);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_function" href="App_8h.html#a364b7b0d4240435c741a2a9bc6c076ba">updateApp</a>(appsPtr-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[1]);</div>
 <div class="line"><span class="lineno">   30</span> </div>
 <div class="line"><span class="lineno">   31</span>    <span class="comment">// Set to computed</span></div>
 <div class="line"><span class="lineno">   32</span>    appsPtr-&gt;<a class="code hl_variable" href="structApps.html#ad9c1d9b8bfab71381ab156c1e4ad3007">base</a>.<a class="code hl_variable" href="structControllerSystem.html#adbfc5da05b506b9e0dea738ee29fbbb6">state</a> = <a class="code hl_enumvalue" href="ControllerSystem_8h.html#ac38090c7c72c6db6eacb377d6224ad36a25da3d5754b166342277b1c9d01df61c">c_computed</a>;</div>
@@ -447,7 +447,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   38</span> </div>
 <div class="line"><span class="lineno">   39</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
 <div class="line"><span class="lineno">   40</span>}</div>
-<div class="ttc" id="aApp_8h_html_af9c13c4c47f46fc56e488d635c0a4a73"><div class="ttname"><a href="App_8h.html#af9c13c4c47f46fc56e488d635c0a4a73">updateApp</a></div><div class="ttdeci">void updateApp(void *app)</div><div class="ttdoc">Updates the APP data.</div><div class="ttdef"><b>Definition:</b> <a href="App_8c_source.html#l00015">App.c:15</a></div></div>
+<div class="ttc" id="aApp_8h_html_a364b7b0d4240435c741a2a9bc6c076ba"><div class="ttname"><a href="App_8h.html#a364b7b0d4240435c741a2a9bc6c076ba">updateApp</a></div><div class="ttdeci">void updateApp(App *app)</div><div class="ttdoc">Updates the APP data.</div><div class="ttdef"><b>Definition:</b> <a href="App_8c_source.html#l00015">App.c:15</a></div></div>
 <div class="ttc" id="aCommon_8h_html_acdf9ea17605dff8b810df8076b6496e2"><div class="ttname"><a href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a></div><div class="ttdeci">#define _SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00005">Common.h:5</a></div></div>
 <div class="ttc" id="aControllerSystem_8h_html_ac38090c7c72c6db6eacb377d6224ad36a25da3d5754b166342277b1c9d01df61c"><div class="ttname"><a href="ControllerSystem_8h.html#ac38090c7c72c6db6eacb377d6224ad36a25da3d5754b166342277b1c9d01df61c">c_computed</a></div><div class="ttdeci">@ c_computed</div><div class="ttdef"><b>Definition:</b> <a href="ControllerSystem_8h_source.html#l00023">ControllerSystem.h:23</a></div></div>
 <div class="ttc" id="astructApps_html"><div class="ttname"><a href="structApps.html">Apps</a></div><div class="ttdef"><b>Definition:</b> <a href="Apps_8h_source.html#l00022">Apps.h:22</a></div></div>
@@ -459,7 +459,7 @@ Here is the call graph for this function:</div>
 <map name="aApps_8h_a780a35152c6aa6e99a8981e3a998331a_cgraph" id="aApps_8h_a780a35152c6aa6e99a8981e3a998331a_cgraph">
 <area shape="rect" title="Updates the APPS based on both sensor outputs." alt="" coords="5,31,96,56"/>
 <area shape="rect" href="App_8c.html#a01be170ac09e9dd35ba3f18c537ae409" title="Gets the current position of the APP." alt="" coords="144,5,255,31"/>
-<area shape="rect" href="App_8c.html#af9c13c4c47f46fc56e488d635c0a4a73" title="Updates the APP data." alt="" coords="157,55,241,80"/>
+<area shape="rect" href="App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="157,55,241,80"/>
 <area shape="rect" href="AnalogSensor_8c.html#a6b63008a770ff66fdd8a45aa640f39b8" title="Retrieves analog sensor data for a specific channel." alt="" coords="303,29,451,55"/>
 <area shape="rect" href="App_8c.html#ac6a91028bac466dcd71f79aa06aa65ba" title="Converts raw APP data to a meaningful position value." alt="" coords="307,79,446,104"/>
 </map>

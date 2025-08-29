@@ -1,0 +1,4 @@
+<map id="updateSteeringColumn" name="updateSteeringColumn">
+<area shape="rect" id="node1" title="Updates the SteeringColumn data." alt="" coords="184,5,337,31"/>
+<area shape="rect" id="node2" href="$SteeringColumn_8c.html#ae28348e36e1e12a95dc7da2bd30e6d88" title="Initializes the SteeringColumn sensor with the given frequency, channel, and zero offset." alt="" coords="5,5,136,31"/>
+</map>

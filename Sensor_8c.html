@@ -162,21 +162,22 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Sensor_8c_source.html#l00004">4</a> of file <a class="el" href="Sensor_8c_source.html">Sensor.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    4</span>                                                                                        {</div>
-<div class="line"><span class="lineno">    5</span>    <a class="code hl_function" href="Updateable_8h.html#ad7900519e5ee79b328292ae69f0b0fa1">initUpdateable</a>(sensor, name, hz, <a class="code hl_enumvalue" href="Updateable_8h.html#aae12decfe98818a98019924af7dbbaa4a6d497d39379053324114e5611323b558">SENSOR</a>);</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_function" href="Updateable_8h.html#a4c9ad3719187f801eb4c7d9211f9b3d9">initUpdateable</a>(&amp;sensor-&gt;<a class="code hl_variable" href="structSensor.html#a7e6cf7138f6d350fd2bf0a76fba7a2ad">updateable</a>, name, hz, <a class="code hl_enumvalue" href="Updateable_8h.html#aae12decfe98818a98019924af7dbbaa4a6d497d39379053324114e5611323b558">SENSOR</a>, sensor);</div>
 <div class="line"><span class="lineno">    6</span>    sensor-&gt;<a class="code hl_variable" href="structSensor.html#a59be498582043f581a78851506f8e322">type</a> = type;</div>
 <div class="line"><span class="lineno">    7</span>    sensor-&gt;<a class="code hl_variable" href="structSensor.html#a57cec2a6cbff88c12ae7632633119526">child</a> = child;</div>
 <div class="line"><span class="lineno">    8</span>}</div>
+<div class="ttc" id="aUpdateable_8h_html_a4c9ad3719187f801eb4c7d9211f9b3d9"><div class="ttname"><a href="Updateable_8h.html#a4c9ad3719187f801eb4c7d9211f9b3d9">initUpdateable</a></div><div class="ttdeci">void initUpdateable(Updateable *updateable, const char *name, int hz, UpdateableType utype, void *child)</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8c_source.html#l00006">Updateable.c:6</a></div></div>
 <div class="ttc" id="aUpdateable_8h_html_aae12decfe98818a98019924af7dbbaa4a6d497d39379053324114e5611323b558"><div class="ttname"><a href="Updateable_8h.html#aae12decfe98818a98019924af7dbbaa4a6d497d39379053324114e5611323b558">SENSOR</a></div><div class="ttdeci">@ SENSOR</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00019">Updateable.h:19</a></div></div>
-<div class="ttc" id="aUpdateable_8h_html_ad7900519e5ee79b328292ae69f0b0fa1"><div class="ttname"><a href="Updateable_8h.html#ad7900519e5ee79b328292ae69f0b0fa1">initUpdateable</a></div><div class="ttdeci">void initUpdateable(void *child, const char *name, int hz, UpdateableType utype)</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8c_source.html#l00006">Updateable.c:6</a></div></div>
 <div class="ttc" id="astructSensor_html_a57cec2a6cbff88c12ae7632633119526"><div class="ttname"><a href="structSensor.html#a57cec2a6cbff88c12ae7632633119526">Sensor::child</a></div><div class="ttdeci">void * child</div><div class="ttdef"><b>Definition:</b> <a href="Sensor_8h_source.html#l00017">Sensor.h:17</a></div></div>
 <div class="ttc" id="astructSensor_html_a59be498582043f581a78851506f8e322"><div class="ttname"><a href="structSensor.html#a59be498582043f581a78851506f8e322">Sensor::type</a></div><div class="ttdeci">SensorType type</div><div class="ttdef"><b>Definition:</b> <a href="Sensor_8h_source.html#l00016">Sensor.h:16</a></div></div>
+<div class="ttc" id="astructSensor_html_a7e6cf7138f6d350fd2bf0a76fba7a2ad"><div class="ttname"><a href="structSensor.html#a7e6cf7138f6d350fd2bf0a76fba7a2ad">Sensor::updateable</a></div><div class="ttdeci">Updateable updateable</div><div class="ttdef"><b>Definition:</b> <a href="Sensor_8h_source.html#l00015">Sensor.h:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Sensor_8c_afaf02fb354c266fd34becaa91c007ce6_cgraph.png" border="0" usemap="#aSensor_8c_afaf02fb354c266fd34becaa91c007ce6_cgraph" alt=""/></div>
 <map name="aSensor_8c_afaf02fb354c266fd34becaa91c007ce6_cgraph" id="aSensor_8c_afaf02fb354c266fd34becaa91c007ce6_cgraph">
 <area shape="rect" title="Initializes a sensor with the given parameters." alt="" coords="5,80,85,105"/>
-<area shape="rect" href="Updateable_8c.html#ad7900519e5ee79b328292ae69f0b0fa1" title=" " alt="" coords="133,80,239,105"/>
+<area shape="rect" href="Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="133,80,239,105"/>
 <area shape="rect" href="Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="287,5,391,31"/>
 <area shape="rect" href="Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="289,55,389,80"/>
 <area shape="rect" href="Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="289,104,388,129"/>
@@ -195,7 +196,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="App_8c.html#a70256ff87716960d0b2a216d48fd94ce" title="Initializes the APP with the given frequency and channel." alt="" coords="613,252,675,277"/>
 <area shape="rect" href="BrakePressure_8c.html#a6cc0bf29d38b4637cb6a0a36f0196a81" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="581,55,707,80"/>
 <area shape="rect" href="ShockPot_8c.html#aa504d587a6cb42be1f4aed7bbea6c1a4" title="Initializes the ShockPot sensor with the given frequency, channel, and wheel location." alt="" coords="596,153,692,179"/>
-<area shape="rect" href="SteeringColumn_8c.html#ad4e64b53204532d834ba6aa5a2a965ab" title="Initializes the SteeringColumn sensor with the given frequency, channel, and zero offset." alt="" coords="579,203,709,228"/>
+<area shape="rect" href="SteeringColumn_8c.html#ae28348e36e1e12a95dc7da2bd30e6d88" title="Initializes the SteeringColumn sensor with the given frequency, channel, and zero offset." alt="" coords="579,203,709,228"/>
 <area shape="rect" href="Temperature_8c.html#ae867df29735777728c348fed4d9ebe1a" title="Initializes the Temperature sensor with the given frequency and channel." alt="" coords="588,104,700,129"/>
 <area shape="rect" href="Apps_8c.html#a30bb39332a8f4e7c416d7d628fe02b3d" title="Initializes the APPs with the given frequency and channel." alt="" coords="417,252,486,277"/>
 <area shape="rect" href="AppsTest_8c.html#a5fd4aa30b777f204d19257d4f24423c0" title=" " alt="" coords="191,239,276,264"/>

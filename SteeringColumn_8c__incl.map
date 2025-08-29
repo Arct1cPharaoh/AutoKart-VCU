@@ -1,7 +1,8 @@
 <map id="Core/Src/Sensors/AnalogSensors/SteeringColumn.c" name="Core/Src/Sensors/AnalogSensors/SteeringColumn.c">
-<area shape="rect" id="node1" title=" " alt="" coords="687,5,905,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1035,5,1253,45"/>
 <area shape="rect" id="node2" href="$SteeringColumn_8h.html" title=" " alt="" coords="613,93,833,133"/>
 <area shape="rect" id="node9" title=" " alt="" coords="393,401,453,427"/>
+<area shape="rect" id="node15" href="$Common_8h.html" title=" " alt="" coords="1181,93,1283,133"/>
 <area shape="rect" id="node3" href="$AnalogSensor_8h.html" title=" " alt="" coords="433,181,556,207"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,255,96,280"/>
 <area shape="rect" id="node5" href="$stm32f7xx__hal_8h.html" title=" " alt="" coords="485,255,600,280"/>

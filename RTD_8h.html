@@ -266,11 +266,11 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">    9</span>  rtd-&gt;<a class="code hl_variable" href="structRTD.html#ab71dfa476087a8ee252eaa958ee2eb2f">precharged</a> = 0;</div>
 <div class="line"><span class="lineno">   10</span>  rtd-&gt;<a class="code hl_variable" href="structRTD.html#af5a89f273bcef8902250848149dc176c">counter</a> = 0;</div>
 <div class="line"><span class="lineno">   11</span> </div>
-<div class="line"><span class="lineno">   12</span>  <a class="code hl_struct" href="structButton.html">Button</a> button;</div>
+<div class="line"><span class="lineno">   12</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structButton.html">Button</a> button;</div>
 <div class="line"><span class="lineno">   13</span>  rtd-&gt;<a class="code hl_variable" href="structRTD.html#ad6137ee453977299e5be1af4fd42adae">button</a> = &amp;button;</div>
 <div class="line"><span class="lineno">   14</span>  <a class="code hl_function" href="Button_8h.html#a217a589851c58f9b9ffc502b3101389c">initButton</a>(rtd-&gt;<a class="code hl_variable" href="structRTD.html#ad6137ee453977299e5be1af4fd42adae">button</a>, <span class="stringliteral">&quot;RTD Button&quot;</span>, hz, 0);</div>
 <div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>  <a class="code hl_struct" href="structDigitalOutput.html">DigitalOutput</a> piezo;</div>
+<div class="line"><span class="lineno">   16</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structDigitalOutput.html">DigitalOutput</a> piezo;</div>
 <div class="line"><span class="lineno">   17</span>  rtd-&gt;<a class="code hl_variable" href="structRTD.html#ac687fcfed021623568a5ca64f3ef8d38">piezo</a> = &amp;piezo;</div>
 <div class="line"><span class="lineno">   18</span>  <a class="code hl_function" href="DigitalOutput_8h.html#a9ae4241b3bfbd21b718984bae5e1815a">initDigitalOutput</a>(rtd-&gt;<a class="code hl_variable" href="structRTD.html#ac687fcfed021623568a5ca64f3ef8d38">piezo</a>, <span class="stringliteral">&quot;Piezo&quot;</span>, hz, piezoPort);</div>
 <div class="line"><span class="lineno">   19</span>  rtd-&gt;<a class="code hl_variable" href="structRTD.html#a599b196a0125e4dc80962c8a9e4db7c7">apps</a> = apps;</div>
@@ -302,7 +302,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="RTD_8c.html#ad4c8548aeb2be8f455c0922c6760e631" title="Updates the RTD Actuator." alt="" coords="145,403,231,428"/>
 <area shape="rect" href="DigitalSensor_8c.html#ace328dbd7fead307e7141368901c0e1d" title="Initializes a digital sensor with the given parameters." alt="" coords="331,5,447,31"/>
 <area shape="rect" href="Sensor_8c.html#afaf02fb354c266fd34becaa91c007ce6" title="Initializes a sensor with the given parameters." alt="" coords="562,93,642,119"/>
-<area shape="rect" href="Updateable_8c.html#ad7900519e5ee79b328292ae69f0b0fa1" title=" " alt="" coords="735,241,840,267"/>
+<area shape="rect" href="Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="735,241,840,267"/>
 <area shape="rect" href="Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="891,167,995,192"/>
 <area shape="rect" href="Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="893,216,993,241"/>
 <area shape="rect" href="Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="893,265,992,291"/>

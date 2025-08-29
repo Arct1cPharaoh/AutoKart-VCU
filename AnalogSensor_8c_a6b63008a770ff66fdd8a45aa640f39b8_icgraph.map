@@ -1,6 +1,6 @@
 <map id="getAnalogSensorData" name="getAnalogSensorData">
 <area shape="rect" id="node1" title="Retrieves analog sensor data for a specific channel." alt="" coords="1184,105,1332,131"/>
-<area shape="rect" id="node2" href="$App_8c.html#af9c13c4c47f46fc56e488d635c0a4a73" title="Updates the APP data." alt="" coords="1021,55,1105,80"/>
+<area shape="rect" id="node2" href="$App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="1021,55,1105,80"/>
 <area shape="rect" id="node8" href="$BrakePressure_8c.html#a900d41fab896ec94686ed339f7ddd48b" title="Updates the brake pressure data." alt="" coords="989,105,1136,131"/>
 <area shape="rect" id="node18" href="$Temperature_8c.html#ab0f1defe018e3ea1eac9696b5f40476b" title="Updates the Temperature data." alt="" coords="995,156,1130,181"/>
 <area shape="rect" id="node3" href="$App_8c.html#a70256ff87716960d0b2a216d48fd94ce" title="Initializes the APP with the given frequency and channel." alt="" coords="843,5,905,31"/>
