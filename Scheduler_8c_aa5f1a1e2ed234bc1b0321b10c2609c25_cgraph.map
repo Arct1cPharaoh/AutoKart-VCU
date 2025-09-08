@@ -1,0 +1,5 @@
+<map id="workerTask" name="workerTask">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,96,56"/>
+<area shape="rect" id="node2" href="$Task_8c.html#af74a92b4c3acbd7beebe1c7e404f6b99" title="Executes the task by calling the sensor&#39;s update function." alt="" coords="144,5,241,31"/>
+<area shape="rect" id="node3" href="$Task_8c.html#aa1e920a3ada35f0a4d299e7a88f73df6" title="Initializes a task with the given sensor and update frequency." alt="" coords="158,55,227,80"/>
+</map>

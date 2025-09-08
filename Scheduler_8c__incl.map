@@ -1,13 +1,13 @@
 <map id="Core/Src/Scheduler/Scheduler.c" name="Core/Src/Scheduler/Scheduler.c">
-<area shape="rect" id="node1" title=" " alt="" coords="52,5,187,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,101,63,126"/>
-<area shape="rect" id="node3" title=" " alt="" coords="87,101,151,126"/>
-<area shape="rect" id="node4" href="$Scheduler_8h.html" title=" " alt="" coords="175,93,298,133"/>
-<area shape="rect" id="node5" title=" " alt="" coords="154,255,229,280"/>
-<area shape="rect" id="node6" href="$PriorityQueue_8h.html" title=" " alt="" coords="228,181,339,207"/>
-<area shape="rect" id="node7" href="$Task_8h.html" title=" " alt="" coords="253,255,314,280"/>
-<area shape="rect" id="node8" href="$Updateable_8h.html" title=" " alt="" coords="214,328,353,353"/>
-<area shape="rect" id="node9" title=" " alt="" coords="168,401,228,427"/>
-<area shape="rect" id="node10" title=" " alt="" coords="252,401,315,427"/>
-<area shape="rect" id="node11" title=" " alt="" coords="339,401,403,427"/>
+<area shape="rect" id="node1" title=" " alt="" coords="172,5,307,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,101,100,126"/>
+<area shape="rect" id="node3" title=" " alt="" coords="124,101,181,126"/>
+<area shape="rect" id="node4" title=" " alt="" coords="205,101,273,126"/>
+<area shape="rect" id="node5" title=" " alt="" coords="298,101,365,126"/>
+<area shape="rect" id="node6" href="$Scheduler_8h.html" title=" " alt="" coords="389,93,511,133"/>
+<area shape="rect" id="node7" href="$Updateable_8h.html" title=" " alt="" coords="379,255,518,280"/>
+<area shape="rect" id="node11" href="$Task_8h.html" title=" " alt="" coords="453,181,514,207"/>
+<area shape="rect" id="node8" title=" " alt="" coords="333,328,393,353"/>
+<area shape="rect" id="node9" title=" " alt="" coords="417,328,480,353"/>
+<area shape="rect" id="node10" title=" " alt="" coords="505,328,569,353"/>
 </map>

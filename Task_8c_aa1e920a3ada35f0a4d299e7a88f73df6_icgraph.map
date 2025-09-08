@@ -1,5 +1,6 @@
 <map id="TaskInit" name="TaskInit">
-<area shape="rect" id="node1" title="Initializes a task with the given sensor and update frequency." alt="" coords="251,5,320,31"/>
-<area shape="rect" id="node2" href="$Scheduler_8c.html#a8806ac2ca53db24211ebf0f81719b505" title="Initializes the scheduler with the given sensors." alt="" coords="104,5,203,31"/>
-<area shape="rect" id="node3" href="$Src_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node1" title="Initializes a task with the given sensor and update frequency." alt="" coords="389,5,459,31"/>
+<area shape="rect" id="node2" href="$Scheduler_8c.html#aa5f1a1e2ed234bc1b0321b10c2609c25" title=" " alt="" coords="251,5,341,31"/>
+<area shape="rect" id="node3" href="$Scheduler_8c.html#a8806ac2ca53db24211ebf0f81719b505" title=" " alt="" coords="104,5,203,31"/>
+<area shape="rect" id="node4" href="$Src_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,56,31"/>
 </map>

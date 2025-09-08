@@ -77,26 +77,23 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Scheduler.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="PriorityQueue_8h_source.html">PriorityQueue.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="Updateable_8h_source.html">../Utils/Updateable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Task_8h_source.html">Task.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Scheduler.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Scheduler_8h__incl.png" border="0" usemap="#aCore_2Inc_2Scheduler_2Scheduler_8h" alt=""/></div>
 <map name="aCore_2Inc_2Scheduler_2Scheduler_8h" id="aCore_2Inc_2Scheduler_2Scheduler_8h">
-<area shape="rect" title=" " alt="" coords="21,5,155,45"/>
-<area shape="rect" title=" " alt="" coords="5,167,80,192"/>
-<area shape="rect" href="PriorityQueue_8h.html" title=" " alt="" coords="79,93,190,119"/>
-<area shape="rect" href="Task_8h.html" title=" " alt="" coords="104,167,165,192"/>
-<area shape="rect" href="Updateable_8h.html" title=" " alt="" coords="65,240,204,265"/>
-<area shape="rect" title=" " alt="" coords="19,313,79,339"/>
-<area shape="rect" title=" " alt="" coords="103,313,166,339"/>
-<area shape="rect" title=" " alt="" coords="191,313,255,339"/>
+<area shape="rect" title=" " alt="" coords="54,5,187,45"/>
+<area shape="rect" href="Updateable_8h.html" title=" " alt="" coords="51,167,190,192"/>
+<area shape="rect" href="Task_8h.html" title=" " alt="" coords="125,93,186,119"/>
+<area shape="rect" title=" " alt="" coords="5,240,65,265"/>
+<area shape="rect" title=" " alt="" coords="89,240,152,265"/>
+<area shape="rect" title=" " alt="" coords="177,240,241,265"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -119,27 +116,27 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa3d1fc2927eec213e6b5f9e854c392d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2">MAX_SENSORS</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memitem:aa3d1fc2927eec213e6b5f9e854c392d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2">MAX_SENSORS</a>&#160;&#160;&#160;32</td></tr>
 <tr class="separator:aa3d1fc2927eec213e6b5f9e854c392d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d29c4b367c3554d638e5b0d977e8b41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#a7d29c4b367c3554d638e5b0d977e8b41">MAX_HZ</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="separator:a7d29c4b367c3554d638e5b0d977e8b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a1ef1f6f320939ca611a0caca79a97ff1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structScheduler.html">Scheduler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#a1ef1f6f320939ca611a0caca79a97ff1">Scheduler</a></td></tr>
-<tr class="separator:a1ef1f6f320939ca611a0caca79a97ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8806ac2ca53db24211ebf0f81719b505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#a8806ac2ca53db24211ebf0f81719b505">SchedulerInit</a> (<a class="el" href="structScheduler.html">Scheduler</a> *scheduler, <a class="el" href="structUpdateable.html">Updateable</a> *updatableArray[])</td></tr>
-<tr class="memdesc:a8806ac2ca53db24211ebf0f81719b505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the scheduler with the given sensors.  <a href="Scheduler_8h.html#a8806ac2ca53db24211ebf0f81719b505">More...</a><br /></td></tr>
 <tr class="separator:a8806ac2ca53db24211ebf0f81719b505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8065221debac476c547533f73504c20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#ab8065221debac476c547533f73504c20">SchedulerRun</a> (<a class="el" href="structScheduler.html">Scheduler</a> *scheduler)</td></tr>
-<tr class="memdesc:ab8065221debac476c547533f73504c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the scheduler, executing tasks based on their priority.  <a href="Scheduler_8h.html#ab8065221debac476c547533f73504c20">More...</a><br /></td></tr>
 <tr class="separator:ab8065221debac476c547533f73504c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d888e50b0c00ef172f5e4dc325220e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#ab6d888e50b0c00ef172f5e4dc325220e">SchedulerStop</a> (<a class="el" href="structScheduler.html">Scheduler</a> *scheduler)</td></tr>
-<tr class="memdesc:ab6d888e50b0c00ef172f5e4dc325220e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the scheduler.  <a href="Scheduler_8h.html#ab6d888e50b0c00ef172f5e4dc325220e">More...</a><br /></td></tr>
 <tr class="separator:ab6d888e50b0c00ef172f5e4dc325220e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa60d29a5a564eb9a6471c804f426ad4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#afa60d29a5a564eb9a6471c804f426ad4">SchedulerSuspendUpdateable</a> (const char *name)</td></tr>
+<tr class="separator:afa60d29a5a564eb9a6471c804f426ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e31f73dd008dc3915814a4317444975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#a1e31f73dd008dc3915814a4317444975">SchedulerResumeUpdateable</a> (const char *name)</td></tr>
+<tr class="separator:a1e31f73dd008dc3915814a4317444975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace41fe73b9e6f075a86d9ca901b2e424"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#ace41fe73b9e6f075a86d9ca901b2e424">SchedulerGetStats</a> (void)</td></tr>
+<tr class="separator:ace41fe73b9e6f075a86d9ca901b2e424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22852950b33b480b0a368a84b9128e39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Scheduler_8h.html#a22852950b33b480b0a368a84b9128e39">SchedulerCleanup</a> (void)</td></tr>
+<tr class="separator:a22852950b33b480b0a368a84b9128e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a7d29c4b367c3554d638e5b0d977e8b41" name="a7d29c4b367c3554d638e5b0d977e8b41"></a>
@@ -154,7 +151,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Scheduler_8h_source.html#l00009">9</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Scheduler_8h_source.html#l00008">8</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -165,31 +162,107 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAX_SENSORS&#160;&#160;&#160;10</td>
+          <td class="memname">#define MAX_SENSORS&#160;&#160;&#160;32</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Scheduler_8h_source.html#l00008">8</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Scheduler_8h_source.html#l00007">7</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a1ef1f6f320939ca611a0caca79a97ff1" name="a1ef1f6f320939ca611a0caca79a97ff1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef1f6f320939ca611a0caca79a97ff1">&#9670;&#160;</a></span>Scheduler</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a22852950b33b480b0a368a84b9128e39" name="a22852950b33b480b0a368a84b9128e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22852950b33b480b0a368a84b9128e39">&#9670;&#160;</a></span>SchedulerCleanup()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structScheduler.html">Scheduler</a> <a class="el" href="structScheduler.html">Scheduler</a></td>
+          <td class="memname">void SchedulerCleanup </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00225">225</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>                            {</div>
+<div class="line"><span class="lineno">  226</span>    <span class="comment">// Delete worker task</span></div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a> != NULL) {</div>
+<div class="line"><span class="lineno">  228</span>        vTaskDelete(<a class="code hl_variable" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a>);</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_variable" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a> = NULL;</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="line"><span class="lineno">  231</span>    </div>
+<div class="line"><span class="lineno">  232</span>    <span class="comment">// Delete work queue</span></div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a> != NULL) {</div>
+<div class="line"><span class="lineno">  234</span>        vQueueDelete(<a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a>);</div>
+<div class="line"><span class="lineno">  235</span>        <a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a> = NULL;</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="line"><span class="lineno">  237</span>    </div>
+<div class="line"><span class="lineno">  238</span>    <span class="comment">// Delete all timers</span></div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>; i++) {</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer != NULL) {</div>
+<div class="line"><span class="lineno">  241</span>            xTimerDelete(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer, portMAX_DELAY);</div>
+<div class="line"><span class="lineno">  242</span>            <a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].<a class="code hl_variable" href="structScheduledUpdateable.html#a97a993c370a0dc3f96b0b2adb912e175">timer</a> = NULL;</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="line"><span class="lineno">  245</span>    </div>
+<div class="line"><span class="lineno">  246</span>    <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a> = 0;</div>
+<div class="line"><span class="lineno">  247</span>    printf(<span class="stringliteral">&quot;Scheduler cleaned up\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  248</span>}</div>
+<div class="ttc" id="aScheduler_8c_html_a2164cacd26f1700a11ae6d32759f0309"><div class="ttname"><a href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a></div><div class="ttdeci">static ScheduledUpdateable scheduledTasks[MAX_SENSORS]</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00018">Scheduler.c:18</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_a22473369061685993efe9134fd383cde"><div class="ttname"><a href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a></div><div class="ttdeci">static QueueHandle_t workQueue</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00023">Scheduler.c:23</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_aa3d59be71021368faea215da7a2280cd"><div class="ttname"><a href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a></div><div class="ttdeci">static TaskHandle_t workerTaskHandle</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00022">Scheduler.c:22</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_ac6d4171cc1da13abe29a4455877e4d4b"><div class="ttname"><a href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a></div><div class="ttdeci">static int taskCount</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00019">Scheduler.c:19</a></div></div>
+<div class="ttc" id="astructScheduledUpdateable_html_a97a993c370a0dc3f96b0b2adb912e175"><div class="ttname"><a href="structScheduledUpdateable.html#a97a993c370a0dc3f96b0b2adb912e175">ScheduledUpdateable::timer</a></div><div class="ttdeci">TimerHandle_t timer</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00009">Scheduler.c:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
+<a id="ace41fe73b9e6f075a86d9ca901b2e424" name="ace41fe73b9e6f075a86d9ca901b2e424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace41fe73b9e6f075a86d9ca901b2e424">&#9670;&#160;</a></span>SchedulerGetStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchedulerGetStats </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00202">202</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                             {</div>
+<div class="line"><span class="lineno">  203</span>    UBaseType_t queueLength = uxQueueMessagesWaiting(<a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a>);</div>
+<div class="line"><span class="lineno">  204</span>    UBaseType_t queueSpaces = uxQueueSpacesAvailable(<a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a>);</div>
+<div class="line"><span class="lineno">  205</span>    </div>
+<div class="line"><span class="lineno">  206</span>    printf(<span class="stringliteral">&quot;Scheduler Statistics:\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  207</span>    printf(<span class="stringliteral">&quot;- Active timers: %d\n&quot;</span>, <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>);</div>
+<div class="line"><span class="lineno">  208</span>    printf(<span class="stringliteral">&quot;- Work queue: %lu items pending, %lu spaces available\n&quot;</span>, </div>
+<div class="line"><span class="lineno">  209</span>           queueLength, queueSpaces);</div>
+<div class="line"><span class="lineno">  210</span>    </div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a> != NULL) {</div>
+<div class="line"><span class="lineno">  212</span>        TaskStatus_t taskStatus;</div>
+<div class="line"><span class="lineno">  213</span>        vTaskGetInfo(<a class="code hl_variable" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a>, &amp;taskStatus, pdTRUE, eInvalid);</div>
+<div class="line"><span class="lineno">  214</span>        printf(<span class="stringliteral">&quot;- Worker task stack high water mark: %u words\n&quot;</span>, </div>
+<div class="line"><span class="lineno">  215</span>               taskStatus.usStackHighWaterMark);</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+<div class="line"><span class="lineno">  217</span>    </div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">if</span> (queueLength &gt; (<a class="code hl_define" href="Scheduler_8c.html#ab6dad44a5966591db8555d7a03b688b3">WORK_QUEUE_SIZE</a> * 3 / 4)) {</div>
+<div class="line"><span class="lineno">  219</span>        printf(<span class="stringliteral">&quot;WARNING: Work queue is %lu%% full - worker may be overloaded\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  220</span>               (queueLength * 100) / <a class="code hl_define" href="Scheduler_8c.html#ab6dad44a5966591db8555d7a03b688b3">WORK_QUEUE_SIZE</a>);</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+<div class="line"><span class="lineno">  222</span>}</div>
+<div class="ttc" id="aScheduler_8c_html_ab6dad44a5966591db8555d7a03b688b3"><div class="ttname"><a href="Scheduler_8c.html#ab6dad44a5966591db8555d7a03b688b3">WORK_QUEUE_SIZE</a></div><div class="ttdeci">#define WORK_QUEUE_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00025">Scheduler.c:25</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a8806ac2ca53db24211ebf0f81719b505" name="a8806ac2ca53db24211ebf0f81719b505"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8806ac2ca53db24211ebf0f81719b505">&#9670;&#160;</a></span>SchedulerInit()</h2>
 
@@ -216,67 +289,90 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the scheduler with the given sensors. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scheduler</td><td>Pointer to the <a class="el" href="structScheduler.html">Scheduler</a> structure to initialize. </td></tr>
-    <tr><td class="paramname">updateableArray</td><td>Array of pointers to <a class="el" href="structUpdateable.html">Updateable</a> structures to be scheduled.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Initializes the priority queue and schedules tasks based on the given sensors and their update frequencies. Limits the number of sensors to MAX_SENSORS. </p>
-
-<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00014">14</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                       {</div>
-<div class="line"><span class="lineno">   15</span>    <a class="code hl_function" href="PriorityQueue_8h.html#af5ad572e37189c56cf0816638dd85d97">PQInit</a>(&amp;scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">tasks</a>);</div>
-<div class="line"><span class="lineno">   16</span>    scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a8a0b0619fdfbda3338fc4964999b3ffd">running</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; updatableArray[i] != NULL; i++) {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (i &gt;= <a class="code hl_define" href="PriorityQueue_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2">MAX_SENSORS</a>) {</div>
-<div class="line"><span class="lineno">   20</span>            printf(<span class="stringliteral">&quot;Warning: Number of sensors exceeds MAX_SENSORS. &quot;</span></div>
-<div class="line"><span class="lineno">   21</span>                   <span class="stringliteral">&quot;Some sensors will not be scheduled.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_struct" href="structUpdateable.html">Updateable</a>* updateable = (<a class="code hl_struct" href="structUpdateable.html">Updateable</a>*)updatableArray[i];</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a> &lt;= 0 || updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a> &gt; <a class="code hl_define" href="Scheduler_8h.html#a7d29c4b367c3554d638e5b0d977e8b41">MAX_HZ</a>) {</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">continue</span>; <span class="comment">// Skip invalid frequencies</span></div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_struct" href="structTask.html">Task</a> task;</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_function" href="Task_8h.html#aa1e920a3ada35f0a4d299e7a88f73df6">TaskInit</a>(&amp;task, updateable, updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a>);</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">int</span> hz = 1000 / updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a>;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="comment">// Setup for STM32</span></div>
-<div class="line"><span class="lineno">   34</span><span class="preprocessor">        #ifndef TEST_MODE</span></div>
-<div class="line"><span class="lineno">   35</span>        printf(<span class="stringliteral">&quot;hal tick: %u\r\n&quot;</span>, HAL_GetTick());</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> initialPriority = HAL_GetTick() + hz;</div>
-<div class="line"><span class="lineno">   37</span><span class="preprocessor">        #else</span></div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">int</span> initialPriority = clock() / (CLOCKS_PER_SEC / 1000) + hz;</div>
-<div class="line"><span class="lineno">   39</span><span class="preprocessor">        #endif</span></div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="PriorityQueue_8h.html#ae841bdf0664368f8d4484b0e5dbd33d7">PQPush</a>(&amp;scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">tasks</a>, task, initialPriority);</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-<div class="line"><span class="lineno">   42</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00080">80</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                       {</div>
+<div class="line"><span class="lineno">   81</span>    scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a37ddf16d1de12cdfd4202db998ee5a03">running</a> = 0;</div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a> = 0;</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="comment">// Create work queue for communicating between timer callbacks and worker task</span></div>
+<div class="line"><span class="lineno">   85</span>    <a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a> = xQueueCreate(<a class="code hl_define" href="Scheduler_8c.html#ab6dad44a5966591db8555d7a03b688b3">WORK_QUEUE_SIZE</a>, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structWorkItem.html">WorkItem</a>));</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">workQueue</a> == NULL) {</div>
+<div class="line"><span class="lineno">   87</span>        printf(<span class="stringliteral">&quot;ERROR: Failed to create work queue\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment">// Create worker task to handle updateables</span></div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (xTaskCreate(<a class="code hl_function" href="Scheduler_8c.html#aa5f1a1e2ed234bc1b0321b10c2609c25">workerTask</a>, <span class="stringliteral">&quot;SchedulerWorker&quot;</span>, <a class="code hl_define" href="Scheduler_8c.html#a3eebf7c74598f4dc86f7ceab27117da4">WORKER_STACK_SIZE</a>, NULL, </div>
+<div class="line"><span class="lineno">   93</span>                    <a class="code hl_define" href="Scheduler_8c.html#aa8b5b3e682fb0fd5c8fe4f85cec06eae">WORKER_PRIORITY</a>, &amp;<a class="code hl_variable" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">workerTaskHandle</a>) != pdPASS) {</div>
+<div class="line"><span class="lineno">   94</span>        printf(<span class="stringliteral">&quot;ERROR: Failed to create worker task\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    printf(<span class="stringliteral">&quot;Created scheduler worker task\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">// Create timers for each updateable</span></div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; updatableArray[i] != NULL &amp;&amp; i &lt; <a class="code hl_define" href="PriorityQueue_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2">MAX_SENSORS</a>; i++) {</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_struct" href="structUpdateable.html">Updateable</a>* updateable = updatableArray[i];</div>
+<div class="line"><span class="lineno">  103</span>        </div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a> &lt;= 0 || updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a> &gt; <a class="code hl_define" href="Scheduler_8h.html#a7d29c4b367c3554d638e5b0d977e8b41">MAX_HZ</a>) {</div>
+<div class="line"><span class="lineno">  105</span>            printf(<span class="stringliteral">&quot;Warning: Skipping %s - invalid frequency %d Hz\n&quot;</span>, </div>
+<div class="line"><span class="lineno">  106</span>                   updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>, updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a>);</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">// Calculate period in FreeRTOS ticks</span></div>
+<div class="line"><span class="lineno">  111</span>        TickType_t period = pdMS_TO_TICKS(1000 / updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a>);</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (period == 0) period = 1; <span class="comment">// Minimum 1 tick for 1kHz tasks</span></div>
+<div class="line"><span class="lineno">  113</span>        </div>
+<div class="line"><span class="lineno">  114</span>        <span class="comment">// Create timer name</span></div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">char</span> timerName[32];</div>
+<div class="line"><span class="lineno">  116</span>        snprintf(timerName, <span class="keyword">sizeof</span>(timerName), <span class="stringliteral">&quot;T_%s&quot;</span>, updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>);</div>
+<div class="line"><span class="lineno">  117</span>        </div>
+<div class="line"><span class="lineno">  118</span>        <span class="comment">// Create FreeRTOS software timer</span></div>
+<div class="line"><span class="lineno">  119</span>        TimerHandle_t timer = xTimerCreate(</div>
+<div class="line"><span class="lineno">  120</span>            timerName,                     <span class="comment">// Timer name</span></div>
+<div class="line"><span class="lineno">  121</span>            period,                        <span class="comment">// Period in ticks</span></div>
+<div class="line"><span class="lineno">  122</span>            pdTRUE,                       <span class="comment">// Auto-reload (periodic)</span></div>
+<div class="line"><span class="lineno">  123</span>            updateable,                   <span class="comment">// Timer ID</span></div>
+<div class="line"><span class="lineno">  124</span>            <a class="code hl_function" href="Scheduler_8c.html#ae0348d3f6f3e9eb556823891aeb8eff9">updateableTimerCallback</a>       <span class="comment">// Callback function</span></div>
+<div class="line"><span class="lineno">  125</span>        );</div>
+<div class="line"><span class="lineno">  126</span>        </div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (timer != NULL) {</div>
+<div class="line"><span class="lineno">  128</span>            <a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[<a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>].<a class="code hl_variable" href="structScheduledUpdateable.html#a11ba6ac502eebec8ab0fe8bd96d3ab98">updateable</a> = updateable;</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[<a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>].<a class="code hl_variable" href="structScheduledUpdateable.html#a97a993c370a0dc3f96b0b2adb912e175">timer</a> = timer;</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>++;</div>
+<div class="line"><span class="lineno">  131</span>            </div>
+<div class="line"><span class="lineno">  132</span>            printf(<span class="stringliteral">&quot;Created timer: %s at %dHz (period: %lu ticks)\n&quot;</span>, </div>
+<div class="line"><span class="lineno">  133</span>                   updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>, updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">hz</a>, period);</div>
+<div class="line"><span class="lineno">  134</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  135</span>            printf(<span class="stringliteral">&quot;ERROR: Failed to create timer for %s\n&quot;</span>, updateable-&gt;<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>);</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span>    </div>
+<div class="line"><span class="lineno">  139</span>    printf(<span class="stringliteral">&quot;Scheduler initialized with %d timers and worker task\n&quot;</span>, <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>);</div>
+<div class="line"><span class="lineno">  140</span>}</div>
 <div class="ttc" id="aPriorityQueue_8h_html_aa3d1fc2927eec213e6b5f9e854c392d2"><div class="ttname"><a href="PriorityQueue_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2">MAX_SENSORS</a></div><div class="ttdeci">#define MAX_SENSORS</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueue_8h_source.html#l00008">PriorityQueue.h:8</a></div></div>
-<div class="ttc" id="aPriorityQueue_8h_html_ae841bdf0664368f8d4484b0e5dbd33d7"><div class="ttname"><a href="PriorityQueue_8h.html#ae841bdf0664368f8d4484b0e5dbd33d7">PQPush</a></div><div class="ttdeci">bool PQPush(PriorityQueue *pq, Task task, int priority)</div><div class="ttdoc">Pushes a task with a given priority onto the priority queue.</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueue_8c_source.html#l00041">PriorityQueue.c:41</a></div></div>
-<div class="ttc" id="aPriorityQueue_8h_html_af5ad572e37189c56cf0816638dd85d97"><div class="ttname"><a href="PriorityQueue_8h.html#af5ad572e37189c56cf0816638dd85d97">PQInit</a></div><div class="ttdeci">void PQInit(PriorityQueue *pq)</div><div class="ttdoc">Initializes the priority queue.</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueue_8c_source.html#l00003">PriorityQueue.c:3</a></div></div>
-<div class="ttc" id="aScheduler_8h_html_a7d29c4b367c3554d638e5b0d977e8b41"><div class="ttname"><a href="Scheduler_8h.html#a7d29c4b367c3554d638e5b0d977e8b41">MAX_HZ</a></div><div class="ttdeci">#define MAX_HZ</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8h_source.html#l00009">Scheduler.h:9</a></div></div>
-<div class="ttc" id="aTask_8h_html_aa1e920a3ada35f0a4d299e7a88f73df6"><div class="ttname"><a href="Task_8h.html#aa1e920a3ada35f0a4d299e7a88f73df6">TaskInit</a></div><div class="ttdeci">void TaskInit(Task *task, Updateable *updateable, int hz)</div><div class="ttdoc">Initializes a task with the given sensor and update frequency.</div><div class="ttdef"><b>Definition:</b> <a href="Task_8c_source.html#l00003">Task.c:3</a></div></div>
-<div class="ttc" id="astructScheduler_html_a1327381025bb2063f14564ba5cb748c6"><div class="ttname"><a href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">Scheduler::tasks</a></div><div class="ttdeci">PriorityQueue tasks</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8h_source.html#l00012">Scheduler.h:12</a></div></div>
-<div class="ttc" id="astructScheduler_html_a8a0b0619fdfbda3338fc4964999b3ffd"><div class="ttname"><a href="structScheduler.html#a8a0b0619fdfbda3338fc4964999b3ffd">Scheduler::running</a></div><div class="ttdeci">bool running</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8h_source.html#l00013">Scheduler.h:13</a></div></div>
-<div class="ttc" id="astructTask_html"><div class="ttname"><a href="structTask.html">Task</a></div><div class="ttdef"><b>Definition:</b> <a href="Task_8h_source.html#l00008">Task.h:8</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_a3eebf7c74598f4dc86f7ceab27117da4"><div class="ttname"><a href="Scheduler_8c.html#a3eebf7c74598f4dc86f7ceab27117da4">WORKER_STACK_SIZE</a></div><div class="ttdeci">#define WORKER_STACK_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00026">Scheduler.c:26</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_aa5f1a1e2ed234bc1b0321b10c2609c25"><div class="ttname"><a href="Scheduler_8c.html#aa5f1a1e2ed234bc1b0321b10c2609c25">workerTask</a></div><div class="ttdeci">static void workerTask(void *pvParameters)</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00030">Scheduler.c:30</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_aa8b5b3e682fb0fd5c8fe4f85cec06eae"><div class="ttname"><a href="Scheduler_8c.html#aa8b5b3e682fb0fd5c8fe4f85cec06eae">WORKER_PRIORITY</a></div><div class="ttdeci">#define WORKER_PRIORITY</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00027">Scheduler.c:27</a></div></div>
+<div class="ttc" id="aScheduler_8c_html_ae0348d3f6f3e9eb556823891aeb8eff9"><div class="ttname"><a href="Scheduler_8c.html#ae0348d3f6f3e9eb556823891aeb8eff9">updateableTimerCallback</a></div><div class="ttdeci">static void updateableTimerCallback(TimerHandle_t xTimer)</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00059">Scheduler.c:59</a></div></div>
+<div class="ttc" id="aScheduler_8h_html_a7d29c4b367c3554d638e5b0d977e8b41"><div class="ttname"><a href="Scheduler_8h.html#a7d29c4b367c3554d638e5b0d977e8b41">MAX_HZ</a></div><div class="ttdeci">#define MAX_HZ</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8h_source.html#l00008">Scheduler.h:8</a></div></div>
+<div class="ttc" id="astructScheduledUpdateable_html_a11ba6ac502eebec8ab0fe8bd96d3ab98"><div class="ttname"><a href="structScheduledUpdateable.html#a11ba6ac502eebec8ab0fe8bd96d3ab98">ScheduledUpdateable::updateable</a></div><div class="ttdeci">Updateable * updateable</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00008">Scheduler.c:8</a></div></div>
+<div class="ttc" id="astructScheduler_html_a37ddf16d1de12cdfd4202db998ee5a03"><div class="ttname"><a href="structScheduler.html#a37ddf16d1de12cdfd4202db998ee5a03">Scheduler::running</a></div><div class="ttdeci">int running</div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8h_source.html#l00011">Scheduler.h:11</a></div></div>
 <div class="ttc" id="astructUpdateable_html"><div class="ttname"><a href="structUpdateable.html">Updateable</a></div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00023">Updateable.h:23</a></div></div>
 <div class="ttc" id="astructUpdateable_html_a4a1e49fba540bce56a175e3e1083f1a5"><div class="ttname"><a href="structUpdateable.html#a4a1e49fba540bce56a175e3e1083f1a5">Updateable::hz</a></div><div class="ttdeci">int hz</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00025">Updateable.h:25</a></div></div>
+<div class="ttc" id="astructUpdateable_html_ab1a238912893afab4f86abaebdc20b12"><div class="ttname"><a href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">Updateable::name</a></div><div class="ttdeci">char name[MAX_NAME_LENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00024">Updateable.h:24</a></div></div>
+<div class="ttc" id="astructWorkItem_html"><div class="ttname"><a href="structWorkItem.html">WorkItem</a></div><div class="ttdef"><b>Definition:</b> <a href="Scheduler_8c_source.html#l00013">Scheduler.c:13</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Scheduler_8h_a8806ac2ca53db24211ebf0f81719b505_cgraph.png" border="0" usemap="#aScheduler_8h_a8806ac2ca53db24211ebf0f81719b505_cgraph" alt=""/></div>
 <map name="aScheduler_8h_a8806ac2ca53db24211ebf0f81719b505_cgraph" id="aScheduler_8h_a8806ac2ca53db24211ebf0f81719b505_cgraph">
-<area shape="rect" title="Initializes the scheduler with the given sensors." alt="" coords="5,55,104,80"/>
-<area shape="rect" href="PriorityQueue_8c.html#af5ad572e37189c56cf0816638dd85d97" title="Initializes the priority queue." alt="" coords="158,5,217,31"/>
-<area shape="rect" href="PriorityQueue_8c.html#ae841bdf0664368f8d4484b0e5dbd33d7" title="Pushes a task with a given priority onto the priority queue." alt="" coords="152,55,223,80"/>
-<area shape="rect" href="Task_8c.html#aa1e920a3ada35f0a4d299e7a88f73df6" title="Initializes a task with the given sensor and update frequency." alt="" coords="153,104,222,129"/>
-<area shape="rect" href="PriorityQueue_8c.html#ab7631090c485201b8c6f7773b0575e3f" title="Restores the heap property by moving the node at the given index up." alt="" coords="271,31,351,56"/>
-<area shape="rect" href="PriorityQueue_8c.html#aca9cc7f25c9cc6fd37c05dbb5b81e727" title="Checks if the priority queue is full." alt="" coords="274,80,347,105"/>
+<area shape="rect" title=" " alt="" coords="5,31,104,56"/>
+<area shape="rect" href="Scheduler_8c.html#ae0348d3f6f3e9eb556823891aeb8eff9" title=" " alt="" coords="152,5,320,31"/>
+<area shape="rect" href="Scheduler_8c.html#aa5f1a1e2ed234bc1b0321b10c2609c25" title=" " alt="" coords="191,55,281,80"/>
+<area shape="rect" href="Task_8c.html#af74a92b4c3acbd7beebe1c7e404f6b99" title="Executes the task by calling the sensor&#39;s update function." alt="" coords="368,29,465,55"/>
+<area shape="rect" href="Task_8c.html#aa1e920a3ada35f0a4d299e7a88f73df6" title="Initializes a task with the given sensor and update frequency." alt="" coords="382,79,451,104"/>
 </map>
 </div>
 <div class="dynheader">
@@ -284,11 +380,43 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Scheduler_8h_a8806ac2ca53db24211ebf0f81719b505_icgraph.png" border="0" usemap="#aScheduler_8h_a8806ac2ca53db24211ebf0f81719b505_icgraph" alt=""/></div>
 <map name="aScheduler_8h_a8806ac2ca53db24211ebf0f81719b505_icgraph" id="aScheduler_8h_a8806ac2ca53db24211ebf0f81719b505_icgraph">
-<area shape="rect" title="Initializes the scheduler with the given sensors." alt="" coords="104,5,203,31"/>
+<area shape="rect" title=" " alt="" coords="104,5,203,31"/>
 <area shape="rect" href="Src_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
+</div>
+</div>
+<a id="a1e31f73dd008dc3915814a4317444975" name="a1e31f73dd008dc3915814a4317444975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e31f73dd008dc3915814a4317444975">&#9670;&#160;</a></span>SchedulerResumeUpdateable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchedulerResumeUpdateable </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00189">189</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                 {</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>; i++) {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].updateable &amp;&amp; </div>
+<div class="line"><span class="lineno">  192</span>            strcmp(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].updateable-&gt;name, name) == 0) {</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (xTimerStart(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer, 0) == pdPASS) {</div>
+<div class="line"><span class="lineno">  194</span>                printf(<span class="stringliteral">&quot;Resumed timer for %s\n&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  195</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="line"><span class="lineno">  199</span>    printf(<span class="stringliteral">&quot;Warning: Could not find or resume timer for %s\n&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  200</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab8065221debac476c547533f73504c20" name="ab8065221debac476c547533f73504c20"></a>
@@ -307,70 +435,32 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Runs the scheduler, executing tasks based on their priority. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scheduler</td><td>Pointer to the <a class="el" href="structScheduler.html">Scheduler</a> structure to run.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Runs the scheduler, repeatedly executing tasks based on their scheduled execution times. Uses Sleep or usleep to avoid busy-waiting if no tasks are ready to execute. </p>
-
-<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00049">49</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                        {</div>
-<div class="line"><span class="lineno">   50</span>    scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a8a0b0619fdfbda3338fc4964999b3ffd">running</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   51</span>    <a class="code hl_struct" href="structTask.html">Task</a> currentTask;</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">while</span> (scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a8a0b0619fdfbda3338fc4964999b3ffd">running</a>) {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="comment">// if (timer_flag &lt; 0) continue;</span></div>
-<div class="line"><span class="lineno">   55</span>        <span class="comment">// timer_flag--;</span></div>
-<div class="line"><span class="lineno">   56</span>        <span class="comment">// FIXME: Re-implement timer.</span></div>
-<div class="line"><span class="lineno">   57</span><span class="preprocessor">        #ifndef TEST_MODE</span></div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">int</span> currentTime = HAL_GetTick();</div>
-<div class="line"><span class="lineno">   59</span><span class="preprocessor">        #else</span></div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">int</span> currentTime = clock() / (CLOCKS_PER_SEC / 1000);</div>
-<div class="line"><span class="lineno">   61</span><span class="preprocessor">        #endif</span></div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">// int currentTime = 0;</span></div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">while</span> (!<a class="code hl_function" href="PriorityQueue_8h.html#a3db90f839aff3e0e896ca237483bb926">PQIsEmpty</a>(&amp;scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">tasks</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno">   65</span>               <a class="code hl_function" href="PriorityQueue_8h.html#a176542d630434d645be4ce5c3e7d5189">PQPeek</a>(&amp;scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">tasks</a>, &amp;currentTask) &amp;&amp;</div>
-<div class="line"><span class="lineno">   66</span>               currentTask.<a class="code hl_variable" href="structTask.html#aecd0764bd9e73850d02ea0d633fe4ed1">nextExecTime</a> &lt;= currentTime) {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="PriorityQueue_8h.html#accf2d5c29ecdd09ea36ac2d7dbb7556f">PQPop</a>(&amp;scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">tasks</a>, &amp;currentTask)) {</div>
-<div class="line"><span class="lineno">   68</span>                <a class="code hl_function" href="Task_8h.html#af74a92b4c3acbd7beebe1c7e404f6b99">TaskExecute</a>(&amp;currentTask);</div>
-<div class="line"><span class="lineno">   69</span>                currentTask.<a class="code hl_variable" href="structTask.html#aecd0764bd9e73850d02ea0d633fe4ed1">nextExecTime</a> = currentTime + (1000 / currentTask.<a class="code hl_variable" href="structTask.html#a299d1cdf8501da3b0fb21f9e49a245d6">hz</a>);</div>
-<div class="line"><span class="lineno">   70</span>                <a class="code hl_function" href="PriorityQueue_8h.html#ae841bdf0664368f8d4484b0e5dbd33d7">PQPush</a>(&amp;scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a1327381025bb2063f14564ba5cb748c6">tasks</a>, currentTask, currentTask.<a class="code hl_variable" href="structTask.html#aecd0764bd9e73850d02ea0d633fe4ed1">nextExecTime</a>);  <span class="comment">// Reinsert task with new priority</span></div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="line"><span class="lineno">   74</span>}</div>
-<div class="ttc" id="aPriorityQueue_8h_html_a176542d630434d645be4ce5c3e7d5189"><div class="ttname"><a href="PriorityQueue_8h.html#a176542d630434d645be4ce5c3e7d5189">PQPeek</a></div><div class="ttdeci">bool PQPeek(PriorityQueue *pq, Task *task)</div><div class="ttdoc">Peeks at the highest priority task in the priority queue without removing it.</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueue_8c_source.html#l00056">PriorityQueue.c:56</a></div></div>
-<div class="ttc" id="aPriorityQueue_8h_html_a3db90f839aff3e0e896ca237483bb926"><div class="ttname"><a href="PriorityQueue_8h.html#a3db90f839aff3e0e896ca237483bb926">PQIsEmpty</a></div><div class="ttdeci">bool PQIsEmpty(PriorityQueue *pq)</div><div class="ttdoc">Checks if the priority queue is empty.</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueue_8c_source.html#l00062">PriorityQueue.c:62</a></div></div>
-<div class="ttc" id="aPriorityQueue_8h_html_accf2d5c29ecdd09ea36ac2d7dbb7556f"><div class="ttname"><a href="PriorityQueue_8h.html#accf2d5c29ecdd09ea36ac2d7dbb7556f">PQPop</a></div><div class="ttdeci">bool PQPop(PriorityQueue *pq, Task *task)</div><div class="ttdoc">Pops the highest priority task from the priority queue.</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueue_8c_source.html#l00048">PriorityQueue.c:48</a></div></div>
-<div class="ttc" id="aTask_8h_html_af74a92b4c3acbd7beebe1c7e404f6b99"><div class="ttname"><a href="Task_8h.html#af74a92b4c3acbd7beebe1c7e404f6b99">TaskExecute</a></div><div class="ttdeci">void TaskExecute(Task *task)</div><div class="ttdoc">Executes the task by calling the sensor's update function.</div><div class="ttdef"><b>Definition:</b> <a href="Task_8c_source.html#l00009">Task.c:9</a></div></div>
-<div class="ttc" id="astructTask_html_a299d1cdf8501da3b0fb21f9e49a245d6"><div class="ttname"><a href="structTask.html#a299d1cdf8501da3b0fb21f9e49a245d6">Task::hz</a></div><div class="ttdeci">int hz</div><div class="ttdef"><b>Definition:</b> <a href="Task_8h_source.html#l00009">Task.h:9</a></div></div>
-<div class="ttc" id="astructTask_html_aecd0764bd9e73850d02ea0d633fe4ed1"><div class="ttname"><a href="structTask.html#aecd0764bd9e73850d02ea0d633fe4ed1">Task::nextExecTime</a></div><div class="ttdeci">highResTime nextExecTime</div><div class="ttdef"><b>Definition:</b> <a href="Task_8h_source.html#l00010">Task.h:10</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00142">142</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                                        {</div>
+<div class="line"><span class="lineno">  143</span>    scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a37ddf16d1de12cdfd4202db998ee5a03">running</a> = 1;</div>
+<div class="line"><span class="lineno">  144</span>    </div>
+<div class="line"><span class="lineno">  145</span>    <span class="comment">// Start all timers</span></div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordtype">int</span> started = 0;</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>; i++) {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (xTimerStart(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer, 0) == pdPASS) {</div>
+<div class="line"><span class="lineno">  149</span>            started++;</div>
+<div class="line"><span class="lineno">  150</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  151</span>            printf(<span class="stringliteral">&quot;ERROR: Failed to start timer for %s\n&quot;</span>, </div>
+<div class="line"><span class="lineno">  152</span>                   <a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].updateable-&gt;name);</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="line"><span class="lineno">  155</span>    </div>
+<div class="line"><span class="lineno">  156</span>    printf(<span class="stringliteral">&quot;Started %d/%d timers\n&quot;</span>, started, <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>);</div>
+<div class="line"><span class="lineno">  157</span>    </div>
+<div class="line"><span class="lineno">  158</span>    <span class="comment">// Start FreeRTOS scheduler</span></div>
+<div class="line"><span class="lineno">  159</span>    vTaskStartScheduler();</div>
+<div class="line"><span class="lineno">  160</span>}</div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="Scheduler_8h_ab8065221debac476c547533f73504c20_cgraph.png" border="0" usemap="#aScheduler_8h_ab8065221debac476c547533f73504c20_cgraph" alt=""/></div>
-<map name="aScheduler_8h_ab8065221debac476c547533f73504c20_cgraph" id="aScheduler_8h_ab8065221debac476c547533f73504c20_cgraph">
-<area shape="rect" title="Runs the scheduler, executing tasks based on their priority." alt="" coords="5,76,108,101"/>
-<area shape="rect" href="PriorityQueue_8c.html#a3db90f839aff3e0e896ca237483bb926" title="Checks if the priority queue is empty." alt="" coords="305,26,393,52"/>
-<area shape="rect" href="PriorityQueue_8c.html#a176542d630434d645be4ce5c3e7d5189" title="Peeks at the highest priority task in the priority queue without removing it." alt="" coords="169,26,240,52"/>
-<area shape="rect" href="PriorityQueue_8c.html#accf2d5c29ecdd09ea36ac2d7dbb7556f" title="Pops the highest priority task from the priority queue." alt="" coords="173,76,237,101"/>
-<area shape="rect" href="PriorityQueue_8c.html#ae841bdf0664368f8d4484b0e5dbd33d7" title="Pushes a task with a given priority onto the priority queue." alt="" coords="169,125,240,150"/>
-<area shape="rect" href="Task_8c.html#af74a92b4c3acbd7beebe1c7e404f6b99" title="Executes the task by calling the sensor&#39;s update function." alt="" coords="156,174,253,200"/>
-<area shape="rect" href="PriorityQueue_8c.html#a6656021f82dc5fc0e47981fad7fda2bd" title="Restores the heap property by moving the node at the given index down." alt="" coords="301,76,397,101"/>
-<area shape="rect" href="PriorityQueue_8c.html#ab7631090c485201b8c6f7773b0575e3f" title="Restores the heap property by moving the node at the given index up." alt="" coords="309,125,389,150"/>
-<area shape="rect" href="PriorityQueue_8c.html#aca9cc7f25c9cc6fd37c05dbb5b81e727" title="Checks if the priority queue is full." alt="" coords="313,174,386,200"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Scheduler_8h_ab8065221debac476c547533f73504c20_icgraph.png" border="0" usemap="#aScheduler_8h_ab8065221debac476c547533f73504c20_icgraph" alt=""/></div>
 <map name="aScheduler_8h_ab8065221debac476c547533f73504c20_icgraph" id="aScheduler_8h_ab8065221debac476c547533f73504c20_icgraph">
-<area shape="rect" title="Runs the scheduler, executing tasks based on their priority." alt="" coords="104,5,207,31"/>
+<area shape="rect" title=" " alt="" coords="104,5,207,31"/>
 <area shape="rect" href="Src_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -393,18 +483,51 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Stops the scheduler. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scheduler</td><td>Pointer to the <a class="el" href="structScheduler.html">Scheduler</a> structure to stop. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00162">162</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                                         {</div>
+<div class="line"><span class="lineno">  163</span>    scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a37ddf16d1de12cdfd4202db998ee5a03">running</a> = 0;</div>
+<div class="line"><span class="lineno">  164</span>    </div>
+<div class="line"><span class="lineno">  165</span>    <span class="comment">// Stop all timers</span></div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>; i++) {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer != NULL) {</div>
+<div class="line"><span class="lineno">  168</span>            xTimerStop(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer, portMAX_DELAY);</div>
+<div class="line"><span class="lineno">  169</span>        }</div>
+<div class="line"><span class="lineno">  170</span>    }</div>
+<div class="line"><span class="lineno">  171</span>    </div>
+<div class="line"><span class="lineno">  172</span>    printf(<span class="stringliteral">&quot;All timers stopped\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa60d29a5a564eb9a6471c804f426ad4" name="afa60d29a5a564eb9a6471c804f426ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa60d29a5a564eb9a6471c804f426ad4">&#9670;&#160;</a></span>SchedulerSuspendUpdateable()</h2>
 
-<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00076">76</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                         {</div>
-<div class="line"><span class="lineno">   77</span>    scheduler-&gt;<a class="code hl_variable" href="structScheduler.html#a8a0b0619fdfbda3338fc4964999b3ffd">running</a> = 0;</div>
-<div class="line"><span class="lineno">   78</span>}</div>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchedulerSuspendUpdateable </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Scheduler_8c_source.html#l00176">176</a> of file <a class="el" href="Scheduler_8c_source.html">Scheduler.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                  {</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">taskCount</a>; i++) {</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].updateable &amp;&amp; </div>
+<div class="line"><span class="lineno">  179</span>            strcmp(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].updateable-&gt;name, name) == 0) {</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (xTimerStop(<a class="code hl_variable" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">scheduledTasks</a>[i].timer, 0) == pdPASS) {</div>
+<div class="line"><span class="lineno">  181</span>                printf(<span class="stringliteral">&quot;Suspended timer for %s\n&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
+<div class="line"><span class="lineno">  186</span>    printf(<span class="stringliteral">&quot;Warning: Could not find or suspend timer for %s\n&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  187</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

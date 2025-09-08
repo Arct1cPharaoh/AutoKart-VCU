@@ -95,6 +95,8 @@ $(function() {
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>dac1_buffer&#160;:&#160;<a class="el" href="AnalogOutput_8h.html#af9a3817ca374258092a2c6534d6159f6">AnalogOutput.h</a>, <a class="el" href="Inverter_8h.html#af9a3817ca374258092a2c6534d6159f6">Inverter.h</a>, <a class="el" href="Src_2main_8c.html#af9a3817ca374258092a2c6534d6159f6">main.c</a></li>
 <li>dac2_buffer&#160;:&#160;<a class="el" href="AnalogOutput_8h.html#a930de474ee4c33d06c89f5288842010f">AnalogOutput.h</a>, <a class="el" href="Src_2main_8c.html#a930de474ee4c33d06c89f5288842010f">main.c</a></li>
+<li>defaultTask_attributes&#160;:&#160;<a class="el" href="Src_2main_8c.html#a25fbb54afdba71c24ba51ed50166ac8d">main.c</a></li>
+<li>defaultTaskHandle&#160;:&#160;<a class="el" href="Src_2main_8c.html#a6a263905468b0c37de4ee5e50ede4e74">main.c</a></li>
 <li>digital_in_buffer&#160;:&#160;<a class="el" href="DigitalSensor_8h.html#a414058e41f2f169a8e5a7e211ae2d913">DigitalSensor.h</a>, <a class="el" href="Src_2main_8c.html#a414058e41f2f169a8e5a7e211ae2d913">main.c</a></li>
 <li>digital_out_buffer&#160;:&#160;<a class="el" href="DigitalOutput_8h.html#aae45a4e3f2ebbf60f125eebad88f7227">DigitalOutput.h</a>, <a class="el" href="Src_2main_8c.html#aae45a4e3f2ebbf60f125eebad88f7227">main.c</a></li>
 </ul>
@@ -111,8 +113,8 @@ $(function() {
 <li>hadc3&#160;:&#160;<a class="el" href="AnalogSensor_8h.html#a984624bcf28d1b2fb7e4e18349f65d5c">AnalogSensor.h</a>, <a class="el" href="Src_2main_8c.html#a984624bcf28d1b2fb7e4e18349f65d5c">main.c</a></li>
 <li>HAL_RCC_CAN1_CLK_ENABLED&#160;:&#160;<a class="el" href="stm32f7xx__hal__msp_8c.html#a18b5b05ac35955baef1479165be10521">stm32f7xx_hal_msp.c</a></li>
 <li>hcan1&#160;:&#160;<a class="el" href="Src_2main_8c.html#a1618d731d18d69e906e8a357b7cd3c8d">main.c</a>, <a class="el" href="stm32f7xx__it_8c.html#a1618d731d18d69e906e8a357b7cd3c8d">stm32f7xx_it.c</a></li>
-<li>hcan2&#160;:&#160;<a class="el" href="Src_2main_8c.html#ab77168d14df04ccca5d48612ee21ced8">main.c</a>, <a class="el" href="stm32f7xx__it_8c.html#ab77168d14df04ccca5d48612ee21ced8">stm32f7xx_it.c</a></li>
-<li>hcan3&#160;:&#160;<a class="el" href="Src_2main_8c.html#ab99f1bc6f9064df2fffe2ac8714b5d93">main.c</a>, <a class="el" href="stm32f7xx__it_8c.html#ab99f1bc6f9064df2fffe2ac8714b5d93">stm32f7xx_it.c</a></li>
+<li>hcan2&#160;:&#160;<a class="el" href="stm32f7xx__it_8c.html#ab77168d14df04ccca5d48612ee21ced8">stm32f7xx_it.c</a>, <a class="el" href="Src_2main_8c.html#ab77168d14df04ccca5d48612ee21ced8">main.c</a></li>
+<li>hcan3&#160;:&#160;<a class="el" href="Src_2main_8c.html#ab99f1bc6f9064df2fffe2ac8714b5d93">main.c</a></li>
 <li>hdac&#160;:&#160;<a class="el" href="Src_2main_8c.html#a40a0d1383beda58531dfda6218720e45">main.c</a></li>
 <li>hdma_adc1&#160;:&#160;<a class="el" href="AnalogSensor_8h.html#a1c126854bb1813d31ab4776b21dcc51f">AnalogSensor.h</a>, <a class="el" href="Src_2main_8c.html#a1c126854bb1813d31ab4776b21dcc51f">main.c</a>, <a class="el" href="stm32f7xx__hal__msp_8c.html#a1c126854bb1813d31ab4776b21dcc51f">stm32f7xx_hal_msp.c</a>, <a class="el" href="stm32f7xx__it_8c.html#a1c126854bb1813d31ab4776b21dcc51f">stm32f7xx_it.c</a></li>
 <li>hdma_adc2&#160;:&#160;<a class="el" href="stm32f7xx__it_8c.html#ad99dd74cc50b61cf07680c1adaf80337">stm32f7xx_it.c</a>, <a class="el" href="stm32f7xx__hal__msp_8c.html#ad99dd74cc50b61cf07680c1adaf80337">stm32f7xx_hal_msp.c</a>, <a class="el" href="AnalogSensor_8h.html#ad99dd74cc50b61cf07680c1adaf80337">AnalogSensor.h</a>, <a class="el" href="Src_2main_8c.html#ad99dd74cc50b61cf07680c1adaf80337">main.c</a></li>
@@ -159,12 +161,20 @@ $(function() {
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>scheduledTasks&#160;:&#160;<a class="el" href="Scheduler_8c.html#a2164cacd26f1700a11ae6d32759f0309">Scheduler.c</a></li>
 <li>SystemCoreClock&#160;:&#160;<a class="el" href="group__STM32F7xx__System__Private__Variables.html#gaa3cd3e43291e81e795d642b79b6088e6">system_stm32f7xx.c</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>taskCount&#160;:&#160;<a class="el" href="Scheduler_8c.html#ac6d4171cc1da13abe29a4455877e4d4b">Scheduler.c</a></li>
 <li>timer_flag&#160;:&#160;<a class="el" href="stm32f7xx__it_8c.html#a1747882be2660a8acf6f2319fe49214d">stm32f7xx_it.c</a></li>
+</ul>
+
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>workerTaskHandle&#160;:&#160;<a class="el" href="Scheduler_8c.html#aa3d59be71021368faea215da7a2280cd">Scheduler.c</a></li>
+<li>workQueue&#160;:&#160;<a class="el" href="Scheduler_8c.html#a22473369061685993efe9134fd383cde">Scheduler.c</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
