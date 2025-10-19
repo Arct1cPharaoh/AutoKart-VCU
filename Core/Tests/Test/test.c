@@ -68,3 +68,23 @@ void test_assert_within_error(test_t *t, const char *actual_label,
 
   t->passes &= passes;
 }
+
+// Test statistics globals
+int tests_run = 0;
+int tests_passed = 0; 
+int tests_failed = 0;
+bool verbose_output = false;
+
+void test_init(void) {
+    tests_run = 0;
+    tests_passed = 0;
+    tests_failed = 0;
+}
+
+void test_cleanup(void) {
+    // Cleanup any test resources
+}
+
+void test_set_verbose(bool verbose) {
+    verbose_output = verbose;
+}

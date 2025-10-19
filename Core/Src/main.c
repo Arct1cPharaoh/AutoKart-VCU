@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -38,6 +37,7 @@
 #include "../Inc/Utils/Constants.h"
 
 #ifndef TEST_MODE
+#include "cmsis_os.h"
 #include "stm32f7xx_hal_adc.h" 
 #endif
 /* USER CODE END Includes */
@@ -310,6 +310,7 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Init scheduler */
+  #ifndef TEST_MODE
   osKernelInitialize();
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -342,6 +343,7 @@ int main(void)
 
   /* Start scheduler */
   osKernelStart();
+  #endif
 
   /* We should never get here as control is now taken by the scheduler */
 
@@ -350,7 +352,9 @@ int main(void)
   while (1)
   {
     printf("ERROR: Scheduler returned unexpectedly!\n");
+    #ifndef TEST_MODE
     HAL_Delay(1000);
+    #endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -1444,9 +1448,6 @@ int _write(int file, char *data, int len)
     // Transmit data using USART3
     HAL_UART_Transmit(&huart3, (uint8_t *)data, len, HAL_MAX_DELAY);
     return len;
-
-#endif // <--- DONT DELETE THIS, IT IS LINKED TO LAST LINE IN MAIN FUNCTION TO ALLOW SIL BUILDS
-
 }
 
 /* FreeRTOS hooks */
@@ -1486,6 +1487,8 @@ void StartDefaultTask(void *argument)
   {
     osDelay(1);
   }
+  #endif // <--- DONT DELETE THIS, IT IS LINKED TO LAST LINE IN MAIN FUNCTION TO ALLOW SIL BUILDS
+
   /* USER CODE END 5 */
 }
 
