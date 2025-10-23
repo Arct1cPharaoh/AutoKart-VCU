@@ -1,6 +1,7 @@
 #include "../../Inc/Utils/Telemetry.h"
 #include "../../Inc/Utils/MessageFormat.h"
 #include "../../Inc/Utils/Common.h"
+#include "../../Inc/Utils/SdLogger.h"
 #include <string.h>
 
 #define MAX_TELEMETRY_SIGNALS 100
@@ -87,6 +88,7 @@ void sendTelemetryValue(TelemetrySignal* signal, float value) {
             
             // Send using generic sendMessage - no special sendSensorValue() needed!
             sendMessage(signal->name, MSG_SENSOR_VALUE, "Value:%.3f;Unit:%s", value, unit->symbol);
+            sdLogValue(signal->name, value);
             break;
             
         case TELEMETRY_OUTPUT:

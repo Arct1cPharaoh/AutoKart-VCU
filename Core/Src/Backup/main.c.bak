@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -37,6 +38,7 @@
 #include "../Inc/Systems/Monitor/TorquePolice.h"
 #include "../Inc/Utils/Constants.h"
 #include "../Inc/Utils/Telemetry.h"
+#include "../Inc/Utils/SdLogger.h"
 
 #ifndef TEST_MODE
 #include "stm32f7xx_hal_adc.h" 
@@ -51,7 +53,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+extern FATFS fs; // TODO: remove this
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -77,6 +79,12 @@ DMA_HandleTypeDef hdma_dac2;
 
 I2C_HandleTypeDef hi2c2;
 I2C_HandleTypeDef hi2c4;
+
+RTC_HandleTypeDef hrtc;
+
+SD_HandleTypeDef hsd1;
+DMA_HandleTypeDef hdma_sdmmc1_rx;
+DMA_HandleTypeDef hdma_sdmmc1_tx;
 
 SPI_HandleTypeDef hspi4;
 SPI_HandleTypeDef hspi6;
@@ -114,6 +122,8 @@ static void MX_I2C2_Init(void);
 static void MX_I2C4_Init(void);
 static void MX_SPI4_Init(void);
 static void MX_SPI6_Init(void);
+static void MX_SDMMC1_SD_Init(void);
+static void MX_RTC_Init(void);
 void StartDefaultTask(void *argument);
 
 /* USER CODE BEGIN PFP */
@@ -129,6 +139,15 @@ uint32_t dac1_buffer[DAC1_BUFFER_SIZE];
 uint32_t dac2_buffer[DAC2_BUFFER_SIZE];
 uint8_t digital_out_buffer[NUM_DIGITAL_OUTPUTS];
 uint8_t digital_in_buffer[NUM_DIGITAL_INPUTS];
+
+// TODO: Rember to delete
+void simple_delay_ms(uint32_t ms)
+{
+    uint32_t start = HAL_GetTick();
+    while ((HAL_GetTick() - start) < ms) {
+        __NOP();
+    }
+}
 
 /* USER CODE END 0 */
 
@@ -178,7 +197,51 @@ int main(void)
   MX_I2C4_Init();
   MX_SPI4_Init();
   MX_SPI6_Init();
+  MX_SDMMC1_SD_Init();
+  MX_FATFS_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
+
+  printf("\033[2J\033[H"); // clear terminal
+
+  printf("Initializing SDMMC...\r\n");
+  HAL_StatusTypeDef st = HAL_SD_Init(&hsd1);
+  HAL_SD_CardInfoTypeDef info;
+
+  if (st != HAL_OK) {
+      printf("HAL_SD_Init failed! status=0x%02X err=0x%08lX\r\n",
+             (unsigned)st, (unsigned long)HAL_SD_GetError(&hsd1));
+  } else {
+      st = HAL_SD_GetCardInfo(&hsd1, &info);
+      if (st == HAL_OK) {
+          printf("Card connected!\r\n");
+          printf("  Type      : %lu (1=SDSC,2=SDHC,3=MMC)\r\n", (unsigned long)info.CardType);
+          printf("  Version   : %lu\r\n", (unsigned long)info.CardVersion);
+          printf("  Class     : %lu\r\n", (unsigned long)info.Class);
+          printf("  Blocks    : %lu\r\n", (unsigned long)info.BlockNbr);
+          printf("  BlockSize : %lu bytes\r\n", (unsigned long)info.BlockSize);
+
+          uint64_t capMB = ((uint64_t)info.BlockNbr * info.BlockSize) / (1024 * 1024);
+          printf("  Capacity  : %llu MB\r\n", (unsigned long long)capMB);
+          printf("  CardState : %lu (3=TRANSFER)\r\n",
+                 (unsigned long)HAL_SD_GetCardState(&hsd1));
+      } else {
+          printf("HAL_SD_GetCardInfo failed! err=0x%08lX\r\n",
+                 (unsigned long)HAL_SD_GetError(&hsd1));
+      }
+  }
+
+  FRESULT res;
+  printf("\r\nAttempting mount at 0:/...\r\n");
+  res = f_mount(&fs, "0:", 1);
+
+  if (res == FR_OK) {
+      printf("Mount successful!\r\n");
+  } else {
+      printf("Mount failed with code: %d\r\n", res);
+  }
+
+  simple_delay_ms(100000);
 
   // Clear the screen
   // //printf("\033[2J\033[1;1H");
@@ -189,6 +252,8 @@ int main(void)
 
   // Init Telemetry
   initTelemetry();
+  initSdLogging();
+  return;
 
   // Begin ADC DMA
   if(HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc1_buffer, 7) != HAL_OK) {
@@ -388,8 +453,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 4;
@@ -1044,6 +1110,97 @@ static void MX_I2C4_Init(void)
 }
 
 /**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+
+  /** Initialize RTC Only
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /* USER CODE BEGIN Check_RTC_BKUP */
+
+  /* USER CODE END Check_RTC_BKUP */
+
+  /** Initialize RTC and set the Time and Date
+  */
+  sTime.Hours = 0x0;
+  sTime.Minutes = 0x0;
+  sTime.Seconds = 0x0;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+  sDate.Month = RTC_MONTH_JANUARY;
+  sDate.Date = 0x1;
+  sDate.Year = 0x0;
+
+  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
+
+}
+
+/**
+  * @brief SDMMC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SDMMC1_SD_Init(void)
+{
+
+  /* USER CODE BEGIN SDMMC1_Init 0 */
+
+  /* USER CODE END SDMMC1_Init 0 */
+
+  /* USER CODE BEGIN SDMMC1_Init 1 */
+
+  /* USER CODE END SDMMC1_Init 1 */
+  hsd1.Instance = SDMMC1;
+  hsd1.Init.ClockEdge = SDMMC_CLOCK_EDGE_RISING;
+  hsd1.Init.ClockBypass = SDMMC_CLOCK_BYPASS_DISABLE;
+  hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
+  hsd1.Init.BusWide = SDMMC_BUS_WIDE_1B;
+  hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
+  hsd1.Init.ClockDiv = 0;
+  /* USER CODE BEGIN SDMMC1_Init 2 */
+
+  /* USER CODE END SDMMC1_Init 2 */
+
+}
+
+/**
   * @brief SPI4 Initialization Function
   * @param None
   * @retval None
@@ -1278,6 +1435,12 @@ static void MX_DMA_Init(void)
   /* DMA2_Stream2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
+  /* DMA2_Stream3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream3_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream3_IRQn);
+  /* DMA2_Stream6_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream6_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream6_IRQn);
 
 }
 
@@ -1395,29 +1558,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(USB_OverCurrent_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC6 PC7 PC8 PC9
-                           PC10 PC11 PC12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
-                          |GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
   /*Configure GPIO pins : PA9 PA10 PA11 PA12 */
   GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PD2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PG9 */
   GPIO_InitStruct.Pin = GPIO_PIN_9;
@@ -1432,14 +1577,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PB8 PB9 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
