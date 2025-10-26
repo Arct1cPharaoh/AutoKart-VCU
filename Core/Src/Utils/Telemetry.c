@@ -88,6 +88,7 @@ void sendTelemetryValue(TelemetrySignal* signal, float value) {
             
             // Send using generic sendMessage - no special sendSensorValue() needed!
             sendMessage(signal->name, MSG_SENSOR_VALUE, "Value:%.3f;Unit:%s", value, unit->symbol);
+            printf("sending data to logger \r\n");
             sdLogValue(signal->name, value);
             break;
             

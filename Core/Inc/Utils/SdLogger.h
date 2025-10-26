@@ -10,27 +10,21 @@
 
 #include <stdint.h>
 
-// Global flag to turn on and off this function
-extern int g_sd_logging_enabled;
-
 /**
- * @brief Mounts the SD card and prepares for logging.
- * return 0 on success, non-zero on failure.
+ * @brief Start the SD logger task (mounts card, opens log file).
+ * Creates the low-priority logger task which will mount the SD card,
+ * open the CSV log file, and begin draining the internal queue.
  */
-int initSdLogging();
+void initSdLogging();
 
 /**
- * @brief Unmounts SD card and  safely stops logging.
- * @note Must be done before SD card removes or risk of data corruption
- */
-void stopSDLogging();
-
-/**
- * @brief Logs a single sensor or output value to the SD card
+ * @brief Queue a value for logging to CSV.
+ * Non-blocking. Can be called from high-rate tasks. If the logger task
+ * is not ready or the queue is full, the sample is dropped.
  *
- * @param name The name of the telemetry signal
- * @param value The floating-point value to log.
+ * @param name  signal name
+ * @param value signal value
  */
-void sdLogValue(const char* name, float value);
+void sdLogValue(const char *name, float value);
 
 #endif // RENSSELAERMOTORSPORT_SDLOGGER_H

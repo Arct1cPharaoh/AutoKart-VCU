@@ -176,6 +176,7 @@ static DSTATUS SD_CheckStatus(BYTE lun)
 DSTATUS SD_initialize(BYTE lun)
 {
 Stat = STA_NOINIT;
+
   /*
    * check that the kernel has been started before continuing
    * as the osMessage API will fail otherwise
