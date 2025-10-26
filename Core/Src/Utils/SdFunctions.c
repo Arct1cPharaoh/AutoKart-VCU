@@ -96,7 +96,8 @@ int sd_append_file(const char *filename, const char *text) {
 
 	res = f_write(&file, text, strlen(text), &bw);
 	f_close(&file);
-	printf("Appended %u bytes to %s\r\n", bw, filename);
+	// Usefull for Debugging sd operations but quite verbose
+	//printf("Appended %u bytes to %s\r\n", bw, filename);
 	return (res == FR_OK && bw == strlen(text)) ? FR_OK : FR_DISK_ERR;
 }
 

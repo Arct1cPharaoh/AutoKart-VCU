@@ -5,7 +5,6 @@
 #include <string.h>
 
 #define BUF_SIZE 128
-#define LOG_FILENAME "datalog.csv"
 #define LOG_LINE_MAX 128
 #define LOG_QUEUE_LEN 256
 #define LOGGER_TASK_DELAY_MS 1
@@ -17,6 +16,7 @@ typedef struct {
     char line[LOG_LINE_MAX];
 } log_item_t;
 
+static char current_log_filename[32];
 static log_item_t log_queue[LOG_QUEUE_LEN];
 static volatile uint16_t log_head = 0;
 static volatile uint16_t log_tail = 0;
@@ -45,6 +45,27 @@ static int rtc_iso_ts(char *out, size_t out_sz) {
                     (unsigned long)ms);
 }
 
+// Makes a new file name each startup
+static void PickNextLogFile(void)
+{
+    uint16_t idx = 0;
+    char path[32];
+    FILINFO fno;
+    FRESULT fr;
+
+    for (;;)
+    {
+        snprintf(path, sizeof(path), "0:/data/log_%04u.csv", idx);
+        fr = f_stat(path, &fno);
+        if (fr == FR_NO_FILE) {
+            strncpy(current_log_filename, path, sizeof(current_log_filename) - 1);
+            current_log_filename[sizeof(current_log_filename) - 1] = '\0';
+            return;
+        }
+        idx++;
+    }
+}
+
 void StopSDLogging();
 void sdLogValue(const char* name, float value);
 
@@ -65,30 +86,31 @@ static void LoggerTask(void *argument)
         vTaskDelete(NULL);
     }
 
+    PickNextLogFile();
+
     // mark logger active
     logger_ready = 1;
 
     for (;;)
-    {
-        while (log_tail != log_head)
-        {
-            const char *line = log_queue[log_tail].line;
-            UINT expected = (UINT)strlen(line);
+	{
+		while (log_tail != log_head)
+		{
+			const char *line = log_queue[log_tail].line;
 
-            // append line to file - NOTE: This is safe but optimized for speed
-            fr = sd_append_file("0:/data/" LOG_FILENAME, line);
-            if (fr != FR_OK) {
-                logger_ready = 0;
-                StopSDLogging();
-                vTaskDelete(NULL);
-            }
+			fr = sd_append_file(current_log_filename, line);
+			if (fr != FR_OK) {
+				logger_ready = 0;
+				StopSDLogging();
+				vTaskDelete(NULL);
+			}
 
-            // advance tail
-            log_tail = (log_tail + 1) % LOG_QUEUE_LEN;
-        }
+			log_tail = (log_tail + 1) % LOG_QUEUE_LEN;
+		}
 
-        vTaskDelay(pdMS_TO_TICKS(LOGGER_TASK_DELAY_MS));
-    }
+		vTaskDelay(pdMS_TO_TICKS(LOGGER_TASK_DELAY_MS));
+	}
+
+    StopSDLogging();
 }
 
 void initSdLogging() {
@@ -97,7 +119,7 @@ void initSdLogging() {
         "LoggerTask",
         1028,
         NULL,
-        tskIDLE_PRIORITY + 2, // lowest priority
+        tskIDLE_PRIORITY, // lowest priority
         NULL
     );
 }
@@ -135,6 +157,7 @@ void sdLogValue(const char* name, float value) {
                      LOG_LINE_MAX,
                      "%s,%s,%.4f\n",
                      ts, name, value);
+
     if (n <= 0 || n >= LOG_LINE_MAX) {
         return;
     }
