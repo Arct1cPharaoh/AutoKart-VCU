@@ -54,6 +54,7 @@ TelemetrySignal* registerTelemetrySignal(const char* name, TelemetryType type, U
     
     sendMessage("Telemetry", MSG_DEBUG, "Registered: %s (%s) [%s] - %dms", 
                name, unit->symbol, getTypeName(type), expected_rate_ms);
+    sdRegisterChannel(name, unit->symbol, sig->custom_min, sig->custom_max);
     return sig;
 }
 

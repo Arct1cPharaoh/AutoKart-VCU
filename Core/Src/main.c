@@ -138,15 +138,6 @@ uint32_t dac2_buffer[DAC2_BUFFER_SIZE];
 uint8_t digital_out_buffer[NUM_DIGITAL_OUTPUTS];
 uint8_t digital_in_buffer[NUM_DIGITAL_INPUTS];
 
-// TODO: Rember to delete
-void simple_delay_ms(uint32_t ms)
-{
-    uint32_t start = HAL_GetTick();
-    while ((HAL_GetTick() - start) < ms) {
-        __NOP();
-    }
-}
-
 /* USER CODE END 0 */
 
 /**
