@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="Accelerometer_8h.html#a39e3f69d0febf56c49895e332453a965">   18</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Accelerometer_8c.html#a39e3f69d0febf56c49895e332453a965">updateAccelerometer</a>(<span class="keywordtype">void</span>* accel) {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_struct" href="structAccelerometer.html">Accelerometer</a> *myAccel = (<a class="code hl_struct" href="structAccelerometer.html">Accelerometer</a> *)accel;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">float</span> rawData = 0.0f; <span class="comment">// Placeholder for sensor reading</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    printf(<span class="stringliteral">&quot;Updating Accelerometer\n&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">//printf(&quot;Updating Accelerometer\n&quot;);</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    myAccel-&gt;<a class="code hl_variable" href="structAccelerometer.html#a136ea00a3d678536b16de34c215205ef">value</a> = <a class="code hl_function" href="Accelerometer_8c.html#a1f6be4d9ef1b0564e7462ee74523b4c6">transferFunctionAccelerometer</a>(rawData);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>

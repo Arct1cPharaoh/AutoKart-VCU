@@ -268,11 +268,11 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="ShockPot_8c_source.html#l00024">24</a> of file <a class="el" href="ShockPot_8c_source.html">ShockPot.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   24</span>                                             {</div>
 <div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span> (rawVal &lt; 15) {</div>
-<div class="line"><span class="lineno">   26</span>        printf(<span class="stringliteral">&quot;ShockPot::transfer_function rawValue is too low\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>        <span class="comment">//printf(&quot;ShockPot::transfer_function rawValue is too low\n&quot;);</span></div>
 <div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">   28</span>    }</div>
 <div class="line"><span class="lineno">   29</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rawVal &gt; 135) {</div>
-<div class="line"><span class="lineno">   30</span>        printf(<span class="stringliteral">&quot;ShockPot::transfer_function rawValue is too high\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="comment">//printf(&quot;ShockPot::transfer_function rawValue is too high\n&quot;);</span></div>
 <div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">   32</span>    }</div>
 <div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> 2.71965 * pow(rawVal, 0.837683) - 16.2622;</div>
@@ -317,7 +317,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="ShockPot_8c_source.html#l00017">17</a> of file <a class="el" href="ShockPot_8c_source.html">ShockPot.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>                                    {</div>
 <div class="line"><span class="lineno">   18</span>    <a class="code hl_struct" href="structShockPot.html">ShockPot</a> *myShockPot = (<a class="code hl_struct" href="structShockPot.html">ShockPot</a> *)shockPot;</div>
-<div class="line"><span class="lineno">   19</span>    printf(<span class="stringliteral">&quot;Implement ShockPot::update\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>    <span class="comment">//printf(&quot;Implement ShockPot::update\n&quot;);</span></div>
 <div class="line"><span class="lineno">   20</span>    <span class="keywordtype">float</span> rawData = 50.0;</div>
 <div class="line"><span class="lineno">   21</span>    myShockPot-&gt;<a class="code hl_variable" href="structShockPot.html#a079b18a47e84ad7c81d87b7ac4ff25d4">distance</a> = <a class="code hl_function" href="ShockPot_8c.html#afb25ee0b1b77e61690f7ff0c700754ab">transferFunctionShockPot</a>(rawData);</div>
 <div class="line"><span class="lineno">   22</span>}</div>

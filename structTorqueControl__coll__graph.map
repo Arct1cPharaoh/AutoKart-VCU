@@ -1,11 +1,12 @@
 <map id="TorqueControl" name="TorqueControl">
-<area shape="rect" id="node1" title=" " alt="" coords="92,445,195,471"/>
-<area shape="rect" id="node2" href="$structControllerSystem.html" title=" " alt="" coords="61,269,183,295"/>
-<area shape="rect" id="node6" href="$structApps.html" title=" " alt="" coords="179,357,231,383"/>
-<area shape="rect" id="node3" href="$structSystem.html" title=" " alt="" coords="89,93,155,119"/>
-<area shape="rect" id="node5" href="$structMonitorSystem.html" title=" " alt="" coords="67,181,177,207"/>
-<area shape="rect" id="node4" href="$structUpdateable.html" title=" " alt="" coords="134,5,222,31"/>
-<area shape="rect" id="node9" href="$structSensor.html" title=" " alt="" coords="203,93,265,119"/>
-<area shape="rect" id="node7" href="$structApp.html" title=" " alt="" coords="213,269,258,295"/>
-<area shape="rect" id="node8" href="$structAnalogSensor.html" title=" " alt="" coords="201,181,304,207"/>
+<area shape="rect" id="node1" title=" " alt="" coords="93,460,195,485"/>
+<area shape="rect" id="node2" href="$structControllerSystem.html" title=" " alt="" coords="62,284,183,309"/>
+<area shape="rect" id="node6" href="$structApps.html" title=" " alt="" coords="179,372,231,397"/>
+<area shape="rect" id="node3" href="$structSystem.html" title=" " alt="" coords="89,93,156,119"/>
+<area shape="rect" id="node5" href="$structMonitorSystem.html" title=" " alt="" coords="68,181,177,207"/>
+<area shape="rect" id="node4" href="$structUpdateable.html" title=" " alt="" coords="135,5,223,31"/>
+<area shape="rect" id="node9" href="$structSensor.html" title=" " alt="" coords="203,93,266,119"/>
+<area shape="rect" id="node7" href="$structApp.html" title=" " alt="" coords="231,284,276,309"/>
+<area shape="rect" id="node8" href="$structAnalogSensor.html" title=" " alt="" coords="202,181,305,207"/>
+<area shape="rect" id="node10" href="$structTelemetrySignal.html" title=" " alt="" coords="329,181,444,207"/>
 </map>

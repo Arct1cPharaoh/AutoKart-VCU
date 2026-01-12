@@ -12,5 +12,6 @@ var searchData=
   ['precharged_9',['precharged',['../structRTD.html#ab71dfa476087a8ee252eaa958ee2eb2f',1,'RTD']]],
   ['pressure_10',['pressure',['../structBrakePressure.html#ac6a0f05f4e76d085cbebe9acebae75be',1,'BrakePressure']]],
   ['priority_11',['priority',['../structPQNode.html#ade420e4e2a058d6f205db2d9561e1494',1,'PQNode']]],
-  ['pulses_12',['pulses',['../structWheelSpeed.html#a9797aef29f050455eddc81891a4278a3',1,'WheelSpeed']]]
+  ['pulses_12',['pulses',['../structWheelSpeed.html#a9797aef29f050455eddc81891a4278a3',1,'WheelSpeed']]],
+  ['pwm_5ffrequency_13',['pwm_frequency',['../structTelemetrySignal.html#a99b4404a16488d0854ca58869b099f69',1,'TelemetrySignal']]]
 ];

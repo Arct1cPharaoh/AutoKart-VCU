@@ -81,35 +81,41 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="AppsMonitor_8h_source.html">../../../Inc/Systems/Monitor/AppsMonitor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Common_8h_source.html">../../../Inc/Utils/Common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MessageFormat_8h_source.html">../../../Inc/Utils/MessageFormat.h</a>&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AppsMonitor.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="AppsMonitor_8c__incl.png" border="0" usemap="#aCore_2Src_2Systems_2Monitors_2AppsMonitor_8c" alt=""/></div>
 <map name="aCore_2Src_2Systems_2Monitors_2AppsMonitor_8c" id="aCore_2Src_2Systems_2Monitors_2AppsMonitor_8c">
-<area shape="rect" title=" " alt="" coords="1442,5,1625,45"/>
-<area shape="rect" href="AppsMonitor_8h.html" title=" " alt="" coords="1302,93,1458,133"/>
-<area shape="rect" href="Common_8h.html" title=" " alt="" coords="1483,93,1584,133"/>
-<area shape="rect" title=" " alt="" coords="1608,101,1670,126"/>
-<area shape="rect" href="MonitorSystem_8h.html" title=" " alt="" coords="1442,343,1572,368"/>
-<area shape="rect" href="Apps_8h.html" title=": Contains the logic for the two app sensors." alt="" coords="1262,181,1392,207"/>
-<area shape="rect" title=" " alt="" coords="1245,563,1305,588"/>
-<area shape="rect" title=" " alt="" coords="1525,563,1588,588"/>
-<area shape="rect" title=" " alt="" coords="1007,563,1071,588"/>
-<area shape="rect" href="System_8h.html" title=" " alt="" coords="1392,416,1468,441"/>
-<area shape="rect" href="Updateable_8h.html" title=" " alt="" coords="1127,489,1266,515"/>
-<area shape="rect" href="ControllerSystem_8h.html" title=" " alt="" coords="1256,262,1398,287"/>
-<area shape="rect" href="App_8h.html" title=" " alt="" coords="836,255,1018,295"/>
-<area shape="rect" href="Constants_8h.html" title=" " alt="" coords="976,343,1108,368"/>
-<area shape="rect" href="Task_8h.html" title=" " alt="" coords="1132,343,1266,368"/>
-<area shape="rect" href="AnalogSensor_8h.html" title=" " alt="" coords="544,343,667,368"/>
-<area shape="rect" title=" " alt="" coords="26,416,116,441"/>
-<area shape="rect" href="stm32f7xx__hal_8h.html" title=" " alt="" coords="140,416,255,441"/>
-<area shape="rect" title=" " alt="" coords="280,416,422,441"/>
-<area shape="rect" title=" " alt="" coords="447,416,594,441"/>
-<area shape="rect" title=" " alt="" coords="618,416,762,441"/>
-<area shape="rect" title=" " alt="" coords="786,416,850,441"/>
-<area shape="rect" href="Sensor_8h.html" title=" " alt="" coords="1082,416,1156,441"/>
+<area shape="rect" title=" " alt="" coords="1721,5,1903,45"/>
+<area shape="rect" href="AppsMonitor_8h.html" title=" " alt="" coords="622,93,778,133"/>
+<area shape="rect" href="Common_8h.html" title=" " alt="" coords="1832,93,1933,133"/>
+<area shape="rect" href="MessageFormat_8h.html" title=" " alt="" coords="1677,93,1808,133"/>
+<area shape="rect" title=" " alt="" coords="1957,101,2019,126"/>
+<area shape="rect" href="MonitorSystem_8h.html" title=" " alt="" coords="42,343,171,368"/>
+<area shape="rect" href="Apps_8h.html" title=": Contains the logic for the two app sensors." alt="" coords="635,181,765,207"/>
+<area shape="rect" title=" " alt="" coords="594,563,654,588"/>
+<area shape="rect" title=" " alt="" coords="227,563,290,588"/>
+<area shape="rect" title=" " alt="" coords="24,563,88,588"/>
+<area shape="rect" href="System_8h.html" title=" " alt="" coords="226,416,302,441"/>
+<area shape="rect" href="Updateable_8h.html" title=" " alt="" coords="397,489,536,515"/>
+<area shape="rect" href="ControllerSystem_8h.html" title=" " alt="" coords="317,262,459,287"/>
+<area shape="rect" href="App_8h.html" title=" " alt="" coords="921,255,1103,295"/>
+<area shape="rect" href="Constants_8h.html" title=" " alt="" coords="530,343,662,368"/>
+<area shape="rect" href="Task_8h.html" title=" " alt="" coords="321,343,455,368"/>
+<area shape="rect" href="AnalogSensor_8h.html" title=" " alt="" coords="951,343,1073,368"/>
+<area shape="rect" href="Telemetry_8h.html" title=" " alt="" coords="1522,343,1662,368"/>
+<area shape="rect" title=" " alt="" coords="967,416,1057,441"/>
+<area shape="rect" href="stm32f7xx__hal_8h.html" title=" " alt="" coords="1081,416,1196,441"/>
+<area shape="rect" title=" " alt="" coords="1221,416,1363,441"/>
+<area shape="rect" title=" " alt="" coords="628,416,775,441"/>
+<area shape="rect" title=" " alt="" coords="799,416,943,441"/>
+<area shape="rect" title=" " alt="" coords="1521,489,1585,515"/>
+<area shape="rect" href="Sensor_8h.html" title=" " alt="" coords="530,416,603,441"/>
+<area shape="rect" title=" " alt="" coords="1620,489,1695,515"/>
+<area shape="rect" href="Units_8h.html" title=" " alt="" coords="1591,416,1654,441"/>
+<area shape="rect" title=" " alt="" coords="1781,181,1849,207"/>
 </map>
 </div>
 </div>
@@ -153,33 +159,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00037">37</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                {</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordtype">float</span> pos1 = <a class="code hl_function" href="App_8h.html#a01be170ac09e9dd35ba3f18c537ae409">getAppPosition</a>(apps-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[0]);</div>
-<div class="line"><span class="lineno">   39</span>    <span class="keywordtype">float</span> pos2 = <a class="code hl_function" href="App_8h.html#a01be170ac09e9dd35ba3f18c537ae409">getAppPosition</a>(apps-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[1]);</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>    <span class="comment">// Resonable Value check upper bound</span></div>
-<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">if</span> (pos1 &gt; 100 || pos2 &gt; 100) {</div>
-<div class="line"><span class="lineno">   43</span>        apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877ac4a2fe1e50e42c65890557e97fd7ec36">APPS_FAULT</a>;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>    <span class="comment">// In sync check</span></div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordtype">float</span> difference = fabs(pos1 - pos2);</div>
-<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (difference &gt; <a class="code hl_define" href="Apps_8h.html#acfcc13e568a153df733f1528d524e129">APPS_DIFFERENCE</a> * 100) {</div>
-<div class="line"><span class="lineno">   50</span>        apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877ac4a2fe1e50e42c65890557e97fd7ec36">APPS_FAULT</a>;</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   52</span>    } </div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    <span class="comment">// Resonable Value check lower bound</span></div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span> (pos1 &lt; 0 || pos2 &lt; 0) {</div>
-<div class="line"><span class="lineno">   56</span>        apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656">APPS_LOW</a>;</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a>;</div>
-<div class="line"><span class="lineno">   61</span>}</div>
-<div class="ttc" id="aApp_8h_html_a01be170ac09e9dd35ba3f18c537ae409"><div class="ttname"><a href="App_8h.html#a01be170ac09e9dd35ba3f18c537ae409">getAppPosition</a></div><div class="ttdeci">float getAppPosition(App *app)</div><div class="ttdoc">Gets the current position of the APP.</div><div class="ttdef"><b>Definition:</b> <a href="App_8c_source.html#l00011">App.c:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00035">35</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                {</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordtype">float</span> pos1 = <a class="code hl_function" href="App_8h.html#a01be170ac09e9dd35ba3f18c537ae409">getAppPosition</a>(apps-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[0]);</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">float</span> pos2 = <a class="code hl_function" href="App_8h.html#a01be170ac09e9dd35ba3f18c537ae409">getAppPosition</a>(apps-&gt;<a class="code hl_variable" href="structApps.html#a39f6d2d9bf8757108ad71dc247ae3f57">app</a>[1]);</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    <span class="comment">// Resonable Value check upper bound</span></div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">if</span> (pos1 &gt; 1 || pos2 &gt; 1) {</div>
+<div class="line"><span class="lineno">   41</span>        apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877ac4a2fe1e50e42c65890557e97fd7ec36">APPS_FAULT</a>;</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <span class="comment">// In sync check</span></div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordtype">float</span> difference = fabs(pos1 - pos2);</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> (difference &gt; <a class="code hl_define" href="Apps_8h.html#acfcc13e568a153df733f1528d524e129">APPS_DIFFERENCE</a>) {</div>
+<div class="line"><span class="lineno">   48</span>        apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877ac4a2fe1e50e42c65890557e97fd7ec36">APPS_FAULT</a>;</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   50</span>    } </div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment">// Resonable Value check lower bound</span></div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">if</span> (pos1 &lt; 0 || pos2 &lt; 0) {</div>
+<div class="line"><span class="lineno">   54</span>        apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656">APPS_LOW</a>;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a>;</div>
+<div class="line"><span class="lineno">   59</span>}</div>
+<div class="ttc" id="aApp_8h_html_a01be170ac09e9dd35ba3f18c537ae409"><div class="ttname"><a href="App_8h.html#a01be170ac09e9dd35ba3f18c537ae409">getAppPosition</a></div><div class="ttdeci">float getAppPosition(App *app)</div><div class="ttdoc">Gets the current position of the APP.</div><div class="ttdef"><b>Definition:</b> <a href="App_8c_source.html#l00017">App.c:17</a></div></div>
 <div class="ttc" id="aApps_8h_html_a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656"><div class="ttname"><a href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656">APPS_LOW</a></div><div class="ttdeci">@ APPS_LOW</div><div class="ttdef"><b>Definition:</b> <a href="Apps_8h_source.html#l00020">Apps.h:19</a></div></div>
 <div class="ttc" id="aApps_8h_html_a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67"><div class="ttname"><a href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a></div><div class="ttdeci">@ APPS_OK</div><div class="ttdef"><b>Definition:</b> <a href="Apps_8h_source.html#l00017">Apps.h:17</a></div></div>
 <div class="ttc" id="aApps_8h_html_a13984efcd5f00ea66d691ca2d9e5c877ac4a2fe1e50e42c65890557e97fd7ec36"><div class="ttname"><a href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877ac4a2fe1e50e42c65890557e97fd7ec36">APPS_FAULT</a></div><div class="ttdeci">@ APPS_FAULT</div><div class="ttdef"><b>Definition:</b> <a href="Apps_8h_source.html#l00018">Apps.h:18</a></div></div>
@@ -231,20 +237,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00023">23</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                               {</div>
-<div class="line"><span class="lineno">   24</span>    <a class="code hl_struct" href="structAppsMonitor.html">AppsMonitor</a>* amPtr = (<a class="code hl_struct" href="structAppsMonitor.html">AppsMonitor</a>*)am;</div>
-<div class="line"><span class="lineno">   25</span>    <a class="code hl_struct" href="structApps.html">Apps</a>* apps = amPtr-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a3f58338c160ac2d4bcff995a9973a35b">apps</a>;</div>
-<div class="line"><span class="lineno">   26</span>    <a class="code hl_function" href="AppsMonitor_8c.html#a8f9817194a8c464d87f7fef64f33b573">checkAppsLimit</a>(apps);</div>
-<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">if</span> (apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> != <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a> &amp;&amp; apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> != <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656">APPS_LOW</a>) {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span> (apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> == <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656">APPS_LOW</a>) {</div>
-<div class="line"><span class="lineno">   31</span>        printf(<span class="stringliteral">&quot;AppsMonitor: APPS position is too low. Defaulting to 0 to pass\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">   34</span>}</div>
-<div class="ttc" id="aAppsMonitor_8c_html_a8f9817194a8c464d87f7fef64f33b573"><div class="ttname"><a href="AppsMonitor_8c.html#a8f9817194a8c464d87f7fef64f33b573">checkAppsLimit</a></div><div class="ttdeci">void checkAppsLimit(Apps *apps)</div><div class="ttdoc">Checks App limits for faults.</div><div class="ttdef"><b>Definition:</b> <a href="AppsMonitor_8c_source.html#l00037">AppsMonitor.c:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00024">24</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                               {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_struct" href="structAppsMonitor.html">AppsMonitor</a>* amPtr = (<a class="code hl_struct" href="structAppsMonitor.html">AppsMonitor</a>*)am;</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_struct" href="structApps.html">Apps</a>* apps = amPtr-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a3f58338c160ac2d4bcff995a9973a35b">apps</a>;</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_function" href="AppsMonitor_8c.html#a8f9817194a8c464d87f7fef64f33b573">checkAppsLimit</a>(apps);</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span> (apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> != <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a> &amp;&amp; apps-&gt;<a class="code hl_variable" href="structApps.html#a7e42f57cd75add816736036d463554a5">status</a> != <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a63ecb4fd187edf4bb554d8d238f80656">APPS_LOW</a>) {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="aAppsMonitor_8c_html_a8f9817194a8c464d87f7fef64f33b573"><div class="ttname"><a href="AppsMonitor_8c.html#a8f9817194a8c464d87f7fef64f33b573">checkAppsLimit</a></div><div class="ttdeci">void checkAppsLimit(Apps *apps)</div><div class="ttdoc">Checks App limits for faults.</div><div class="ttdef"><b>Definition:</b> <a href="AppsMonitor_8c_source.html#l00035">AppsMonitor.c:35</a></div></div>
 <div class="ttc" id="aCommon_8h_html_a295b784cba68a3b8793e3d3dc3e172ab"><div class="ttname"><a href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a></div><div class="ttdeci">#define _FAILURE</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00006">Common.h:6</a></div></div>
 <div class="ttc" id="aCommon_8h_html_acdf9ea17605dff8b810df8076b6496e2"><div class="ttname"><a href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a></div><div class="ttdeci">#define _SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00005">Common.h:5</a></div></div>
 <div class="ttc" id="astructAppsMonitor_html"><div class="ttname"><a href="structAppsMonitor.html">AppsMonitor</a></div><div class="ttdef"><b>Definition:</b> <a href="AppsMonitor_8h_source.html#l00007">AppsMonitor.h:7</a></div></div>
@@ -305,13 +308,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00006">6</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                                                          {</div>
-<div class="line"><span class="lineno">    7</span>    <a class="code hl_function" href="MonitorSystem_8h.html#a8d8af9a14fa42b23069fc019bd0ec287">initMonitorSystem</a>(&amp;am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a89caa14ed2322e604d06a65b12620ec9">base</a>, <span class="stringliteral">&quot;Apps Monitor&quot;</span>, hz, <a class="code hl_enumvalue" href="MonitorSystem_8h.html#ac69ce5a28782fdc01f7ba5c236cd5f72a2dea6408dc5cb30fb4ad243124c90c42">m_APPS</a>, <a class="code hl_enumvalue" href="MonitorSystem_8h.html#af689ff2b014590ff3dac04c7279f0398a40e75a3c747cc64f7c383f3ba8acbe8f">VEHICLE_SHUTDOWN</a>, <a class="code hl_function" href="AppsMonitor_8c.html#acd68c63bc5c3861b01f22aa3a76281b9">checkAppsMonitor</a>);</div>
-<div class="line"><span class="lineno">    8</span>    am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a3f58338c160ac2d4bcff995a9973a35b">apps</a> = apps;</div>
-<div class="line"><span class="lineno">    9</span>    am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a01661b081b3983d132948ea70aaac158">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a>;</div>
-<div class="line"><span class="lineno">   10</span>}</div>
-<div class="ttc" id="aAppsMonitor_8c_html_acd68c63bc5c3861b01f22aa3a76281b9"><div class="ttname"><a href="AppsMonitor_8c.html#acd68c63bc5c3861b01f22aa3a76281b9">checkAppsMonitor</a></div><div class="ttdeci">int checkAppsMonitor(void *am)</div><div class="ttdef"><b>Definition:</b> <a href="AppsMonitor_8c_source.html#l00023">AppsMonitor.c:23</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00007">7</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                                                          {</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_function" href="MonitorSystem_8h.html#a8d8af9a14fa42b23069fc019bd0ec287">initMonitorSystem</a>(&amp;am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a89caa14ed2322e604d06a65b12620ec9">base</a>, <span class="stringliteral">&quot;Apps Monitor&quot;</span>, hz, <a class="code hl_enumvalue" href="MonitorSystem_8h.html#ac69ce5a28782fdc01f7ba5c236cd5f72a2dea6408dc5cb30fb4ad243124c90c42">m_APPS</a>, <a class="code hl_enumvalue" href="MonitorSystem_8h.html#af689ff2b014590ff3dac04c7279f0398a40e75a3c747cc64f7c383f3ba8acbe8f">VEHICLE_SHUTDOWN</a>, <a class="code hl_function" href="AppsMonitor_8c.html#acd68c63bc5c3861b01f22aa3a76281b9">checkAppsMonitor</a>);</div>
+<div class="line"><span class="lineno">    9</span>    am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a3f58338c160ac2d4bcff995a9973a35b">apps</a> = apps;</div>
+<div class="line"><span class="lineno">   10</span>    am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a01661b081b3983d132948ea70aaac158">status</a> = <a class="code hl_enumvalue" href="Apps_8h.html#a13984efcd5f00ea66d691ca2d9e5c877a7d6a7068ad8c66306778972d2540af67">APPS_OK</a>;</div>
+<div class="line"><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aAppsMonitor_8c_html_acd68c63bc5c3861b01f22aa3a76281b9"><div class="ttname"><a href="AppsMonitor_8c.html#acd68c63bc5c3861b01f22aa3a76281b9">checkAppsMonitor</a></div><div class="ttdeci">int checkAppsMonitor(void *am)</div><div class="ttdef"><b>Definition:</b> <a href="AppsMonitor_8c_source.html#l00024">AppsMonitor.c:24</a></div></div>
 <div class="ttc" id="aMonitorSystem_8h_html_a8d8af9a14fa42b23069fc019bd0ec287"><div class="ttname"><a href="MonitorSystem_8h.html#a8d8af9a14fa42b23069fc019bd0ec287">initMonitorSystem</a></div><div class="ttdeci">void initMonitorSystem(MonitorSystem *monitor, const char *name, int hz, MonitorType type, FaultType fault, int(*runMonitor)(void *self))</div><div class="ttdoc">Initializes the Monitor System with initial settings.</div><div class="ttdef"><b>Definition:</b> <a href="MonitorSystem_8c_source.html#l00003">MonitorSystem.c:3</a></div></div>
 <div class="ttc" id="aMonitorSystem_8h_html_ac69ce5a28782fdc01f7ba5c236cd5f72a2dea6408dc5cb30fb4ad243124c90c42"><div class="ttname"><a href="MonitorSystem_8h.html#ac69ce5a28782fdc01f7ba5c236cd5f72a2dea6408dc5cb30fb4ad243124c90c42">m_APPS</a></div><div class="ttdeci">@ m_APPS</div><div class="ttdef"><b>Definition:</b> <a href="MonitorSystem_8h_source.html#l00012">MonitorSystem.h:12</a></div></div>
 <div class="ttc" id="aMonitorSystem_8h_html_af689ff2b014590ff3dac04c7279f0398a40e75a3c747cc64f7c383f3ba8acbe8f"><div class="ttname"><a href="MonitorSystem_8h.html#af689ff2b014590ff3dac04c7279f0398a40e75a3c747cc64f7c383f3ba8acbe8f">VEHICLE_SHUTDOWN</a></div><div class="ttdeci">@ VEHICLE_SHUTDOWN</div><div class="ttdef"><b>Definition:</b> <a href="MonitorSystem_8h_source.html#l00024">MonitorSystem.h:23</a></div></div>
@@ -363,15 +366,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00013">13</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                      {</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">if</span> (am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a89caa14ed2322e604d06a65b12620ec9">base</a>.<a class="code hl_variable" href="structMonitorSystem.html#aad95a0dad72b8feb0fe934b105d2b55f">runMonitor</a> == NULL) {</div>
-<div class="line"><span class="lineno">   15</span>        printf(<span class="stringliteral">&quot;Monitor function not set for AppsMonitor\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_define" href="Updateable_8h.html#a95e75e1b0072990627fe850f0184b271">ENABLE</a>(am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a89caa14ed2322e604d06a65b12620ec9">base</a>.<a class="code hl_variable" href="structMonitorSystem.html#ae797855340e1004bb2eaaf8447376597">system</a>);</div>
-<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">   20</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AppsMonitor_8c_source.html#l00014">14</a> of file <a class="el" href="AppsMonitor_8c_source.html">AppsMonitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                                      {</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">if</span> (am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a89caa14ed2322e604d06a65b12620ec9">base</a>.<a class="code hl_variable" href="structMonitorSystem.html#aad95a0dad72b8feb0fe934b105d2b55f">runMonitor</a> == NULL) {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="comment">//printf(&quot;Monitor function not set for AppsMonitor\n&quot;);</span></div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_define" href="Updateable_8h.html#a95e75e1b0072990627fe850f0184b271">ENABLE</a>(am-&gt;<a class="code hl_variable" href="structAppsMonitor.html#a89caa14ed2322e604d06a65b12620ec9">base</a>.<a class="code hl_variable" href="structMonitorSystem.html#ae797855340e1004bb2eaaf8447376597">system</a>);</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">   21</span>}</div>
 <div class="ttc" id="aUpdateable_8h_html_a95e75e1b0072990627fe850f0184b271"><div class="ttname"><a href="Updateable_8h.html#a95e75e1b0072990627fe850f0184b271">ENABLE</a></div><div class="ttdeci">#define ENABLE(item_)</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00010">Updateable.h:10</a></div></div>
 <div class="ttc" id="astructMonitorSystem_html_aad95a0dad72b8feb0fe934b105d2b55f"><div class="ttname"><a href="structMonitorSystem.html#aad95a0dad72b8feb0fe934b105d2b55f">MonitorSystem::runMonitor</a></div><div class="ttdeci">int(* runMonitor)(void *self)</div><div class="ttdef"><b>Definition:</b> <a href="MonitorSystem_8h_source.html#l00030">MonitorSystem.h:30</a></div></div>
 <div class="ttc" id="astructMonitorSystem_html_ae797855340e1004bb2eaaf8447376597"><div class="ttname"><a href="structMonitorSystem.html#ae797855340e1004bb2eaaf8447376597">MonitorSystem::system</a></div><div class="ttdeci">System system</div><div class="ttdef"><b>Definition:</b> <a href="MonitorSystem_8h_source.html#l00027">MonitorSystem.h:27</a></div></div>

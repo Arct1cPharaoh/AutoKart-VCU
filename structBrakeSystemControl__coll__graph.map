@@ -1,13 +1,14 @@
 <map id="BrakeSystemControl" name="BrakeSystemControl">
-<area shape="rect" id="node1" title=" " alt="" coords="195,383,337,408"/>
-<area shape="rect" id="node2" href="$structControllerSystem.html" title=" " alt="" coords="5,280,127,305"/>
-<area shape="rect" id="node3" href="$structSystem.html" title=" " alt="" coords="157,93,223,119"/>
-<area shape="rect" id="node5" href="$structMonitorSystem.html" title=" " alt="" coords="135,181,245,207"/>
-<area shape="rect" id="node4" href="$structUpdateable.html" title=" " alt="" coords="278,5,366,31"/>
-<area shape="rect" id="node8" href="$structSensor.html" title=" " alt="" coords="291,93,353,119"/>
-<area shape="rect" id="node11" href="$structOutput.html" title=" " alt="" coords="390,93,451,119"/>
-<area shape="rect" id="node6" href="$structBrakePressure.html" title=" " alt="" coords="151,280,259,305"/>
-<area shape="rect" id="node7" href="$structAnalogSensor.html" title=" " alt="" coords="271,181,373,207"/>
-<area shape="rect" id="node9" href="$structTemperature.html" title=" " alt="" coords="283,280,377,305"/>
-<area shape="rect" id="node10" href="$structDigitalOutput.html" title=" " alt="" coords="376,231,473,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="208,397,349,423"/>
+<area shape="rect" id="node2" href="$structControllerSystem.html" title=" " alt="" coords="29,295,150,320"/>
+<area shape="rect" id="node3" href="$structSystem.html" title=" " alt="" coords="129,93,196,119"/>
+<area shape="rect" id="node5" href="$structMonitorSystem.html" title=" " alt="" coords="5,192,115,217"/>
+<area shape="rect" id="node4" href="$structUpdateable.html" title=" " alt="" coords="240,5,328,31"/>
+<area shape="rect" id="node8" href="$structSensor.html" title=" " alt="" coords="253,93,315,119"/>
+<area shape="rect" id="node12" href="$structOutput.html" title=" " alt="" coords="463,143,524,168"/>
+<area shape="rect" id="node6" href="$structBrakePressure.html" title=" " alt="" coords="293,295,401,320"/>
+<area shape="rect" id="node7" href="$structAnalogSensor.html" title=" " alt="" coords="233,192,335,217"/>
+<area shape="rect" id="node10" href="$structTemperature.html" title=" " alt="" coords="174,295,269,320"/>
+<area shape="rect" id="node9" href="$structTelemetrySignal.html" title=" " alt="" coords="364,192,479,217"/>
+<area shape="rect" id="node11" href="$structDigitalOutput.html" title=" " alt="" coords="425,295,522,320"/>
 </map>

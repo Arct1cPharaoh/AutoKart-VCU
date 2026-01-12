@@ -1,5 +1,5 @@
 <map id="Core/Inc/Utils/Common.h" name="Core/Inc/Utils/Common.h">
-<area shape="rect" id="node1" title=" " alt="" coords="2181,5,2349,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2286,5,2454,31"/>
 <area shape="rect" id="node2" href="$RTD_8h.html" title=" " alt="" coords="339,79,524,119"/>
 <area shape="rect" id="node4" href="$RTDMonitor_8c.html" title=" " alt="" coords="5,255,188,295"/>
 <area shape="rect" id="node7" href="$TorquePolice_8c.html" title=" " alt="" coords="532,255,715,295"/>
@@ -20,8 +20,9 @@
 <area shape="rect" id="node22" href="$ExternalSystem_8c.html" title=" " alt="" coords="3517,79,3695,119"/>
 <area shape="rect" id="node23" href="$AppsMonitor_8c.html" title=" " alt="" coords="3720,79,3903,119"/>
 <area shape="rect" id="node24" href="$BrakePolice_8c.html" title=" " alt="" coords="3927,79,4109,119"/>
-<area shape="rect" id="node25" href="$Updateable_8c.html" title=" " alt="" coords="4134,86,4318,111"/>
-<area shape="rect" id="node26" href="$test_8c.html" title=" " alt="" coords="4342,86,4494,111"/>
+<area shape="rect" id="node25" href="$Telemetry_8c.html" title=" " alt="" coords="4133,86,4308,111"/>
+<area shape="rect" id="node26" href="$Updateable_8c.html" title=" " alt="" coords="4333,86,4517,111"/>
+<area shape="rect" id="node27" href="$test_8c.html" title=" " alt="" coords="4541,86,4693,111"/>
 <area shape="rect" id="node3" href="$RTDMonitor_8h.html" title=" " alt="" coords="97,167,270,207"/>
 <area shape="rect" id="node5" href="$Src_2main_8c.html" title=": Main program body" alt="" coords="250,262,365,287"/>
 <area shape="rect" id="node6" href="$TorquePolice_8h.html" title=" " alt="" coords="345,167,518,207"/>

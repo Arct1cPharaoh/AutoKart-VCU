@@ -83,10 +83,11 @@ Collaboration diagram for App:</div>
 <div class="dyncontent">
 <div class="center"><img src="structApp__coll__graph.png" border="0" usemap="#aApp_coll__map" alt="Collaboration graph"/></div>
 <map name="aApp_coll__map" id="aApp_coll__map">
-<area shape="rect" title=" " alt="" coords="34,269,79,295"/>
+<area shape="rect" title=" " alt="" coords="101,284,146,309"/>
 <area shape="rect" href="structAnalogSensor.html" title=" " alt="" coords="5,181,108,207"/>
 <area shape="rect" href="structSensor.html" title=" " alt="" coords="25,93,88,119"/>
 <area shape="rect" href="structUpdateable.html" title=" " alt="" coords="13,5,101,31"/>
+<area shape="rect" href="structTelemetrySignal.html" title=" " alt="" coords="133,181,247,207"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -96,10 +97,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a9fb97d389e14405e540e7eb232fa38fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa40356fafb878b49d6a3bcb36e8a6fd1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structApp.html#aa40356fafb878b49d6a3bcb36e8a6fd1">position</a></td></tr>
 <tr class="separator:aa40356fafb878b49d6a3bcb36e8a6fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e7437fedb19dfde16dd95d7c62dd90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTelemetrySignal.html">TelemetrySignal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structApp.html#a38e7437fedb19dfde16dd95d7c62dd90">telem_raw</a></td></tr>
+<tr class="separator:a38e7437fedb19dfde16dd95d7c62dd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb79d2c9d8454469fc671b9df34a9a2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTelemetrySignal.html">TelemetrySignal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structApp.html#adb79d2c9d8454469fc671b9df34a9a2c">telem_position</a></td></tr>
+<tr class="separator:adb79d2c9d8454469fc671b9df34a9a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00006">6</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00007">7</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a9fb97d389e14405e540e7eb232fa38fa" name="a9fb97d389e14405e540e7eb232fa38fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fb97d389e14405e540e7eb232fa38fa">&#9670;&#160;</a></span>base</h2>
@@ -113,7 +118,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00007">7</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00008">8</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
 
 </div>
 </div>
@@ -129,7 +134,39 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00008">8</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00009">9</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
+
+</div>
+</div>
+<a id="adb79d2c9d8454469fc671b9df34a9a2c" name="adb79d2c9d8454469fc671b9df34a9a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb79d2c9d8454469fc671b9df34a9a2c">&#9670;&#160;</a></span>telem_position</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTelemetrySignal.html">TelemetrySignal</a>* App::telem_position</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00011">11</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
+
+</div>
+</div>
+<a id="a38e7437fedb19dfde16dd95d7c62dd90" name="a38e7437fedb19dfde16dd95d7c62dd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e7437fedb19dfde16dd95d7c62dd90">&#9670;&#160;</a></span>telem_raw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTelemetrySignal.html">TelemetrySignal</a>* App::telem_raw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="App_8h_source.html#l00010">10</a> of file <a class="el" href="App_8h_source.html">App.h</a>.</p>
 
 </div>
 </div>

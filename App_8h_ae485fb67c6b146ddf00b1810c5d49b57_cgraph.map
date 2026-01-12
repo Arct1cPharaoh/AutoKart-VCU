@@ -1,0 +1,19 @@
+<map id="initApp" name="initApp">
+<area shape="rect" id="node1" title="Initializes the APP with the given frequency and channel." alt="" coords="5,172,68,197"/>
+<area shape="rect" id="node2" href="$AnalogSensor_8c.html#ac992e329ef2479c38747e193ce77500c" title="Initializes an analog sensor and configures the corresponding GPIO pin." alt="" coords="116,109,236,135"/>
+<area shape="rect" id="node9" href="$Telemetry_8c.html#ad94fd7e4a8a10b2ce63679738de549ef" title=" " alt="" coords="284,172,443,197"/>
+<area shape="rect" id="node13" href="$App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="134,273,218,299"/>
+<area shape="rect" id="node3" href="$Sensor_8c.html#afaf02fb354c266fd34becaa91c007ce6" title="Initializes a sensor with the given parameters." alt="" coords="323,85,403,111"/>
+<area shape="rect" id="node4" href="$Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="500,79,605,104"/>
+<area shape="rect" id="node5" href="$Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="669,5,773,31"/>
+<area shape="rect" id="node6" href="$Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="671,55,771,80"/>
+<area shape="rect" id="node7" href="$Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="672,104,771,129"/>
+<area shape="rect" id="node8" href="$Updateable_8c.html#a2ce98de36bf9863555ab86f1e31bb6a3" title="Default update function for Updateable objects." alt="" coords="670,153,773,179"/>
+<area shape="rect" id="node10" href="$Telemetry_8c.html#a1947f7043d680efc04752f852b622aa4" title=" " alt="" coords="501,128,604,153"/>
+<area shape="rect" id="node11" href="$Units_8c.html#a589350189385db4f70a033de12f8fb27" title=" " alt="" coords="663,280,780,305"/>
+<area shape="rect" id="node12" href="$MessageFormat_8c.html#adaaacbf33ba7f4f08d8af9bae2ee2d38" title=" " alt="" coords="501,229,604,255"/>
+<area shape="rect" id="node14" href="$AnalogSensor_8c.html#a6b63008a770ff66fdd8a45aa640f39b8" title="Retrieves analog sensor data for a specific channel." alt="" coords="289,273,437,299"/>
+<area shape="rect" id="node15" href="$Telemetry_8c.html#a42357317b4e74eac5d4e8eed46838e90" title=" " alt="" coords="293,323,433,348"/>
+<area shape="rect" id="node17" href="$App_8c.html#ac6a91028bac466dcd71f79aa06aa65ba" title="Converts raw APP data to a meaningful position value." alt="" coords="294,372,433,397"/>
+<area shape="rect" id="node16" href="$Units_8c.html#a02d31592dd021027d16e51f7a2f3af84" title=" " alt="" coords="491,331,615,356"/>
+</map>

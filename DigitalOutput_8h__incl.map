@@ -1,10 +1,13 @@
 <map id="Core/Inc/Outputs/DigitalOutput.h" name="Core/Inc/Outputs/DigitalOutput.h">
-<area shape="rect" id="node1" title=" " alt="" coords="176,5,337,45"/>
-<area shape="rect" id="node2" href="$Output_8h.html" title=" " alt="" coords="96,93,167,119"/>
-<area shape="rect" id="node7" href="$Constants_8h.html" title=" " alt="" coords="191,93,323,119"/>
-<area shape="rect" id="node8" title=" " alt="" coords="347,93,411,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,240,65,265"/>
-<area shape="rect" id="node4" title=" " alt="" coords="197,240,260,265"/>
-<area shape="rect" id="node5" href="$Updateable_8h.html" title=" " alt="" coords="62,167,201,192"/>
-<area shape="rect" id="node6" title=" " alt="" coords="99,240,163,265"/>
+<area shape="rect" id="node1" title=" " alt="" coords="256,5,417,45"/>
+<area shape="rect" id="node2" href="$Output_8h.html" title=" " alt="" coords="99,93,169,119"/>
+<area shape="rect" id="node7" href="$Constants_8h.html" title=" " alt="" coords="193,93,325,119"/>
+<area shape="rect" id="node8" href="$Telemetry_8h.html" title=" " alt="" coords="350,93,481,119"/>
+<area shape="rect" id="node9" title=" " alt="" coords="443,240,507,265"/>
+<area shape="rect" id="node3" title=" " alt="" coords="201,240,261,265"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,240,68,265"/>
+<area shape="rect" id="node5" href="$Updateable_8h.html" title=" " alt="" coords="65,167,203,192"/>
+<area shape="rect" id="node6" title=" " alt="" coords="102,240,166,265"/>
+<area shape="rect" id="node10" title=" " alt="" coords="322,240,397,265"/>
+<area shape="rect" id="node11" href="$Units_8h.html" title=" " alt="" coords="375,167,437,192"/>
 </map>

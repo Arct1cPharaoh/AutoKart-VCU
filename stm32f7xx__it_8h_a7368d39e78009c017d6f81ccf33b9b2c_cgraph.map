@@ -1,7 +1,8 @@
 <map id="HAL_CAN_RxFifo0MsgPendingCallback" name="HAL_CAN_RxFifo0MsgPendingCallback">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,45"/>
-<area shape="rect" id="node2" href="$Can_8c.html#ab6573fd95381dab7cdbd99990cb4f1de" title="Receives a CAN message." alt="" coords="260,13,419,38"/>
-<area shape="rect" id="node3" href="$Can_8c.html#a7b791ed820670f44703fc1bccd0b9424" title="Parses a CAN message." alt="" coords="467,13,573,38"/>
-<area shape="rect" id="node4" href="$Can_8c.html#a5844510b96d146c9c3e5f7addeb5b93e" title="Parses signals in a CAN message." alt="" coords="621,13,719,38"/>
-<area shape="rect" id="node5" href="$Can_8c.html#a74e797483566915f57a846dd366b18b4" title="Parses a CAN signal." alt="" coords="767,13,857,38"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,212,63"/>
+<area shape="rect" id="node2" href="$Can_8c.html#ab6573fd95381dab7cdbd99990cb4f1de" title="Receives a CAN message." alt="" coords="260,31,419,56"/>
+<area shape="rect" id="node3" href="$Can_8c.html#a7b791ed820670f44703fc1bccd0b9424" title="Parses a CAN message." alt="" coords="467,5,573,31"/>
+<area shape="rect" id="node6" href="$MessageFormat_8c.html#adaaacbf33ba7f4f08d8af9bae2ee2d38" title=" " alt="" coords="469,55,571,80"/>
+<area shape="rect" id="node4" href="$Can_8c.html#a5844510b96d146c9c3e5f7addeb5b93e" title="Parses signals in a CAN message." alt="" coords="621,5,719,31"/>
+<area shape="rect" id="node5" href="$Can_8c.html#a74e797483566915f57a846dd366b18b4" title="Parses a CAN signal." alt="" coords="767,5,857,31"/>
 </map>

@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['can_5fmessages_0',['can_messages',['../Can_8c.html#a4af7489ff69573f4410f051111cd2380',1,'Can.c']]],
-  ['celltemperaturemax_1',['cellTemperatureMax',['../structBms.html#a51670cb79b2354ecf24d16e0c5125f7b',1,'Bms']]],
-  ['celltemperaturemin_2',['cellTemperatureMin',['../structBms.html#ae4db05aea5dcf12374ed9f904a9780ad',1,'Bms']]],
-  ['cellvoltagemax_3',['cellVoltageMax',['../structBms.html#a3c15cc3e47ae19b741c02fec99992fa1',1,'Bms']]],
-  ['cellvoltagemin_4',['cellVoltageMin',['../structBms.html#a254922334d0b44ea546e4e4f702e6e27',1,'Bms']]],
-  ['channel_5',['channel',['../structAnalogOutput.html#aff5e9c284802f3ea2b594dd919bd09dd',1,'AnalogOutput::channel()'],['../structAnalogSensor.html#a01ed701a4a02f637c35124e2982b0954',1,'AnalogSensor::channel()']]],
-  ['chargestatus_6',['chargeStatus',['../structBms.html#abf28078e8a885e9950773e6806bf3316',1,'Bms']]],
-  ['check_5fheartbeat_7',['check_heartbeat',['../structCommsSystem.html#a041ccb955b25c56444e570f354b87b78',1,'CommsSystem::check_heartbeat()'],['../structExternalSystem.html#af0e762ad56062e3f5ff1ff57bdc68954',1,'ExternalSystem::check_heartbeat()']]],
-  ['child_8',['child',['../structAnalogSensor.html#a5e1488ef723d35bb51991148a3c3f997',1,'AnalogSensor::child()'],['../structDigitalSensor.html#af22bd51d38c70b32043e931cad3cde2e',1,'DigitalSensor::child()'],['../structSensor.html#a57cec2a6cbff88c12ae7632633119526',1,'Sensor::child()'],['../structControllerSystem.html#af3510581d0c41e08c2e896f106852794',1,'ControllerSystem::child()'],['../structExternalSystem.html#a34a37783192641c04867b8b469987fd4',1,'ExternalSystem::child()'],['../structSystem.html#a2e83df30972851bf886576c340d6e507',1,'System::child()'],['../structUpdateable.html#a624a00d563cd6b8533e4686449959c04',1,'Updateable::child()']]],
-  ['comms_9',['comms',['../structExternalSystem.html#ae26f40c87edc5ebffe847ebb30de077a',1,'ExternalSystem']]],
-  ['count_5f_10',['count_',['../structtable.html#a3b1b496c020a92cc4ac04a54c3b7c81a',1,'table']]],
-  ['counter_11',['counter',['../structRTD.html#af5a89f273bcef8902250848149dc176c',1,'RTD']]]
+  ['can_5fid_0',['can_id',['../structTelemetrySignal.html#a4275b83501a4a3885b822c30d9396c2d',1,'TelemetrySignal']]],
+  ['can_5finfo_1',['can_info',['../structTelemetrySignal.html#a25e26b81f47545a0d978d7576d89958e',1,'TelemetrySignal']]],
+  ['can_5fmessages_2',['can_messages',['../Can_8c.html#a4af7489ff69573f4410f051111cd2380',1,'Can.c']]],
+  ['category_3',['category',['../structUnitDefinition.html#aa6fba81d8722ae1027f2925e4922223b',1,'UnitDefinition']]],
+  ['celltemperaturemax_4',['cellTemperatureMax',['../structBms.html#a51670cb79b2354ecf24d16e0c5125f7b',1,'Bms']]],
+  ['celltemperaturemin_5',['cellTemperatureMin',['../structBms.html#ae4db05aea5dcf12374ed9f904a9780ad',1,'Bms']]],
+  ['cellvoltagemax_6',['cellVoltageMax',['../structBms.html#a3c15cc3e47ae19b741c02fec99992fa1',1,'Bms']]],
+  ['cellvoltagemin_7',['cellVoltageMin',['../structBms.html#a254922334d0b44ea546e4e4f702e6e27',1,'Bms']]],
+  ['channel_8',['channel',['../structAnalogOutput.html#aff5e9c284802f3ea2b594dd919bd09dd',1,'AnalogOutput::channel()'],['../structAnalogSensor.html#a01ed701a4a02f637c35124e2982b0954',1,'AnalogSensor::channel()']]],
+  ['chargestatus_9',['chargeStatus',['../structBms.html#abf28078e8a885e9950773e6806bf3316',1,'Bms']]],
+  ['check_5fheartbeat_10',['check_heartbeat',['../structCommsSystem.html#a041ccb955b25c56444e570f354b87b78',1,'CommsSystem::check_heartbeat()'],['../structExternalSystem.html#af0e762ad56062e3f5ff1ff57bdc68954',1,'ExternalSystem::check_heartbeat()']]],
+  ['child_11',['child',['../structDigitalSensor.html#af22bd51d38c70b32043e931cad3cde2e',1,'DigitalSensor::child()'],['../structUpdateable.html#a624a00d563cd6b8533e4686449959c04',1,'Updateable::child()'],['../structSystem.html#a2e83df30972851bf886576c340d6e507',1,'System::child()'],['../structExternalSystem.html#a34a37783192641c04867b8b469987fd4',1,'ExternalSystem::child()'],['../structControllerSystem.html#af3510581d0c41e08c2e896f106852794',1,'ControllerSystem::child()'],['../structSensor.html#a57cec2a6cbff88c12ae7632633119526',1,'Sensor::child()'],['../structAnalogSensor.html#a5e1488ef723d35bb51991148a3c3f997',1,'AnalogSensor::child()']]],
+  ['cmd_5findex_12',['cmd_index',['../stm32f7xx__it_8c.html#a7eabdedf1c60fd620804559c65547f94',1,'stm32f7xx_it.c']]],
+  ['comms_13',['comms',['../structExternalSystem.html#ae26f40c87edc5ebffe847ebb30de077a',1,'ExternalSystem']]],
+  ['count_5f_14',['count_',['../structtable.html#a3b1b496c020a92cc4ac04a54c3b7c81a',1,'table']]],
+  ['counter_15',['counter',['../structRTD.html#af5a89f273bcef8902250848149dc176c',1,'RTD']]],
+  ['custom_5fmax_16',['custom_max',['../structTelemetrySignal.html#a1aa62f08b77d56db883080494c06543a',1,'TelemetrySignal']]],
+  ['custom_5fmin_17',['custom_min',['../structTelemetrySignal.html#acc14004fa41c6b5579778b07e55ec03a',1,'TelemetrySignal']]]
 ];

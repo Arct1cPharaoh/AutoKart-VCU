@@ -267,7 +267,7 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="SteeringColumn_8c_source.html#l00032">32</a> of file <a class="el" href="SteeringColumn_8c_source.html">SteeringColumn.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   32</span>                                                   {</div>
 <div class="line"><span class="lineno">   33</span>    <span class="comment">// Placeholder for actual transfer function</span></div>
-<div class="line"><span class="lineno">   34</span>    printf(<span class="stringliteral">&quot;Implement SteeringColumn::transfer_function\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   34</span>    <span class="comment">//printf(&quot;Implement SteeringColumn::transfer_function\n&quot;);</span></div>
 <div class="line"><span class="lineno">   35</span>    <span class="keywordflow">return</span> rawVal;</div>
 <div class="line"><span class="lineno">   36</span>}</div>
 </div><!-- fragment --><div class="dynheader">
@@ -312,12 +312,12 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>                                                         {</div>
 <div class="line"><span class="lineno">   18</span>    <span class="comment">// Check if the pointer is null</span></div>
 <div class="line"><span class="lineno">   19</span>    <span class="keywordflow">if</span> (steeringColumn == NULL) {</div>
-<div class="line"><span class="lineno">   20</span>        fprintf(stderr, <span class="stringliteral">&quot;Error: Null pointer passed to updateSteeringColumn\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>        <span class="comment">//printf(stderr, &quot;Error: Null pointer passed to updateSteeringColumn\n&quot;);</span></div>
 <div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   22</span>    }</div>
 <div class="line"><span class="lineno">   23</span> </div>
 <div class="line"><span class="lineno">   24</span>    <span class="keywordtype">float</span> rawData = 0.0f; <span class="comment">// This should come from sensor read function or simulation</span></div>
-<div class="line"><span class="lineno">   25</span>    printf(<span class="stringliteral">&quot;Implement SteeringColumn Update.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>    <span class="comment">//printf(&quot;Implement SteeringColumn Update.\n&quot;);</span></div>
 <div class="line"><span class="lineno">   26</span>    steeringColumn-&gt;<a class="code hl_variable" href="structSteeringColumn.html#a0dd1e7baa84b2910114b55428a199f61">rotation_angle</a></div>
 <div class="line"><span class="lineno">   27</span>        = <a class="code hl_function" href="SteeringColumn_8c.html#addde23fa13ab83da9f43d4b3515a642e">transferFunctionSteeringColumn</a>(rawData + steeringColumn-&gt;<a class="code hl_variable" href="structSteeringColumn.html#a6054bb7b70dcb20f7d4b28e81029cba6">zero_offset</a>);</div>
 <div class="line"><span class="lineno">   28</span> </div>

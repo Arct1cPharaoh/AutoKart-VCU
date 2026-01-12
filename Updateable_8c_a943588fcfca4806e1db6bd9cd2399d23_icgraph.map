@@ -17,8 +17,8 @@
 <area shape="rect" id="node15" href="$AnalogSensor_8c.html#ac992e329ef2479c38747e193ce77500c" title="Initializes an analog sensor and configures the corresponding GPIO pin." alt="" coords="765,153,885,179"/>
 <area shape="rect" id="node24" href="$DigitalSensor_8c.html#ace328dbd7fead307e7141368901c0e1d" title="Initializes a digital sensor with the given parameters." alt="" coords="767,351,883,376"/>
 <area shape="rect" id="node16" href="$Accelerometer_8c.html#acf82e4569532339a0a1eb666e1398d4b" title="Initializes the accelerometer with the given channel, frequency, and multiplexer channel." alt="" coords="587,5,709,31"/>
-<area shape="rect" id="node17" href="$App_8c.html#a70256ff87716960d0b2a216d48fd94ce" title="Initializes the APP with the given frequency and channel." alt="" coords="617,252,679,277"/>
-<area shape="rect" id="node20" href="$BrakePressure_8c.html#a6cc0bf29d38b4637cb6a0a36f0196a81" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="585,153,711,179"/>
+<area shape="rect" id="node17" href="$App_8c.html#ae485fb67c6b146ddf00b1810c5d49b57" title="Initializes the APP with the given frequency and channel." alt="" coords="617,252,679,277"/>
+<area shape="rect" id="node20" href="$BrakePressure_8c.html#ac9902f987351262c6fbe975dbdd46de0" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="585,153,711,179"/>
 <area shape="rect" id="node21" href="$ShockPot_8c.html#aa504d587a6cb42be1f4aed7bbea6c1a4" title="Initializes the ShockPot sensor with the given frequency, channel, and wheel location." alt="" coords="600,55,696,80"/>
 <area shape="rect" id="node22" href="$SteeringColumn_8c.html#ae28348e36e1e12a95dc7da2bd30e6d88" title="Initializes the SteeringColumn sensor with the given frequency, channel, and zero offset." alt="" coords="583,104,713,129"/>
 <area shape="rect" id="node23" href="$Temperature_8c.html#ae867df29735777728c348fed4d9ebe1a" title="Initializes the Temperature sensor with the given frequency and channel." alt="" coords="592,203,704,228"/>

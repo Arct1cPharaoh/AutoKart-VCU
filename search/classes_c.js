@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['updateable_0',['Updateable',['../structUpdateable.html',1,'']]]
+  ['unitdefinition_0',['UnitDefinition',['../structUnitDefinition.html',1,'']]],
+  ['updateable_1',['Updateable',['../structUpdateable.html',1,'']]]
 ];

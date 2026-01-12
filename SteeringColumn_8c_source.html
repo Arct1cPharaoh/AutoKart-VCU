@@ -96,12 +96,12 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="SteeringColumn_8h.html#a17263c57a34bf28f4920ed228f194df3">   17</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="SteeringColumn_8c.html#a17263c57a34bf28f4920ed228f194df3">updateSteeringColumn</a>(<a class="code hl_struct" href="structSteeringColumn.html">SteeringColumn</a>* steeringColumn) {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// Check if the pointer is null</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span> (steeringColumn == NULL) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        fprintf(stderr, <span class="stringliteral">&quot;Error: Null pointer passed to updateSteeringColumn\n&quot;</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">//printf(stderr, &quot;Error: Null pointer passed to updateSteeringColumn\n&quot;);</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">float</span> rawData = 0.0f; <span class="comment">// This should come from sensor read function or simulation</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    printf(<span class="stringliteral">&quot;Implement SteeringColumn Update.\n&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//printf(&quot;Implement SteeringColumn Update.\n&quot;);</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    steeringColumn-&gt;<a class="code hl_variable" href="structSteeringColumn.html#a0dd1e7baa84b2910114b55428a199f61">rotation_angle</a></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        = <a class="code hl_function" href="SteeringColumn_8c.html#addde23fa13ab83da9f43d4b3515a642e">transferFunctionSteeringColumn</a>(rawData + steeringColumn-&gt;<a class="code hl_variable" href="structSteeringColumn.html#a6054bb7b70dcb20f7d4b28e81029cba6">zero_offset</a>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
@@ -110,7 +110,7 @@ $(function() {
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="SteeringColumn_8h.html#addde23fa13ab83da9f43d4b3515a642e">   32</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="SteeringColumn_8c.html#addde23fa13ab83da9f43d4b3515a642e">transferFunctionSteeringColumn</a>(<span class="keywordtype">float</span> rawVal) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Placeholder for actual transfer function</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    printf(<span class="stringliteral">&quot;Implement SteeringColumn::transfer_function\n&quot;</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">//printf(&quot;Implement SteeringColumn::transfer_function\n&quot;);</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> rawVal;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 <div class="ttc" id="aAnalogSensor_8h_html_ac992e329ef2479c38747e193ce77500c"><div class="ttname"><a href="AnalogSensor_8h.html#ac992e329ef2479c38747e193ce77500c">initAnalogSensor</a></div><div class="ttdeci">void initAnalogSensor(AnalogSensor *analogSensor, const char *name, int hz, int channel, void *child)</div><div class="ttdoc">Initializes an analog sensor and configures the corresponding GPIO pin.</div><div class="ttdef"><b>Definition:</b> <a href="AnalogSensor_8c_source.html#l00042">AnalogSensor.c:42</a></div></div>

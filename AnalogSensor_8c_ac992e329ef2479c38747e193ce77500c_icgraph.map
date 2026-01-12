@@ -1,8 +1,8 @@
 <map id="initAnalogSensor" name="initAnalogSensor">
 <area shape="rect" id="node1" title="Initializes an analog sensor and configures the corresponding GPIO pin." alt="" coords="757,129,877,155"/>
 <area shape="rect" id="node2" href="$Accelerometer_8c.html#acf82e4569532339a0a1eb666e1398d4b" title="Initializes the accelerometer with the given channel, frequency, and multiplexer channel." alt="" coords="583,5,705,31"/>
-<area shape="rect" id="node3" href="$App_8c.html#a70256ff87716960d0b2a216d48fd94ce" title="Initializes the APP with the given frequency and channel." alt="" coords="613,55,675,80"/>
-<area shape="rect" id="node7" href="$BrakePressure_8c.html#a6cc0bf29d38b4637cb6a0a36f0196a81" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="581,104,707,129"/>
+<area shape="rect" id="node3" href="$App_8c.html#ae485fb67c6b146ddf00b1810c5d49b57" title="Initializes the APP with the given frequency and channel." alt="" coords="613,55,675,80"/>
+<area shape="rect" id="node7" href="$BrakePressure_8c.html#ac9902f987351262c6fbe975dbdd46de0" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="581,104,707,129"/>
 <area shape="rect" id="node14" href="$ShockPot_8c.html#aa504d587a6cb42be1f4aed7bbea6c1a4" title="Initializes the ShockPot sensor with the given frequency, channel, and wheel location." alt="" coords="596,153,692,179"/>
 <area shape="rect" id="node15" href="$SteeringColumn_8c.html#ae28348e36e1e12a95dc7da2bd30e6d88" title="Initializes the SteeringColumn sensor with the given frequency, channel, and zero offset." alt="" coords="579,203,709,228"/>
 <area shape="rect" id="node16" href="$Temperature_8c.html#ae867df29735777728c348fed4d9ebe1a" title="Initializes the Temperature sensor with the given frequency and channel." alt="" coords="588,252,700,277"/>

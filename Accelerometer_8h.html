@@ -322,7 +322,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>                                      {</div>
 <div class="line"><span class="lineno">   19</span>    <a class="code hl_struct" href="structAccelerometer.html">Accelerometer</a> *myAccel = (<a class="code hl_struct" href="structAccelerometer.html">Accelerometer</a> *)accel;</div>
 <div class="line"><span class="lineno">   20</span>    <span class="keywordtype">float</span> rawData = 0.0f; <span class="comment">// Placeholder for sensor reading</span></div>
-<div class="line"><span class="lineno">   21</span>    printf(<span class="stringliteral">&quot;Updating Accelerometer\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   21</span>    <span class="comment">//printf(&quot;Updating Accelerometer\n&quot;);</span></div>
 <div class="line"><span class="lineno">   22</span>    myAccel-&gt;<a class="code hl_variable" href="structAccelerometer.html#a136ea00a3d678536b16de34c215205ef">value</a> = <a class="code hl_function" href="Accelerometer_8c.html#a1f6be4d9ef1b0564e7462ee74523b4c6">transferFunctionAccelerometer</a>(rawData);</div>
 <div class="line"><span class="lineno">   23</span>}</div>
 <div class="ttc" id="aAccelerometer_8c_html_a1f6be4d9ef1b0564e7462ee74523b4c6"><div class="ttname"><a href="Accelerometer_8c.html#a1f6be4d9ef1b0564e7462ee74523b4c6">transferFunctionAccelerometer</a></div><div class="ttdeci">float transferFunctionAccelerometer(float rawVal)</div><div class="ttdoc">Converts raw accelerometer data to a meaningful value.</div><div class="ttdef"><b>Definition:</b> <a href="Accelerometer_8c_source.html#l00025">Accelerometer.c:25</a></div></div>

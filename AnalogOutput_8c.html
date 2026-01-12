@@ -232,7 +232,7 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="AnalogOutput_8c_source.html#l00017">17</a> of file <a class="el" href="AnalogOutput_8c_source.html">AnalogOutput.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>                                                            {</div>
 <div class="line"><span class="lineno">   18</span><span class="preprocessor">    #ifdef DEBUGn</span></div>
-<div class="line"><span class="lineno">   19</span>    printf(<span class="stringliteral">&quot;Writing data to analog output %s: %f\n&quot;</span>, output-&gt;<a class="code hl_variable" href="structAnalogOutput.html#a3441df280a3c3cbfe335d98458e17480">output</a>.<a class="code hl_variable" href="structOutput.html#ab93d7c47bd69a3ebe6917d69a46f0ba7">updateable</a>.<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>, data);</div>
+<div class="line"><span class="lineno">   19</span>    <span class="comment">//printf(&quot;Writing data to analog output %s: %f\n&quot;, output-&gt;output.updateable.name, data);</span></div>
 <div class="line"><span class="lineno">   20</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><span class="lineno">   21</span> </div>
 <div class="line"><span class="lineno">   22</span>    <span class="keywordflow">if</span> (output-&gt;<a class="code hl_variable" href="structAnalogOutput.html#aff5e9c284802f3ea2b594dd919bd09dd">channel</a> == 1) {</div>
@@ -246,21 +246,19 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   30</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   31</span>      </div>
 <div class="line"><span class="lineno">   32</span><span class="preprocessor">      #ifdef DEBUGn</span></div>
-<div class="line"><span class="lineno">   33</span>      printf(<span class="stringliteral">&quot;Invalid channel number for analog output %s\n&quot;</span>, output-&gt;<a class="code hl_variable" href="structAnalogOutput.html#a3441df280a3c3cbfe335d98458e17480">output</a>.<a class="code hl_variable" href="structOutput.html#ab93d7c47bd69a3ebe6917d69a46f0ba7">updateable</a>.<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>);</div>
+<div class="line"><span class="lineno">   33</span>      <span class="comment">//printf(&quot;Invalid channel number for analog output %s\n&quot;, output-&gt;output.updateable.name);</span></div>
 <div class="line"><span class="lineno">   34</span><span class="preprocessor">      #endif</span></div>
 <div class="line"><span class="lineno">   35</span> </div>
 <div class="line"><span class="lineno">   36</span>      <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   37</span>    }</div>
 <div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
 <div class="line"><span class="lineno">   39</span>}</div>
-<div class="ttc" id="aAnalogOutput_8h_html_a930de474ee4c33d06c89f5288842010f"><div class="ttname"><a href="AnalogOutput_8h.html#a930de474ee4c33d06c89f5288842010f">dac2_buffer</a></div><div class="ttdeci">uint32_t dac2_buffer[DAC2_BUFFER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="Src_2main_8c_source.html#l00127">main.c:127</a></div></div>
-<div class="ttc" id="aAnalogOutput_8h_html_af9a3817ca374258092a2c6534d6159f6"><div class="ttname"><a href="AnalogOutput_8h.html#af9a3817ca374258092a2c6534d6159f6">dac1_buffer</a></div><div class="ttdeci">uint32_t dac1_buffer[DAC1_BUFFER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="Src_2main_8c_source.html#l00126">main.c:126</a></div></div>
+<div class="ttc" id="aAnalogOutput_8h_html_a930de474ee4c33d06c89f5288842010f"><div class="ttname"><a href="AnalogOutput_8h.html#a930de474ee4c33d06c89f5288842010f">dac2_buffer</a></div><div class="ttdeci">uint32_t dac2_buffer[DAC2_BUFFER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="Src_2main_8c_source.html#l00129">main.c:129</a></div></div>
+<div class="ttc" id="aAnalogOutput_8h_html_af9a3817ca374258092a2c6534d6159f6"><div class="ttname"><a href="AnalogOutput_8h.html#af9a3817ca374258092a2c6534d6159f6">dac1_buffer</a></div><div class="ttdeci">uint32_t dac1_buffer[DAC1_BUFFER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="Src_2main_8c_source.html#l00128">main.c:128</a></div></div>
 <div class="ttc" id="aCommon_8h_html_a295b784cba68a3b8793e3d3dc3e172ab"><div class="ttname"><a href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a></div><div class="ttdeci">#define _FAILURE</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00006">Common.h:6</a></div></div>
 <div class="ttc" id="aCommon_8h_html_acdf9ea17605dff8b810df8076b6496e2"><div class="ttname"><a href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a></div><div class="ttdeci">#define _SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00005">Common.h:5</a></div></div>
 <div class="ttc" id="aConstants_8h_html_a630bd1109b2bbeaddcaff738953c0022"><div class="ttname"><a href="Constants_8h.html#a630bd1109b2bbeaddcaff738953c0022">DAC1_BUFFER_SIZE</a></div><div class="ttdeci">#define DAC1_BUFFER_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8h_source.html#l00009">Constants.h:9</a></div></div>
 <div class="ttc" id="aConstants_8h_html_a71266219ec48bd78ed760202b209dbda"><div class="ttname"><a href="Constants_8h.html#a71266219ec48bd78ed760202b209dbda">DAC2_BUFFER_SIZE</a></div><div class="ttdeci">#define DAC2_BUFFER_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8h_source.html#l00010">Constants.h:10</a></div></div>
-<div class="ttc" id="astructOutput_html_ab93d7c47bd69a3ebe6917d69a46f0ba7"><div class="ttname"><a href="structOutput.html#ab93d7c47bd69a3ebe6917d69a46f0ba7">Output::updateable</a></div><div class="ttdeci">Updateable updateable</div><div class="ttdef"><b>Definition:</b> <a href="Output_8h_source.html#l00015">Output.h:15</a></div></div>
-<div class="ttc" id="astructUpdateable_html_ab1a238912893afab4f86abaebdc20b12"><div class="ttname"><a href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">Updateable::name</a></div><div class="ttdeci">char name[MAX_NAME_LENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00024">Updateable.h:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

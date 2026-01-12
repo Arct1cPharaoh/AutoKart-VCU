@@ -1,7 +1,10 @@
 <map id="updateApps" name="updateApps">
-<area shape="rect" id="node1" title="Updates the APPS based on both sensor outputs." alt="" coords="5,31,96,56"/>
-<area shape="rect" id="node2" href="$App_8c.html#a01be170ac09e9dd35ba3f18c537ae409" title="Gets the current position of the APP." alt="" coords="144,5,255,31"/>
-<area shape="rect" id="node3" href="$App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="157,55,241,80"/>
-<area shape="rect" id="node4" href="$AnalogSensor_8c.html#a6b63008a770ff66fdd8a45aa640f39b8" title="Retrieves analog sensor data for a specific channel." alt="" coords="303,29,451,55"/>
-<area shape="rect" id="node5" href="$App_8c.html#ac6a91028bac466dcd71f79aa06aa65ba" title="Converts raw APP data to a meaningful position value." alt="" coords="307,79,446,104"/>
+<area shape="rect" id="node1" title="Updates the APPS based on both sensor outputs." alt="" coords="5,81,96,107"/>
+<area shape="rect" id="node2" href="$App_8c.html#a364b7b0d4240435c741a2a9bc6c076ba" title="Updates the APP data." alt="" coords="144,81,228,107"/>
+<area shape="rect" id="node3" href="$AnalogSensor_8c.html#a6b63008a770ff66fdd8a45aa640f39b8" title="Retrieves analog sensor data for a specific channel." alt="" coords="276,5,424,31"/>
+<area shape="rect" id="node4" href="$MessageFormat_8c.html#adaaacbf33ba7f4f08d8af9bae2ee2d38" title=" " alt="" coords="483,56,585,81"/>
+<area shape="rect" id="node5" href="$Telemetry_8c.html#a42357317b4e74eac5d4e8eed46838e90" title=" " alt="" coords="280,107,420,132"/>
+<area shape="rect" id="node8" href="$App_8c.html#ac6a91028bac466dcd71f79aa06aa65ba" title="Converts raw APP data to a meaningful position value." alt="" coords="281,156,419,181"/>
+<area shape="rect" id="node6" href="$Units_8c.html#a589350189385db4f70a033de12f8fb27" title=" " alt="" coords="644,132,761,157"/>
+<area shape="rect" id="node7" href="$Units_8c.html#a02d31592dd021027d16e51f7a2f3af84" title=" " alt="" coords="472,157,596,183"/>
 </map>

@@ -217,7 +217,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   25</span>                                     {</div>
 <div class="line"><span class="lineno">   26</span>    <span class="comment">// Check if the pointer is null</span></div>
 <div class="line"><span class="lineno">   27</span>    <span class="keywordflow">if</span> (ws == NULL) {</div>
-<div class="line"><span class="lineno">   28</span>        fprintf(stderr, <span class="stringliteral">&quot;Error: Null pointer passed to calculateSpeed\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   28</span>        <span class="comment">//printf(stderr, &quot;Error: Null pointer passed to calculateSpeed\n&quot;);</span></div>
 <div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> -1; <span class="comment">// Or handle the error as appropriate</span></div>
 <div class="line"><span class="lineno">   30</span>    }</div>
 <div class="line"><span class="lineno">   31</span> </div>
@@ -232,9 +232,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   40</span> </div>
 <div class="line"><span class="lineno">   41</span>    <span class="comment">// Verify inputs</span></div>
 <div class="line"><span class="lineno">   42</span>    <span class="keywordflow">if</span> (numTeeth &lt;= 0 || radius &lt;= 0.0f || pulses &lt;= 0 || delta &lt;= 0.0) {</div>
-<div class="line"><span class="lineno">   43</span>        printf(<span class="stringliteral">&quot;Error: Invalid argument. &quot;</span></div>
-<div class="line"><span class="lineno">   44</span>               <span class="stringliteral">&quot;NumTeeth = %d, Radius = %.2f, Pulses = %d, Time Delta = %.2f\n&quot;</span>,</div>
-<div class="line"><span class="lineno">   45</span>               numTeeth, radius, pulses, delta);</div>
+<div class="line"><span class="lineno">   43</span>        <span class="comment">//printf(&quot;Error: Invalid argument. &quot;</span></div>
+<div class="line"><span class="lineno">   44</span>        <span class="comment">//       &quot;NumTeeth = %d, Radius = %.2f, Pulses = %d, Time Delta = %.2f\n&quot;,</span></div>
+<div class="line"><span class="lineno">   45</span>        <span class="comment">//       numTeeth, radius, pulses, delta);</span></div>
 <div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> 0.0f;</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
 <div class="line"><span class="lineno">   48</span> </div>
@@ -486,7 +486,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   63</span> </div>
 <div class="line"><span class="lineno">   64</span>    ws-&gt;<a class="code hl_variable" href="structWheelSpeed.html#a6d8b62cdae99f0980adf213fe71558e1">speed</a> = <a class="code hl_function" href="WheelSpeed_8c.html#a9b06a45c350af910e0b84912802616b9">calculateSpeed</a>(ws);</div>
 <div class="line"><span class="lineno">   65</span>    <span class="keywordflow">if</span> (ws-&gt;<a class="code hl_variable" href="structWheelSpeed.html#a6d8b62cdae99f0980adf213fe71558e1">speed</a> &lt; 0) {</div>
-<div class="line"><span class="lineno">   66</span>        printf(<span class="stringliteral">&quot;Error: Speed calculation failed\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="comment">//printf(&quot;Error: Speed calculation failed\n&quot;);</span></div>
 <div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   68</span>    }</div>
 <div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>

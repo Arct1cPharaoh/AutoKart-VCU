@@ -1,6 +1,6 @@
 <map id="updateBrakePressure" name="updateBrakePressure">
 <area shape="rect" id="node1" title="Updates the brake pressure data." alt="" coords="989,103,1136,128"/>
-<area shape="rect" id="node2" href="$BrakePressure_8c.html#a6cc0bf29d38b4637cb6a0a36f0196a81" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="606,79,731,104"/>
+<area shape="rect" id="node2" href="$BrakePressure_8c.html#ac9902f987351262c6fbe975dbdd46de0" title="Initializes the BrakePressure sensor with the given frequency and channel." alt="" coords="606,79,731,104"/>
 <area shape="rect" id="node10" href="$BrakeSystemControl_8c.html#a8ba4ffcecbf364519ca67eeb4a6a2450" title="Updates BrakeSystemStatus with current sensor data." alt="" coords="807,128,941,153"/>
 <area shape="rect" id="node3" href="$BrakeSystemControl_8c.html#a45079ad72d2940fe8dce1fddde838bea" title="Initializes the Braking System with initial settings." alt="" coords="372,104,531,129"/>
 <area shape="rect" id="node4" href="$Src_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="208,5,259,31"/>

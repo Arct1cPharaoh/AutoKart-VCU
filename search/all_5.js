@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['e_5fdefaultupdate_0',['e_defaultUpdate',['../ExternalSystem_8h.html#ab79245d1354be72cc395e346f5a08503',1,'e_defaultUpdate(Updateable *updateable):&#160;ExternalSystem.c'],['../ExternalSystem_8c.html#ab79245d1354be72cc395e346f5a08503',1,'e_defaultUpdate(Updateable *updateable):&#160;ExternalSystem.c']]],
+  ['e_5fdefaultupdate_0',['e_defaultUpdate',['../ExternalSystem_8c.html#ab79245d1354be72cc395e346f5a08503',1,'e_defaultUpdate(Updateable *updateable):&#160;ExternalSystem.c'],['../ExternalSystem_8h.html#ab79245d1354be72cc395e346f5a08503',1,'e_defaultUpdate(Updateable *updateable):&#160;ExternalSystem.c']]],
   ['e_5finverter_1',['e_INVERTER',['../ExternalSystem_8h.html#aa3ca4a11130df4f4b95894cff017475ca2df0f96a37c34fa58a21dd696c01ea47',1,'ExternalSystem.h']]],
   ['enable_2',['ENABLE',['../Updateable_8h.html#a95e75e1b0072990627fe850f0184b271',1,'Updateable.h']]],
   ['enable_3',['enable',['../structUpdateable.html#ad2432fdf907612a6df86ad1b08fe9bee',1,'Updateable']]],
   ['enabled_4',['ENABLED',['../Updateable_8h.html#a73c228f87e038e8295ee8ea8eceaa5ac',1,'Updateable.h']]],
-  ['enabled_5',['enabled',['../structUpdateable.html#a2454f255fedd2c6bd24e8e2d3ecbcffb',1,'Updateable']]],
+  ['enabled_5',['enabled',['../structTelemetrySignal.html#a342314c8d8c0edd659850705a77a04e1',1,'TelemetrySignal::enabled()'],['../structUpdateable.html#a2454f255fedd2c6bd24e8e2d3ecbcffb',1,'Updateable::enabled()']]],
   ['endian_6',['endian',['../structCAN__Signal__Template.html#ae2b8092e207e4c059257ba65e634c3d5',1,'CAN_Signal_Template']]],
   ['environ_7',['environ',['../syscalls_8c.html#aa006daaf11f1e2e45a6ababaf463212b',1,'syscalls.c']]],
   ['equal_8',['equal',['../BMSTest_8c.html#aeff4a621d9f3876dc688b3124f52dab8',1,'BMSTest.c']]],
-  ['error_5fhandler_9',['Error_Handler',['../Src_2main_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c'],['../main_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c']]],
+  ['error_5fhandler_9',['Error_Handler',['../main_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c'],['../Src_2main_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c']]],
   ['esc_10',['ESC',['../Common_8h.html#a4af1b6159e447ba72652bb7fcdfa726e',1,'Common.h']]],
   ['esc_5faqua_11',['ESC_AQUA',['../Common_8h.html#a58fbd79b54ca0b8ba71721a015c289ab',1,'Common.h']]],
   ['esc_5fgreen_12',['ESC_GREEN',['../Common_8h.html#aa0d6b2906ea4e2b5179baa95a9ba7653',1,'Common.h']]],
@@ -23,11 +23,12 @@ var searchData=
   ['eth_5ftx_5fbuf_5fsize_20',['ETH_TX_BUF_SIZE',['../stm32f7xx__hal__conf_8h.html#af83956dfc1b135c3c92ac409758b6cf4',1,'stm32f7xx_hal_conf.h']]],
   ['eth_5ftxbufnb_21',['ETH_TXBUFNB',['../stm32f7xx__hal__conf_8h.html#a4ad07ad8fa6f8639ab8ef362390d86c7',1,'stm32f7xx_hal_conf.h']]],
   ['ethernet_22',['ETHERNET',['../CommsSystem_8h.html#aa47ccaaca64ec7d83344a262ea4ebba3a8f0fce6ed9d0370f45ef72a7b469937c',1,'CommsSystem.h']]],
-  ['external_23',['EXTERNAL',['../System_8h.html#a922f019f64e4183a18638787f6ba539ba63fbb9fe7b9a695d3a65541465cb99d5',1,'System.h']]],
-  ['external_5fclock_5fvalue_24',['EXTERNAL_CLOCK_VALUE',['../stm32f7xx__hal__conf_8h.html#a8c47c935e91e70569098b41718558648',1,'stm32f7xx_hal_conf.h']]],
-  ['externalsystem_25',['ExternalSystem',['../ExternalSystem_8h.html#a95e5caf6526188016be830f4c32cf58d',1,'ExternalSystem():&#160;ExternalSystem.h'],['../structExternalSystem.html',1,'ExternalSystem']]],
-  ['externalsystem_2ec_26',['ExternalSystem.c',['../ExternalSystem_8c.html',1,'']]],
-  ['externalsystem_2eh_27',['ExternalSystem.h',['../ExternalSystem_8h.html',1,'']]],
-  ['externaltype_28',['ExternalType',['../ExternalSystem_8h.html#aa3ca4a11130df4f4b95894cff017475c',1,'ExternalSystem.h']]],
-  ['extsystem_29',['extSystem',['../structBms.html#a85ff076a6bd745917841456c49499fde',1,'Bms']]]
+  ['expected_5frate_5fms_23',['expected_rate_ms',['../structTelemetrySignal.html#a1907b86198fc7e398fa2a5dc4530165b',1,'TelemetrySignal']]],
+  ['external_24',['EXTERNAL',['../System_8h.html#a922f019f64e4183a18638787f6ba539ba63fbb9fe7b9a695d3a65541465cb99d5',1,'System.h']]],
+  ['external_5fclock_5fvalue_25',['EXTERNAL_CLOCK_VALUE',['../stm32f7xx__hal__conf_8h.html#a8c47c935e91e70569098b41718558648',1,'stm32f7xx_hal_conf.h']]],
+  ['externalsystem_26',['ExternalSystem',['../ExternalSystem_8h.html#a95e5caf6526188016be830f4c32cf58d',1,'ExternalSystem():&#160;ExternalSystem.h'],['../structExternalSystem.html',1,'ExternalSystem']]],
+  ['externalsystem_2ec_27',['ExternalSystem.c',['../ExternalSystem_8c.html',1,'']]],
+  ['externalsystem_2eh_28',['ExternalSystem.h',['../ExternalSystem_8h.html',1,'']]],
+  ['externaltype_29',['ExternalType',['../ExternalSystem_8h.html#aa3ca4a11130df4f4b95894cff017475c',1,'ExternalSystem.h']]],
+  ['extsystem_30',['extSystem',['../structBms.html#a85ff076a6bd745917841456c49499fde',1,'Bms']]]
 ];

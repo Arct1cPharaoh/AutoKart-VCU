@@ -158,16 +158,13 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="test_8c_source.html#l00033">33</a> of file <a class="el" href="test_8c_source.html">test.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   34</span>                              {</div>
 <div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span> (passes) {</div>
-<div class="line"><span class="lineno">   36</span>    printf(<a class="code hl_define" href="Common_8h.html#a81d97b2292c59c9c556bd9fbee21eb96">TEST_OK</a> <span class="stringliteral">&quot;%s %s\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>, pass_message);</div>
+<div class="line"><span class="lineno">   36</span>    <span class="comment">//printf(TEST_OK &quot;%s %s\n&quot;, t-&gt;name, pass_message);</span></div>
 <div class="line"><span class="lineno">   37</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   38</span>    printf(<a class="code hl_define" href="Common_8h.html#aac5fb49959e4b7d34f778ab60b422728">TEST_ERR</a> <span class="stringliteral">&quot;%s %s\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>, fail_message);</div>
+<div class="line"><span class="lineno">   38</span>    <span class="comment">//printf(TEST_ERR &quot;%s %s\n&quot;, t-&gt;name, fail_message);</span></div>
 <div class="line"><span class="lineno">   39</span>  }</div>
 <div class="line"><span class="lineno">   40</span> </div>
 <div class="line"><span class="lineno">   41</span>  t-&gt;<a class="code hl_variable" href="structtest__t.html#a93a58c9ac1ffa09023831e158b9c1c67">passes</a> &amp;= passes;</div>
 <div class="line"><span class="lineno">   42</span>}</div>
-<div class="ttc" id="aCommon_8h_html_a81d97b2292c59c9c556bd9fbee21eb96"><div class="ttname"><a href="Common_8h.html#a81d97b2292c59c9c556bd9fbee21eb96">TEST_OK</a></div><div class="ttdeci">#define TEST_OK</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00026">Common.h:26</a></div></div>
-<div class="ttc" id="aCommon_8h_html_aac5fb49959e4b7d34f778ab60b422728"><div class="ttname"><a href="Common_8h.html#aac5fb49959e4b7d34f778ab60b422728">TEST_ERR</a></div><div class="ttdeci">#define TEST_ERR</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00027">Common.h:27</a></div></div>
-<div class="ttc" id="astructtest__t_html_a8fe88927fecb0cc568302872f2026e2b"><div class="ttname"><a href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">test_t::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00040">test.h:40</a></div></div>
 <div class="ttc" id="astructtest__t_html_a93a58c9ac1ffa09023831e158b9c1c67"><div class="ttname"><a href="structtest__t.html#a93a58c9ac1ffa09023831e158b9c1c67">test_t::passes</a></div><div class="ttdeci">bool passes</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00041">test.h:41</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -220,9 +217,9 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>                                         {</div>
 <div class="line"><span class="lineno">   46</span>  <span class="keywordtype">bool</span> passes = fabs(a - b) &lt; <a class="code hl_define" href="test_8h.html#a6cc298c4cdb7fb35d5d3cc6af02d4518">TEST_EQUAL_EPSILON</a>;</div>
 <div class="line"><span class="lineno">   47</span>  <span class="keywordflow">if</span> (passes) {</div>
-<div class="line"><span class="lineno">   48</span>    printf(<a class="code hl_define" href="Common_8h.html#a81d97b2292c59c9c556bd9fbee21eb96">TEST_OK</a> <span class="stringliteral">&quot;%s %s = %s (%f = %f)\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>, a_label, b_label, a, b);</div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment">//printf(TEST_OK &quot;%s %s = %s (%f = %f)\n&quot;, t-&gt;name, a_label, b_label, a, b);</span></div>
 <div class="line"><span class="lineno">   49</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   50</span>    printf(<a class="code hl_define" href="Common_8h.html#aac5fb49959e4b7d34f778ab60b422728">TEST_ERR</a> <span class="stringliteral">&quot;%s %s ≠ %s (%f ≠ %f)\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>, a_label, b_label, a, b);</div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">//printf(TEST_ERR &quot;%s %s ≠ %s (%f ≠ %f)\n&quot;, t-&gt;name, a_label, b_label, a, b);</span></div>
 <div class="line"><span class="lineno">   51</span>  }</div>
 <div class="line"><span class="lineno">   52</span> </div>
 <div class="line"><span class="lineno">   53</span>  t-&gt;<a class="code hl_variable" href="structtest__t.html#a93a58c9ac1ffa09023831e158b9c1c67">passes</a> &amp;= passes;</div>
@@ -280,10 +277,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   59</span>  <span class="keywordtype">float</span> percent_error = (actual - expected) / expected * 100;</div>
 <div class="line"><span class="lineno">   60</span>  <span class="keywordtype">bool</span> passes = fabs(percent_error) &lt; <a class="code hl_define" href="test_8h.html#a552127fe812284b4d56f5fe9dc6c3d33">TEST_ERROR_DELTA_PERCENT</a>;</div>
 <div class="line"><span class="lineno">   61</span>  <span class="keywordflow">if</span> (passes) {</div>
-<div class="line"><span class="lineno">   62</span>    printf(<a class="code hl_define" href="Common_8h.html#a81d97b2292c59c9c556bd9fbee21eb96">TEST_OK</a> <span class="stringliteral">&quot;%s %s ≈ %s (%f ≈ %f)\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>, actual_label,</div>
+<div class="line"><span class="lineno">   62</span>    <span class="comment">//printf(TEST_OK &quot;%s %s ≈ %s (%f ≈ %f)\n&quot;, t-&gt;name, actual_label,</span></div>
 <div class="line"><span class="lineno">   63</span>           expected_label, actual, expected);</div>
 <div class="line"><span class="lineno">   64</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   65</span>    printf(<a class="code hl_define" href="Common_8h.html#aac5fb49959e4b7d34f778ab60b422728">TEST_ERR</a> <span class="stringliteral">&quot;%s %s ≠ %s (%f ≠ %f)\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>, actual_label,</div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment">//printf(TEST_ERR &quot;%s %s ≠ %s (%f ≠ %f)\n&quot;, t-&gt;name, actual_label,</span></div>
 <div class="line"><span class="lineno">   66</span>           expected_label, actual, expected);</div>
 <div class="line"><span class="lineno">   67</span>  }</div>
 <div class="line"><span class="lineno">   68</span> </div>
@@ -312,16 +309,14 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="test_8c_source.html#l00022">22</a> of file <a class="el" href="test_8c_source.html">test.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   22</span>                         {</div>
 <div class="line"><span class="lineno">   23</span>  <span class="keywordflow">if</span> (t-&gt;<a class="code hl_variable" href="structtest__t.html#a93a58c9ac1ffa09023831e158b9c1c67">passes</a>) {</div>
-<div class="line"><span class="lineno">   24</span>    printf(<a class="code hl_define" href="Common_8h.html#a513027e9e45c00888acb45f61b0d1a2d">TEST_PASS</a> <span class="stringliteral">&quot;%s all passed\n\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>);</div>
+<div class="line"><span class="lineno">   24</span>    <span class="comment">//printf(TEST_PASS &quot;%s all passed\n\n&quot;, t-&gt;name);</span></div>
 <div class="line"><span class="lineno">   25</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   26</span>    printf(<a class="code hl_define" href="Common_8h.html#a1e224fb22d7d3a3e5e5529599a061810">TEST_FAIL</a> <span class="stringliteral">&quot;%s failed\n\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>);</div>
+<div class="line"><span class="lineno">   26</span>    <span class="comment">//printf(TEST_FAIL &quot;%s failed\n\n&quot;, t-&gt;name);</span></div>
 <div class="line"><span class="lineno">   27</span>  }</div>
 <div class="line"><span class="lineno">   28</span> </div>
 <div class="line"><span class="lineno">   29</span>  <span class="comment">// NOTE If t-&gt;name is copied in test_start, it needs to be freed</span></div>
 <div class="line"><span class="lineno">   30</span>  free(t);</div>
 <div class="line"><span class="lineno">   31</span>}</div>
-<div class="ttc" id="aCommon_8h_html_a1e224fb22d7d3a3e5e5529599a061810"><div class="ttname"><a href="Common_8h.html#a1e224fb22d7d3a3e5e5529599a061810">TEST_FAIL</a></div><div class="ttdeci">#define TEST_FAIL</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00028">Common.h:28</a></div></div>
-<div class="ttc" id="aCommon_8h_html_a513027e9e45c00888acb45f61b0d1a2d"><div class="ttname"><a href="Common_8h.html#a513027e9e45c00888acb45f61b0d1a2d">TEST_PASS</a></div><div class="ttdeci">#define TEST_PASS</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00025">Common.h:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -350,12 +345,12 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   14</span>  t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a> = name;</div>
 <div class="line"><span class="lineno">   15</span>  t-&gt;<a class="code hl_variable" href="structtest__t.html#a93a58c9ac1ffa09023831e158b9c1c67">passes</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   16</span> </div>
-<div class="line"><span class="lineno">   17</span>  printf(<a class="code hl_define" href="Common_8h.html#a06549ee78edde8ab8d888b504dc86728">TEST_START</a> <span class="stringliteral">&quot;%s\n&quot;</span>, t-&gt;<a class="code hl_variable" href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">name</a>);</div>
+<div class="line"><span class="lineno">   17</span>  <span class="comment">//printf(TEST_START &quot;%s\n&quot;, t-&gt;name);</span></div>
 <div class="line"><span class="lineno">   18</span> </div>
 <div class="line"><span class="lineno">   19</span>  <span class="keywordflow">return</span> t;</div>
 <div class="line"><span class="lineno">   20</span>}</div>
-<div class="ttc" id="aCommon_8h_html_a06549ee78edde8ab8d888b504dc86728"><div class="ttname"><a href="Common_8h.html#a06549ee78edde8ab8d888b504dc86728">TEST_START</a></div><div class="ttdeci">#define TEST_START</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00024">Common.h:24</a></div></div>
 <div class="ttc" id="astructtest__t_html"><div class="ttname"><a href="structtest__t.html">test_t</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00039">test.h:39</a></div></div>
+<div class="ttc" id="astructtest__t_html_a8fe88927fecb0cc568302872f2026e2b"><div class="ttname"><a href="structtest__t.html#a8fe88927fecb0cc568302872f2026e2b">test_t::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00040">test.h:40</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

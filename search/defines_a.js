@@ -18,9 +18,10 @@ var searchData=
   ['max_5fsensors_15',['MAX_SENSORS',['../PriorityQueue_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2',1,'MAX_SENSORS():&#160;PriorityQueue.h'],['../Scheduler_8h.html#aa3d1fc2927eec213e6b5f9e854c392d2',1,'MAX_SENSORS():&#160;Scheduler.h']]],
   ['max_5fsignal_5fname_5flength_16',['MAX_SIGNAL_NAME_LENGTH',['../Can_8h.html#a4b5da4a35814c43f45281637572c9893',1,'Can.h']]],
   ['max_5fsignals_17',['MAX_SIGNALS',['../Can_8h.html#ac1444afccc384905184935b1e9de39bd',1,'Can.h']]],
-  ['max_5ftorque_18',['MAX_TORQUE',['../TorqueControlActuatorTest_8c.html#aaffdf293ef95fd884b05ac19b8f90ad3',1,'TorqueControlActuatorTest.c']]],
-  ['max_5funit_5fname_5flength_19',['MAX_UNIT_NAME_LENGTH',['../Can_8h.html#a46f7bdd65a8fb28513fc13feacfe2dbb',1,'Can.h']]],
-  ['mco_5fgpio_5fport_20',['MCO_GPIO_Port',['../main_8h.html#abd06dd7ec64336dc256720eb6fb94817',1,'main.h']]],
-  ['mco_5fpin_21',['MCO_Pin',['../main_8h.html#a1a9a753e892d0c27036cb8929cc9c547',1,'main.h']]],
-  ['min_5fbrake_5fpressure_22',['MIN_BRAKE_PRESSURE',['../Constants_8h.html#a28da67c837fc56ee1c60fc6828a013be',1,'Constants.h']]]
+  ['max_5ftelemetry_5fsignals_18',['MAX_TELEMETRY_SIGNALS',['../Telemetry_8c.html#af2e3852a285fd8b8e0c78980e6ddcd5f',1,'Telemetry.c']]],
+  ['max_5ftorque_19',['MAX_TORQUE',['../TorqueControlActuatorTest_8c.html#aaffdf293ef95fd884b05ac19b8f90ad3',1,'TorqueControlActuatorTest.c']]],
+  ['max_5funit_5fname_5flength_20',['MAX_UNIT_NAME_LENGTH',['../Can_8h.html#a46f7bdd65a8fb28513fc13feacfe2dbb',1,'Can.h']]],
+  ['mco_5fgpio_5fport_21',['MCO_GPIO_Port',['../main_8h.html#abd06dd7ec64336dc256720eb6fb94817',1,'main.h']]],
+  ['mco_5fpin_22',['MCO_Pin',['../main_8h.html#a1a9a753e892d0c27036cb8929cc9c547',1,'main.h']]],
+  ['min_5fbrake_5fpressure_23',['MIN_BRAKE_PRESSURE',['../Constants_8h.html#a28da67c837fc56ee1c60fc6828a013be',1,'Constants.h']]]
 ];

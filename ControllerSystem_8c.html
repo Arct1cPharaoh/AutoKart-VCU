@@ -162,7 +162,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ControllerSystem_8c_source.html#l00024">24</a> of file <a class="el" href="ControllerSystem_8c_source.html">ControllerSystem.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                              {</div>
 <div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span> (controller-&gt;<a class="code hl_variable" href="structControllerSystem.html#ae8e42023f45ffbf8d41916c8c4c77575">num_monitors</a> &gt;= <a class="code hl_define" href="Constants_8h.html#a0cd5fd43543b0e231650b1eaabc30dd2">MAX_MONITORS</a>) {</div>
-<div class="line"><span class="lineno">   26</span>        printf(<span class="stringliteral">&quot;Cannot add more monitors to the controller\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>        <span class="comment">//printf(&quot;Cannot add more monitors to the controller\n&quot;);</span></div>
 <div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   28</span>    }</div>
 <div class="line"><span class="lineno">   29</span>    controller-&gt;<a class="code hl_variable" href="structControllerSystem.html#a0164e78f6e48416560ca7d40e90e8f1d">monitors</a>[controller-&gt;<a class="code hl_variable" href="structControllerSystem.html#ae8e42023f45ffbf8d41916c8c4c77575">num_monitors</a>++] = monitor;</div>
@@ -244,7 +244,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
 <div class="line"><span class="lineno">   41</span>        }</div>
 <div class="line"><span class="lineno">   42</span>    }</div>
-<div class="line"><span class="lineno">   43</span>    printf(<span class="stringliteral">&quot;Monitor not found in the controller\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>    <span class="comment">//printf(&quot;Monitor not found in the controller\n&quot;);</span></div>
 <div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   45</span>}</div>
 </div><!-- fragment --><div class="dynheader">
@@ -300,12 +300,12 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   69</span>                                                  {</div>
 <div class="line"><span class="lineno">   70</span> </div>
 <div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span> (controller-&gt;<a class="code hl_variable" href="structControllerSystem.html#adbfc5da05b506b9e0dea738ee29fbbb6">state</a> != <a class="code hl_enumvalue" href="ControllerSystem_8h.html#ac38090c7c72c6db6eacb377d6224ad36a25da3d5754b166342277b1c9d01df61c">c_computed</a>) {</div>
-<div class="line"><span class="lineno">   72</span>        printf(<span class="stringliteral">&quot;Controller not computed new value\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>        <span class="comment">//printf(&quot;Controller not computed new value\n&quot;);</span></div>
 <div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
 <div class="line"><span class="lineno">   75</span> </div>
 <div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span> (controller-&gt;<a class="code hl_variable" href="structControllerSystem.html#ae8e42023f45ffbf8d41916c8c4c77575">num_monitors</a> == 0) {</div>
-<div class="line"><span class="lineno">   77</span>        printf(<span class="stringliteral">&quot;No monitors set for Controller\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   77</span>        <span class="comment">//printf(&quot;No monitors set for Controller\n&quot;);</span></div>
 <div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#a295b784cba68a3b8793e3d3dc3e172ab">_FAILURE</a>;</div>
 <div class="line"><span class="lineno">   79</span>    }</div>
 <div class="line"><span class="lineno">   80</span>    </div>

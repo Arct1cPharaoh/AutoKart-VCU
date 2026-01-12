@@ -81,21 +81,28 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="DigitalOutput_8h_source.html">../../Inc/Outputs/DigitalOutput.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Common_8h_source.html">../../Inc/Utils/Common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MessageFormat_8h_source.html">../../Inc/Utils/MessageFormat.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Telemetry_8h_source.html">../../Inc/Utils/Telemetry.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for DigitalOutput.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="DigitalOutput_8c__incl.png" border="0" usemap="#aCore_2Src_2Outputs_2DigitalOutput_8c" alt=""/></div>
 <map name="aCore_2Src_2Outputs_2DigitalOutput_8c" id="aCore_2Src_2Outputs_2DigitalOutput_8c">
-<area shape="rect" title=" " alt="" coords="265,5,427,45"/>
-<area shape="rect" href="DigitalOutput_8h.html" title=" " alt="" coords="181,93,332,133"/>
-<area shape="rect" href="Common_8h.html" title=" " alt="" coords="357,101,514,126"/>
-<area shape="rect" href="Output_8h.html" title=" " alt="" coords="96,181,167,207"/>
-<area shape="rect" href="Constants_8h.html" title=" " alt="" coords="191,181,323,207"/>
-<area shape="rect" title=" " alt="" coords="347,181,411,207"/>
-<area shape="rect" title=" " alt="" coords="5,328,65,353"/>
-<area shape="rect" title=" " alt="" coords="197,328,260,353"/>
-<area shape="rect" href="Updateable_8h.html" title=" " alt="" coords="62,255,201,280"/>
-<area shape="rect" title=" " alt="" coords="99,328,163,353"/>
+<area shape="rect" title=" " alt="" coords="345,5,507,45"/>
+<area shape="rect" href="DigitalOutput_8h.html" title=" " alt="" coords="295,93,445,133"/>
+<area shape="rect" href="Telemetry_8h.html" title=" " alt="" coords="465,181,595,207"/>
+<area shape="rect" href="Common_8h.html" title=" " alt="" coords="521,101,678,126"/>
+<area shape="rect" href="MessageFormat_8h.html" title=" " alt="" coords="5,101,204,126"/>
+<area shape="rect" href="Output_8h.html" title=" " alt="" coords="163,181,233,207"/>
+<area shape="rect" href="Constants_8h.html" title=" " alt="" coords="257,181,389,207"/>
+<area shape="rect" title=" " alt="" coords="446,328,510,353"/>
+<area shape="rect" title=" " alt="" coords="57,328,117,353"/>
+<area shape="rect" title=" " alt="" coords="260,328,323,353"/>
+<area shape="rect" href="Updateable_8h.html" title=" " alt="" coords="125,255,263,280"/>
+<area shape="rect" title=" " alt="" coords="162,328,226,353"/>
+<area shape="rect" title=" " alt="" coords="557,328,631,353"/>
+<area shape="rect" href="Units_8h.html" title=" " alt="" coords="516,255,579,280"/>
+<area shape="rect" title=" " alt="" coords="71,181,139,207"/>
 </map>
 </div>
 </div>
@@ -160,36 +167,43 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DigitalOutput_8c_source.html#l00004">4</a> of file <a class="el" href="DigitalOutput_8c_source.html">DigitalOutput.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    5</span>                                 {</div>
-<div class="line"><span class="lineno">    6</span>    <span class="keywordflow">if</span> (port &lt; 0 || port &gt;= <a class="code hl_define" href="Constants_8h.html#a74fa1f8994d578e4ecb0cd531bdf986a">NUM_DIGITAL_OUTPUTS</a>) {</div>
-<div class="line"><span class="lineno">    7</span>        </div>
-<div class="line"><span class="lineno">    8</span><span class="preprocessor">        #ifdef DEBUGn</span></div>
-<div class="line"><span class="lineno">    9</span>        printf(<span class="stringliteral">&quot;Invalid port number for digital output %s\n&quot;</span>, name);</div>
-<div class="line"><span class="lineno">   10</span><span class="preprocessor">        #endif</span></div>
-<div class="line"><span class="lineno">   11</span> </div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="line"><span class="lineno">   14</span>    <a class="code hl_function" href="Output_8h.html#a5baf375f8e0195ea69bc0e395b53cd1a">initOutput</a>(&amp;digitalOutput-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a19fa85346acf6757e846046f3fe771a2">output</a>, name, hz, <a class="code hl_enumvalue" href="Output_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a7b83936d44502ace8bc55c99fc5cfdfc">o_DIGITAL</a>);</div>
-<div class="line"><span class="lineno">   15</span>    digitalOutput-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a01596de4b8252bd9033507e6feea1cb9">port</a> = port;</div>
-<div class="line"><span class="lineno">   16</span>}</div>
+<p class="definition">Definition at line <a class="el" href="DigitalOutput_8c_source.html#l00006">6</a> of file <a class="el" href="DigitalOutput_8c_source.html">DigitalOutput.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                                 {</div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">if</span> (port &lt; 0 || port &gt;= <a class="code hl_define" href="Constants_8h.html#a74fa1f8994d578e4ecb0cd531bdf986a">NUM_DIGITAL_OUTPUTS</a>) {</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_function" href="MessageFormat_8h.html#adaaacbf33ba7f4f08d8af9bae2ee2d38">sendMessage</a>(name, <a class="code hl_enumvalue" href="MessageFormat_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a28aec242413d6eab32c014fd1cecc4f0">MSG_ERROR</a>, <span class="stringliteral">&quot;Port %u Invalid&quot;</span>, port);</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_function" href="Output_8h.html#a5baf375f8e0195ea69bc0e395b53cd1a">initOutput</a>(&amp;digitalOutput-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a19fa85346acf6757e846046f3fe771a2">output</a>, name, hz, <a class="code hl_enumvalue" href="Output_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a7b83936d44502ace8bc55c99fc5cfdfc">o_DIGITAL</a>);</div>
+<div class="line"><span class="lineno">   13</span>    digitalOutput-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a01596de4b8252bd9033507e6feea1cb9">port</a> = port;</div>
+<div class="line"><span class="lineno">   14</span>    digitalOutput-&gt;<a class="code hl_variable" href="structDigitalOutput.html#aeb8051d9795873541607fc5e9dd8e0d0">telem_state</a> = <a class="code hl_function" href="Telemetry_8h.html#ad94fd7e4a8a10b2ce63679738de549ef">registerTelemetrySignal</a>(name, <a class="code hl_enumvalue" href="Telemetry_8h.html#a29aec449827137dbac41fa4c18e90a05a304648f8fae69ce5536adadae7ecccdb">TELEMETRY_OUTPUT</a>, <a class="code hl_enumvalue" href="Units_8h.html#ab9b13c04009a7bae91886840495566a5ab2fed2ffcc444b5166d3af6d4fb96de8">UNIT_BOOLEAN</a>, 1000/hz, 0, 1);</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 <div class="ttc" id="aConstants_8h_html_a74fa1f8994d578e4ecb0cd531bdf986a"><div class="ttname"><a href="Constants_8h.html#a74fa1f8994d578e4ecb0cd531bdf986a">NUM_DIGITAL_OUTPUTS</a></div><div class="ttdeci">#define NUM_DIGITAL_OUTPUTS</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8h_source.html#l00013">Constants.h:13</a></div></div>
+<div class="ttc" id="aMessageFormat_8h_html_ac6606ebe91c8ac66a2c314c79f5ab013a28aec242413d6eab32c014fd1cecc4f0"><div class="ttname"><a href="MessageFormat_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a28aec242413d6eab32c014fd1cecc4f0">MSG_ERROR</a></div><div class="ttdeci">@ MSG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MessageFormat_8h_source.html#l00013">MessageFormat.h:13</a></div></div>
+<div class="ttc" id="aMessageFormat_8h_html_adaaacbf33ba7f4f08d8af9bae2ee2d38"><div class="ttname"><a href="MessageFormat_8h.html#adaaacbf33ba7f4f08d8af9bae2ee2d38">sendMessage</a></div><div class="ttdeci">void sendMessage(const char *sender, MessageType type, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="MessageFormat_8c_source.html#l00005">MessageFormat.c:5</a></div></div>
 <div class="ttc" id="aOutput_8h_html_a4e0517338e6c4a31a2addafc06d4f3a3a7b83936d44502ace8bc55c99fc5cfdfc"><div class="ttname"><a href="Output_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a7b83936d44502ace8bc55c99fc5cfdfc">o_DIGITAL</a></div><div class="ttdeci">@ o_DIGITAL</div><div class="ttdef"><b>Definition:</b> <a href="Output_8h_source.html#l00011">Output.h:11</a></div></div>
 <div class="ttc" id="aOutput_8h_html_a5baf375f8e0195ea69bc0e395b53cd1a"><div class="ttname"><a href="Output_8h.html#a5baf375f8e0195ea69bc0e395b53cd1a">initOutput</a></div><div class="ttdeci">void initOutput(Output *output, const char *name, int hz, OutputType type)</div><div class="ttdoc">Initializes an output with the given parameters.</div><div class="ttdef"><b>Definition:</b> <a href="Output_8c_source.html#l00004">Output.c:4</a></div></div>
-<div class="ttc" id="astructDigitalOutput_html_a01596de4b8252bd9033507e6feea1cb9"><div class="ttname"><a href="structDigitalOutput.html#a01596de4b8252bd9033507e6feea1cb9">DigitalOutput::port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition:</b> <a href="DigitalOutput_8h_source.html#l00013">DigitalOutput.h:13</a></div></div>
-<div class="ttc" id="astructDigitalOutput_html_a19fa85346acf6757e846046f3fe771a2"><div class="ttname"><a href="structDigitalOutput.html#a19fa85346acf6757e846046f3fe771a2">DigitalOutput::output</a></div><div class="ttdeci">Output output</div><div class="ttdef"><b>Definition:</b> <a href="DigitalOutput_8h_source.html#l00012">DigitalOutput.h:12</a></div></div>
+<div class="ttc" id="aTelemetry_8h_html_a29aec449827137dbac41fa4c18e90a05a304648f8fae69ce5536adadae7ecccdb"><div class="ttname"><a href="Telemetry_8h.html#a29aec449827137dbac41fa4c18e90a05a304648f8fae69ce5536adadae7ecccdb">TELEMETRY_OUTPUT</a></div><div class="ttdeci">@ TELEMETRY_OUTPUT</div><div class="ttdef"><b>Definition:</b> <a href="Telemetry_8h_source.html#l00010">Telemetry.h:10</a></div></div>
+<div class="ttc" id="aTelemetry_8h_html_ad94fd7e4a8a10b2ce63679738de549ef"><div class="ttname"><a href="Telemetry_8h.html#ad94fd7e4a8a10b2ce63679738de549ef">registerTelemetrySignal</a></div><div class="ttdeci">TelemetrySignal * registerTelemetrySignal(const char *name, TelemetryType type, UnitId unit_id, uint32_t expected_rate_ms, float custom_min, float custom_max)</div><div class="ttdef"><b>Definition:</b> <a href="Telemetry_8c_source.html#l00023">Telemetry.c:23</a></div></div>
+<div class="ttc" id="aUnits_8h_html_ab9b13c04009a7bae91886840495566a5ab2fed2ffcc444b5166d3af6d4fb96de8"><div class="ttname"><a href="Units_8h.html#ab9b13c04009a7bae91886840495566a5ab2fed2ffcc444b5166d3af6d4fb96de8">UNIT_BOOLEAN</a></div><div class="ttdeci">@ UNIT_BOOLEAN</div><div class="ttdef"><b>Definition:</b> <a href="Units_8h_source.html#l00066">Units.h:66</a></div></div>
+<div class="ttc" id="astructDigitalOutput_html_a01596de4b8252bd9033507e6feea1cb9"><div class="ttname"><a href="structDigitalOutput.html#a01596de4b8252bd9033507e6feea1cb9">DigitalOutput::port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition:</b> <a href="DigitalOutput_8h_source.html#l00014">DigitalOutput.h:14</a></div></div>
+<div class="ttc" id="astructDigitalOutput_html_a19fa85346acf6757e846046f3fe771a2"><div class="ttname"><a href="structDigitalOutput.html#a19fa85346acf6757e846046f3fe771a2">DigitalOutput::output</a></div><div class="ttdeci">Output output</div><div class="ttdef"><b>Definition:</b> <a href="DigitalOutput_8h_source.html#l00013">DigitalOutput.h:13</a></div></div>
+<div class="ttc" id="astructDigitalOutput_html_aeb8051d9795873541607fc5e9dd8e0d0"><div class="ttname"><a href="structDigitalOutput.html#aeb8051d9795873541607fc5e9dd8e0d0">DigitalOutput::telem_state</a></div><div class="ttdeci">TelemetrySignal * telem_state</div><div class="ttdef"><b>Definition:</b> <a href="DigitalOutput_8h_source.html#l00015">DigitalOutput.h:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="DigitalOutput_8c_a742aaea202c697c34c46e1853a0923a2_cgraph.png" border="0" usemap="#aDigitalOutput_8c_a742aaea202c697c34c46e1853a0923a2_cgraph" alt=""/></div>
 <map name="aDigitalOutput_8c_a742aaea202c697c34c46e1853a0923a2_cgraph" id="aDigitalOutput_8c_a742aaea202c697c34c46e1853a0923a2_cgraph">
-<area shape="rect" title="Initializes a digital output with the given parameters." alt="" coords="5,80,120,105"/>
-<area shape="rect" href="Output_8c.html#a5baf375f8e0195ea69bc0e395b53cd1a" title="Initializes an output with the given parameters." alt="" coords="168,80,247,105"/>
-<area shape="rect" href="Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="295,80,400,105"/>
-<area shape="rect" href="Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="448,5,552,31"/>
-<area shape="rect" href="Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="450,55,550,80"/>
-<area shape="rect" href="Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="451,104,549,129"/>
-<area shape="rect" href="Updateable_8c.html#a2ce98de36bf9863555ab86f1e31bb6a3" title="Default update function for Updateable objects." alt="" coords="449,153,551,179"/>
+<area shape="rect" title="Initializes a digital output with the given parameters." alt="" coords="5,176,120,201"/>
+<area shape="rect" href="Output_8c.html#a5baf375f8e0195ea69bc0e395b53cd1a" title="Initializes an output with the given parameters." alt="" coords="208,103,287,128"/>
+<area shape="rect" href="Telemetry_8c.html#ad94fd7e4a8a10b2ce63679738de549ef" title=" " alt="" coords="168,176,327,201"/>
+<area shape="rect" href="MessageFormat_8c.html#adaaacbf33ba7f4f08d8af9bae2ee2d38" title=" " alt="" coords="382,227,485,252"/>
+<area shape="rect" href="Updateable_8c.html#a4c9ad3719187f801eb4c7d9211f9b3d9" title=" " alt="" coords="381,79,486,104"/>
+<area shape="rect" href="Updateable_8c.html#a1c9a6406589ec57eb31ce5f718926658" title="Default disable function for Updateable objects." alt="" coords="540,5,644,31"/>
+<area shape="rect" href="Updateable_8c.html#a1a19c1371c1aec5ea56ba51f17f25ca8" title="Default enable function for Updateable objects." alt="" coords="542,55,642,80"/>
+<area shape="rect" href="Updateable_8c.html#a943588fcfca4806e1db6bd9cd2399d23" title="Default status function for Updateable objects." alt="" coords="543,104,641,129"/>
+<area shape="rect" href="Updateable_8c.html#a2ce98de36bf9863555ab86f1e31bb6a3" title="Default update function for Updateable objects." alt="" coords="541,153,643,179"/>
+<area shape="rect" href="Telemetry_8c.html#a1947f7043d680efc04752f852b622aa4" title=" " alt="" coords="382,128,485,153"/>
+<area shape="rect" href="Units_8c.html#a589350189385db4f70a033de12f8fb27" title=" " alt="" coords="375,177,492,203"/>
 </map>
 </div>
 <div class="dynheader">
@@ -247,20 +261,28 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int _SUCCESS or _FAILURE. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="DigitalOutput_8c_source.html#l00018">18</a> of file <a class="el" href="DigitalOutput_8c_source.html">DigitalOutput.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                            {</div>
-<div class="line"><span class="lineno">   19</span>    </div>
-<div class="line"><span class="lineno">   20</span><span class="preprocessor">    #ifdef DEBUGn</span></div>
-<div class="line"><span class="lineno">   21</span>    printf(<span class="stringliteral">&quot;Writing data to digital output %s: %d\n&quot;</span>, output-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a19fa85346acf6757e846046f3fe771a2">output</a>.<a class="code hl_variable" href="structOutput.html#ab93d7c47bd69a3ebe6917d69a46f0ba7">updateable</a>.<a class="code hl_variable" href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">name</a>, data);</div>
-<div class="line"><span class="lineno">   22</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="DigitalOutput_8h.html#aae45a4e3f2ebbf60f125eebad88f7227">digital_out_buffer</a>[output-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a01596de4b8252bd9033507e6feea1cb9">port</a>] = data;</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<p class="definition">Definition at line <a class="el" href="DigitalOutput_8c_source.html#l00017">17</a> of file <a class="el" href="DigitalOutput_8c_source.html">DigitalOutput.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                            {</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="DigitalOutput_8h.html#aae45a4e3f2ebbf60f125eebad88f7227">digital_out_buffer</a>[output-&gt;<a class="code hl_variable" href="structDigitalOutput.html#a01596de4b8252bd9033507e6feea1cb9">port</a>] = data;</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_function" href="Telemetry_8h.html#a42357317b4e74eac5d4e8eed46838e90">sendTelemetryValue</a>(output-&gt;<a class="code hl_variable" href="structDigitalOutput.html#aeb8051d9795873541607fc5e9dd8e0d0">telem_state</a>, data);</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">   21</span>}</div>
 <div class="ttc" id="aCommon_8h_html_acdf9ea17605dff8b810df8076b6496e2"><div class="ttname"><a href="Common_8h.html#acdf9ea17605dff8b810df8076b6496e2">_SUCCESS</a></div><div class="ttdeci">#define _SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="Common_8h_source.html#l00005">Common.h:5</a></div></div>
-<div class="ttc" id="aDigitalOutput_8h_html_aae45a4e3f2ebbf60f125eebad88f7227"><div class="ttname"><a href="DigitalOutput_8h.html#aae45a4e3f2ebbf60f125eebad88f7227">digital_out_buffer</a></div><div class="ttdeci">uint8_t digital_out_buffer[NUM_DIGITAL_OUTPUTS]</div><div class="ttdef"><b>Definition:</b> <a href="Src_2main_8c_source.html#l00128">main.c:128</a></div></div>
-<div class="ttc" id="astructOutput_html_ab93d7c47bd69a3ebe6917d69a46f0ba7"><div class="ttname"><a href="structOutput.html#ab93d7c47bd69a3ebe6917d69a46f0ba7">Output::updateable</a></div><div class="ttdeci">Updateable updateable</div><div class="ttdef"><b>Definition:</b> <a href="Output_8h_source.html#l00015">Output.h:15</a></div></div>
-<div class="ttc" id="astructUpdateable_html_ab1a238912893afab4f86abaebdc20b12"><div class="ttname"><a href="structUpdateable.html#ab1a238912893afab4f86abaebdc20b12">Updateable::name</a></div><div class="ttdeci">char name[MAX_NAME_LENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="Updateable_8h_source.html#l00024">Updateable.h:24</a></div></div>
+<div class="ttc" id="aDigitalOutput_8h_html_aae45a4e3f2ebbf60f125eebad88f7227"><div class="ttname"><a href="DigitalOutput_8h.html#aae45a4e3f2ebbf60f125eebad88f7227">digital_out_buffer</a></div><div class="ttdeci">uint8_t digital_out_buffer[NUM_DIGITAL_OUTPUTS]</div><div class="ttdef"><b>Definition:</b> <a href="Src_2main_8c_source.html#l00130">main.c:130</a></div></div>
+<div class="ttc" id="aTelemetry_8h_html_a42357317b4e74eac5d4e8eed46838e90"><div class="ttname"><a href="Telemetry_8h.html#a42357317b4e74eac5d4e8eed46838e90">sendTelemetryValue</a></div><div class="ttdeci">void sendTelemetryValue(TelemetrySignal *signal, float value)</div><div class="ttdef"><b>Definition:</b> <a href="Telemetry_8c_source.html#l00059">Telemetry.c:59</a></div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="DigitalOutput_8c_a787f11889caf733df06f753c3ca81a15_cgraph.png" border="0" usemap="#aDigitalOutput_8c_a787f11889caf733df06f753c3ca81a15_cgraph" alt=""/></div>
+<map name="aDigitalOutput_8c_a787f11889caf733df06f753c3ca81a15_cgraph" id="aDigitalOutput_8c_a787f11889caf733df06f753c3ca81a15_cgraph">
+<area shape="rect" title="Writes data to the buffer of the digital output." alt="" coords="5,23,157,48"/>
+<area shape="rect" href="Telemetry_8c.html#a42357317b4e74eac5d4e8eed46838e90" title=" " alt="" coords="205,23,345,48"/>
+<area shape="rect" href="Units_8c.html#a589350189385db4f70a033de12f8fb27" title=" " alt="" coords="565,23,683,48"/>
+<area shape="rect" href="MessageFormat_8c.html#adaaacbf33ba7f4f08d8af9bae2ee2d38" title=" " alt="" coords="404,23,507,48"/>
+<area shape="rect" href="Units_8c.html#a02d31592dd021027d16e51f7a2f3af84" title=" " alt="" coords="393,72,517,97"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="DigitalOutput_8c_a787f11889caf733df06f753c3ca81a15_icgraph.png" border="0" usemap="#aDigitalOutput_8c_a787f11889caf733df06f753c3ca81a15_icgraph" alt=""/></div>
