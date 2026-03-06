@@ -39,15 +39,10 @@ int updateBms(ExternalSystem* external) {
     if (bms->can_data.new_data_flags & BMS_NEW_STATUS_0X6B0) {
         bms->packCurrent = (float)bms->can_data.status_0x6B0.pack_abs_current_unsigned * 0.1f;
         bms->packVoltage = (float)bms->can_data.status_0x6B0.pack_inst_voltage * 0.1f;
-
-        printf("[BMS] 0x6B0 PackCurrent=%.2f A, PackVoltage=%.2f V\r\n",
-               bms->packCurrent, bms->packVoltage);
     }
 
     if (bms->can_data.new_data_flags & BMS_NEW_STATUS_0X6B1) {
         bms->stateOfCharge = (float)bms->can_data.status_0x6B1.pack_soc * 0.01f;
-
-        printf("[BMS] 0x6B1 SOC=%.2f %%\r\n", bms->stateOfCharge);
     }
 
     if (bms->can_data.new_data_flags & BMS_NEW_STATUS_0X6B2) {
@@ -56,9 +51,6 @@ int updateBms(ExternalSystem* external) {
 
         bms->cellTemperatureMax = highT;
         bms->cellTemperatureMin = lowT;
-
-        printf("[BMS] 0x6B2 CellTempMin=%.2f C, CellTempMax=%.2f C\r\n",
-               bms->cellTemperatureMin, bms->cellTemperatureMax);
     }
 
     if (bms->can_data.new_data_flags & BMS_NEW_STATUS_0X6B3) {
@@ -67,9 +59,6 @@ int updateBms(ExternalSystem* external) {
 
         bms->cellVoltageMax = highV;
         bms->cellVoltageMin = lowV;
-
-        printf("[BMS] 0x6B3 CellVMin=%.4f V, CellVMax=%.4f V\r\n",
-               bms->cellVoltageMin, bms->cellVoltageMax);
     }
 
     if (bms->can_data.new_data_flags & BMS_NEW_STATUS_0X6B4) {
@@ -77,9 +66,6 @@ int updateBms(ExternalSystem* external) {
         const float minPackV = (float)bms->can_data.status_0x6B4.minimum_pack_voltage * 0.1f;
         const float packR    = (float)bms->can_data.status_0x6B4.pack_resistance * 0.0005f;
         const float intT     = (float)bms->can_data.status_0x6B4.internal_temperature * 0.3333333333f;
-
-        printf("[BMS] 0x6B4 PackVMin=%.2f V, PackVMax=%.2f V, PackR=%.6f Ohm, InternalT=%.2f C\r\n",
-               minPackV, maxPackV, packR, intT);
     }
 
     if (isBmsCANDataStale(bms, 5000)) {
@@ -203,8 +189,7 @@ static inline void bms_print_signals(const CAN_Message* m) {
     for (int i = 0; i < m->template->signal_count; i++) {
         const CAN_Signal* s = &m->signals[i];
 
-        float physical_value =
-            s->value * s->template->scale + s->template->offset;
+        float physical_value = s->value;
 
         printf("[BMS SIG] ID=0x%lX %s = %f %s\r\n",
                m->header.StdId,
@@ -212,15 +197,13 @@ static inline void bms_print_signals(const CAN_Message* m) {
                physical_value,
                s->template->unit ? s->template->unit : "");
 
-        // Telemetry hook
-         sendMessage("BMS_DATA", MSG_SENSOR_VALUE,
+        sendMessage("BMS_DATA", MSG_SENSOR_VALUE,
                     "Signal=%s;Value=%f;Unit=%s",
                     s->template->name,
                     physical_value,
                     s->template->unit ? s->template->unit : "");
     }
 }
-
 
 void bmsCanHandler(void* system, CAN_Message* message) {
     Bms* bms = (Bms*)system;
@@ -234,35 +217,28 @@ void bmsCanHandler(void* system, CAN_Message* message) {
     switch (id) {
         case MSGID_0X6B0_ID:
             bms_store_0x6B0(bms, message);
-            printf("[BMS CAN] RX 0x6B0\r\n");
             break;
 
         case MSGID_0X6B1_ID:
             bms_store_0x6B1(bms, message);
-            printf("[BMS CAN] RX 0x6B1\r\n");
             break;
 
         case MSGID_0X6B2_ID:
             bms_store_0x6B2(bms, message);
-            printf("[BMS CAN] RX 0x6B2 (Temps)\r\n");
             break;
 
         case MSGID_0X6B3_ID:
             bms_store_0x6B3(bms, message);
-            printf("[BMS CAN] RX 0x6B3 (Cell Voltages)\r\n");
             break;
 
         case MSGID_0X6B4_ID:
             bms_store_0x6B4(bms, message);
-            printf("[BMS CAN] RX 0x6B4 (Pack Limits)\r\n");
             break;
 
         default:
             printf("[BMS CAN] RX Unknown ID=0x%lX\r\n", id);
             break;
     }
-
-    bms_print_signals(message);
 
     bms->can_data.last_update = HAL_GetTick();
     bms->can_data.message_count++;
