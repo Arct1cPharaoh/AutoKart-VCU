@@ -94,11 +94,11 @@ int send_CAN_message(CANBus bus, CANProtocol protocol, uint32_t id, uint8_t* dat
     TxHeader.DLC = len;
 
     // Print the message
-    printf(ANSI_COLOR_YELLOW "Sending CAN Message" ANSI_COLOR_RESET ": ID: %d, DLC: %d, Data: ", id, len);
+    //printf(ANSI_COLOR_YELLOW "Sending CAN Message" ANSI_COLOR_RESET ": ID: %d, DLC: %d, Data: ", id, len);
     for (int i = 0; i < len; i++) {
-        printf("%02X ", data[i]);
+        //printf("%02X ", data[i]);
     }
-    printf("\r\n");
+    //printf("\r\n");
 
     #ifndef TEST_MODE
     // Send the CAN message

@@ -28,7 +28,6 @@
 #include "../Inc/Sensors/DigitalSensor.h"
 #include "../Inc/Outputs/DigitalOutput.h"
 #include "../Inc/Utils/Telemetry.h"
-#include "../Inc/Utils/MessageFormat.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -78,6 +77,9 @@ extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
 extern DMA_HandleTypeDef hdma_dac1;
 extern DMA_HandleTypeDef hdma_dac2;
+extern DMA_HandleTypeDef hdma_sdmmc1_rx;
+extern DMA_HandleTypeDef hdma_sdmmc1_tx;
+extern SD_HandleTypeDef hsd1;
 extern TIM_HandleTypeDef htim2;
 extern UART_HandleTypeDef huart3;
 /* USER CODE BEGIN EV */
@@ -275,6 +277,20 @@ void USART3_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles SDMMC1 global interrupt.
+  */
+void SDMMC1_IRQHandler(void)
+{
+  /* USER CODE BEGIN SDMMC1_IRQn 0 */
+
+  /* USER CODE END SDMMC1_IRQn 0 */
+  HAL_SD_IRQHandler(&hsd1);
+  /* USER CODE BEGIN SDMMC1_IRQn 1 */
+
+  /* USER CODE END SDMMC1_IRQn 1 */
+}
+
+/**
   * @brief This function handles DMA2 stream0 global interrupt.
   */
 void DMA2_Stream0_IRQHandler(void)
@@ -317,6 +333,20 @@ void DMA2_Stream2_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles DMA2 stream3 global interrupt.
+  */
+void DMA2_Stream3_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA2_Stream3_IRQn 0 */
+
+  /* USER CODE END DMA2_Stream3_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_sdmmc1_rx);
+  /* USER CODE BEGIN DMA2_Stream3_IRQn 1 */
+
+  /* USER CODE END DMA2_Stream3_IRQn 1 */
+}
+
+/**
   * @brief This function handles CAN2 RX0 interrupts.
   */
 void CAN2_RX0_IRQHandler(void)
@@ -328,6 +358,20 @@ void CAN2_RX0_IRQHandler(void)
   /* USER CODE BEGIN CAN2_RX0_IRQn 1 */
 
   /* USER CODE END CAN2_RX0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA2 stream6 global interrupt.
+  */
+void DMA2_Stream6_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA2_Stream6_IRQn 0 */
+
+  /* USER CODE END DMA2_Stream6_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_sdmmc1_tx);
+  /* USER CODE BEGIN DMA2_Stream6_IRQn 1 */
+
+  /* USER CODE END DMA2_Stream6_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
@@ -385,13 +429,13 @@ int send_CAN_message_helper(CANBus bus, CAN_TxHeaderTypeDef *TxHeader, uint8_t *
     if (bus == CAN_1) {
         if (HAL_CAN_AddTxMessage(&hcan1, TxHeader, data, &mailbox) != HAL_OK) {
         	uint32_t error = HAL_CAN_GetError(&hcan1);
-			printf("CAN1 Transmission Error: %lx\n", error);
+			//printf("CAN1 Transmission Error: %lx\n", error);
             return -1;
         }
     } else if (bus == CAN_2) {
         if (HAL_CAN_AddTxMessage(&hcan2, TxHeader, data, &mailbox) != HAL_OK) {
         	uint32_t error = HAL_CAN_GetError(&hcan2);
-			printf("CAN2 Transmission Error: %lx\n", error);
+			//printf("CAN2 Transmission Error: %lx\n", error);
             return -1;
         }
     } else {
@@ -451,35 +495,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
   } else if (hadc == &hadc3) {
     ProcessADCData(adc1_buffer, adc2_buffer, adc3_buffer);
   }
-}
-
-// CAN TX Complete Callbacks to generate telemetry messages
-void HAL_CAN_TxMailbox0CompleteCallback(CAN_HandleTypeDef *hcan)
-{
-    // Create a telemetry message for TX confirmation using proper sendMessage function
-    if (hcan == &hcan1) {
-        sendMessage("CAN", MSG_CAN_TX, "ID:0x123;DLC:8;Data:AABBCCDD55667788");
-    } else if (hcan == &hcan2) {
-        sendMessage("CAN", MSG_CAN_TX, "ID:0x123;DLC:8;Data:AABBCCDD55667788");
-    }
-}
-
-void HAL_CAN_TxMailbox1CompleteCallback(CAN_HandleTypeDef *hcan)
-{
-    if (hcan == &hcan1) {
-        sendMessage("CAN", MSG_CAN_TX, "ID:0x456;DLC:8;Data:1122334455667788");
-    } else if (hcan == &hcan2) {
-        sendMessage("CAN", MSG_CAN_TX, "ID:0x456;DLC:8;Data:1122334455667788");
-    }
-}
-
-void HAL_CAN_TxMailbox2CompleteCallback(CAN_HandleTypeDef *hcan)
-{
-    if (hcan == &hcan1) {
-        sendMessage("CAN", MSG_CAN_TX, "ID:0x789;DLC:8;Data:DEADBEEFCAFEBABE");
-    } else if (hcan == &hcan2) {
-        sendMessage("CAN", MSG_CAN_TX, "ID:0x789;DLC:8;Data:DEADBEEFCAFEBABE");
-    }
 }
 
 /* USER CODE END 1 */

@@ -1,6 +1,7 @@
 #include "../../Inc/Utils/Telemetry.h"
 #include "../../Inc/Utils/MessageFormat.h"
 #include "../../Inc/Utils/Common.h"
+#include "../../Inc/Utils/SdLogger.h"
 #include <string.h>
 
 #define MAX_TELEMETRY_SIGNALS 100
@@ -53,6 +54,7 @@ TelemetrySignal* registerTelemetrySignal(const char* name, TelemetryType type, U
     
     sendMessage("Telemetry", MSG_DEBUG, "Registered: %s (%s) [%s] - %dms", 
                name, unit->symbol, getTypeName(type), expected_rate_ms);
+    sdRegisterChannel(name, unit->symbol, sig->custom_min, sig->custom_max);
     return sig;
 }
 
@@ -87,6 +89,7 @@ void sendTelemetryValue(TelemetrySignal* signal, float value) {
             
             // Send using generic sendMessage - no special sendSensorValue() needed!
             sendMessage(signal->name, MSG_SENSOR_VALUE, "Value:%.3f;Unit:%s", value, unit->symbol);
+            sdLogValue(signal->name, value);
             break;
             
         case TELEMETRY_OUTPUT:
