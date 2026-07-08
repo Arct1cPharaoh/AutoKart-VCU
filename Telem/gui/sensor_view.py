@@ -16,6 +16,7 @@ class SensorView:
         self.pending_updates = {}  # {sensor_key: (name, value, unit, timestamp)}
         self.update_timer_active = False
         self.UPDATE_BATCH_INTERVAL = 100  # ms - reduced from 200ms for faster updates
+        self.running = True  # Add running flag for cleanup
         
         if parent is not None:
             self.frame = ttk.Frame(parent, padding="10")
@@ -136,12 +137,15 @@ class SensorView:
         self.pending_updates[sensor_key] = (name, value, unit, timestamp)
         
         # Start batch timer if not already active
-        if not self.update_timer_active and self.frame:
+        if not self.update_timer_active and self.frame and self.running:
             self.update_timer_active = True
             self.frame.after(self.UPDATE_BATCH_INTERVAL, self.process_batched_updates)
     
     def process_batched_updates(self):
         """Process all pending sensor updates in batch"""
+        if not self.running:
+            return
+            
         if not self.pending_updates:
             self.update_timer_active = False
             return

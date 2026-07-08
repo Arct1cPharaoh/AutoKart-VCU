@@ -21,4 +21,7 @@
 # Object directorys
 /obj/
 
+# pycache files
+__pycache__/
+
 ### End of additional rules ###

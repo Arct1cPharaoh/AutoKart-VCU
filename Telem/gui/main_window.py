@@ -25,17 +25,36 @@ class MainWindow:
         self.root.title("STM32 Telemetry Monitor")
         self.root.geometry("1400x900")
         
+        # Track scheduled tasks for proper cleanup
+        self.scheduled_tasks = []
+        self.running = True
+        
+        # Override tkinter's after method to track all scheduled tasks
+        self._original_after = self.root.after
+        self.root.after = self._tracked_after
+        
         self.connection = ConnectionManager()
         self.config = ConfigManager()
         
         # Create shared message parser for efficiency
         self.parse_message = create_common_message_parser()
         
+        # Bind window close event
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+        
         self.setup_ui()
         self.start_processing()
         
         # Initialize memory monitoring
         print("🔍 Memory monitoring started - status will be printed every 10 seconds")
+    
+    def _tracked_after(self, ms, func=None):
+        """Wrapper for tkinter's after method to track all scheduled tasks"""
+        if not self.running:
+            return None
+        task_id = self._original_after(ms, func)
+        self.scheduled_tasks.append(task_id)
+        return task_id
         
     def setup_ui(self):
         """Setup main UI with connection controls and tabs"""
@@ -92,7 +111,7 @@ class MainWindow:
         self.sensor_view = SensorView(None, self.config)
         self.raw_view = RawView(self.notebook)
         self.output_view = OutputView(None, self.config)
-        self.can_view = CANView(None)
+        self.can_view = CANView(None, self.connection)  # Pass connection manager
         self.plot_view = PlotView(None, self.config)  # ADD THIS LINE
         
         # Create combined view: Sensors + Outputs vertical, CAN to the right
@@ -254,6 +273,9 @@ class MainWindow:
     
     def start_processing(self):
         """Main processing loop - optimized for high message throughput"""
+        if not self.running:
+            return
+            
         messages_processed = 0
         # Increased batch size to handle high STM32 message rates
         max_messages = 100  # Increased from 25 to handle queue overflow
@@ -267,7 +289,8 @@ class MainWindow:
                 break
         
         # High-throughput interval for queue management
-        self.root.after(50, self.start_processing)  # Reduced from 100ms to 50ms for higher throughput
+        if self.running:
+            self.root.after(50, self.start_processing)  # Use the tracked version
         
         # Memory monitoring - log every 10 seconds
         self.memory_check_counter = getattr(self, 'memory_check_counter', 0) + 1
@@ -291,3 +314,40 @@ class MainWindow:
                 print(f"⚠️  MEMORY WARNING: High usage detected!")
         except Exception as e:
             print(f"Memory check failed: {e}")
+    
+    def on_closing(self):
+        """Handle window close event with proper cleanup"""
+        print("Shutting down telemetry monitor...")
+        
+        # Stop all processing immediately
+        self.running = False
+        
+        # Disconnect if connected
+        try:
+            if self.connection.is_connected:
+                self.connection.disconnect()
+        except:
+            pass
+        
+        # Stop any view-specific processing
+        try:
+            if hasattr(self.sensor_view, 'running'):
+                self.sensor_view.running = False
+            if hasattr(self.output_view, 'running'):
+                self.output_view.running = False
+            if hasattr(self.plot_view, 'running'):
+                self.plot_view.running = False
+        except:
+            pass
+        
+        print("Forcing immediate shutdown...")
+        
+        # Force immediate destruction without trying to cancel individual tasks
+        try:
+            self.root.after = self._original_after
+        except:
+            pass
+        
+        # Destroy the window immediately
+        self.root.quit()
+        self.root.destroy()

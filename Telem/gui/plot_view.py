@@ -20,6 +20,7 @@ class PlotView:
         self.selected_signals = set()  # Which signals to plot
         self.is_plotting = False
         self.plot_animation = None  # Initialize animation state properly
+        self.running = True  # Add running flag for cleanup
         
         # Performance optimization: config cache for is_configured() results
         self.config_cache = {}
@@ -126,7 +127,8 @@ class PlotView:
         
         # Update signal list periodically
         self.update_signal_list()
-        self.frame.after(2000, self.periodic_signal_update)
+        if self.running:
+            self.frame.after(2000, self.periodic_signal_update)
     
     def setup_matplotlib(self, parent):
         """Setup matplotlib figure and canvas"""
@@ -205,11 +207,14 @@ class PlotView:
     
     def periodic_signal_update(self):
         """Periodically update signal list (less frequent)"""
+        if not self.running:
+            return
+            
         # Only update if config might have changed
         if hasattr(self.config, 'config_data') and self.config.config_data:
             self.update_signal_list()
         
-        if self.frame and self.frame.winfo_exists():
+        if self.frame and self.frame.winfo_exists() and self.running:
             self.frame.after(5000, self.periodic_signal_update)  # Every 5 seconds instead of 2
     
     def add_selected_signals(self):

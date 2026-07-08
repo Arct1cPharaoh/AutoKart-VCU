@@ -843,7 +843,12 @@ static void MX_CAN2_Init(void)
   hcan2.Init.AutoRetransmission = DISABLE;
   hcan2.Init.ReceiveFifoLocked = DISABLE;
   hcan2.Init.TransmitFifoPriority = DISABLE;
-  if (HAL_CAN_Init(&hcan2) != HAL_OK)
+  if (HAL_CAN_Init(&hcan2) != HAL_OK)Added Sd logging functionality using sdmmc1 and the pins pc8, 9, 10, 11, 12 and pd 2.
+It works with rtos and dma (which is forced with rtos)
+Handles init, mount, and CSV data writes hijacking the telemetry data line.
+Supports 4-bit SDIO bus, FatFs, and automatic log file generation.
+Creates a new file on system reset.
+Most files below are config updates, you may find it easier to review these in cube mx.
   {
     Error_Handler();
   }
@@ -1365,7 +1370,12 @@ static void MX_DMA_Init(void)
   /* DMA controller clock enable */
   __HAL_RCC_DMA2_CLK_ENABLE();
   __HAL_RCC_DMA1_CLK_ENABLE();
-
+Added Sd logging functionality using sdmmc1 and the pins pc8, 9, 10, 11, 12 and pd 2.
+It works with rtos and dma (which is forced with rtos)
+Handles init, mount, and CSV data writes hijacking the telemetry data line.
+Supports 4-bit SDIO bus, FatFs, and automatic log file generation.
+Creates a new file on system reset.
+Most files below are config updates, you may find it easier to review these in cube mx.
   /* DMA interrupt init */
   /* DMA1_Stream5_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 5, 0);
